@@ -1,0 +1,21 @@
+<div class="main_wrapper" ng-init="gameInit()" id="root_scope">
+    <div class="banner" ng-include src="'games/logic/quiz_new/app/partials/includes/banner.html'"></div>
+    <div class="lifes" ng-include src="'games/logic/quiz_new/app/partials/includes/lifes.html'"></div>
+    <div class="fill_bars" ng-include src="'games/logic/quiz_new/app/partials/includes/fill_bars.html'"></div>
+    <div class="main_data">
+        <div class="question">
+            <span ng-bind="questions[0].question"></span> (<span ng-bind="game_progress.answerd"></span>/<span ng-bind="game_progress.total"></span>)
+        </div>
+        
+        <div class="option big_blue_button" ng-repeat="(key, value) in questions[0].answers" ng-bind="value" ng-click="setAns(key,questions[0].q_id)" id="ans_{{key}}" ng-show="value!=''">
+        </div>
+        
+        <div class="strikes" ng-include src="'games/logic/quiz_new/app/partials/includes/strikes.html'"></div>
+    </div>
+    
+    <div class="strike_animation">
+        <div class="animation"></div>
+    </div>
+    
+    
+</div>

@@ -1,0 +1,30 @@
+<div class="main_wrapper" ng-init="inst_init()" id="root_scope">
+    <div class="banner" ng-include src="'games/logic/quiz_new/app/partials/includes/banner.html'"></div>
+
+    <div class="main_data no_banners">
+        <div class="content" ng-hide="instructions" >
+            <span tarnslate  ng-click="__go()">Welcome</span>! 
+            <br><br>
+
+
+            <span tarnslate>You get 1 minute per question to select the correct answer.</span><br>
+            <span tarnslate>Answer as quickly as possible to maximize your score!</span><br><br>
+
+
+            <span tarnslate>You have 3 lifelines to help you out:</span><br>
+            50:50 - <span tarnslate>Only 2 answers!</span><br>
+            +30 - <span tarnslate>Give youself an extra 30 seconds!</span><br>
+            Skip - <span tarnslate>Skip to the next question</span>...
+
+            <div id="good-luck" tarnslate>Good Luck!</div>
+            <button type="button" class="big_blue_button"  ng-click="__go()" tarnslate>Go!</button>
+
+        </div>
+
+        <div class="content" ng-show="instructions" ng-bind-html-unsafe="instructions">
+
+        </div>
+    </div>
+    
+    
+</div>

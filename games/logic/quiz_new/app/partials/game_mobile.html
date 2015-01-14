@@ -1,0 +1,146 @@
+<div class="main_wrapper" ng-init="gameInit()" id="root_scope">
+    <div class="banner" ng-include src="'games/logic/quiz_new/app/partials/includes/banner.html'"></div>
+    
+    <div class="main_data">
+
+        <div class="data_row">
+            <div class="q_more q_score">
+                <h3 ng-bind="score">88</h3>
+                SCORE
+            </div>
+            <div class="liflines_mobile">
+                <div class="lifeline_mobile" ng-class="{used:game_quiz_user.use_skip=='1'}" ng-click="setLife('use_skip')">
+                    SKIP <br>
+                    <img src="/games/logic/quiz_new/media/img/skip.png" />
+                </div>
+                <div class="lifeline_mobile" ng-class="{used:game_quiz_user.use_5050=='1'}" ng-click="setLife('use_5050')">
+                    50:50<br>
+                    <img src="/games/logic/quiz_new/media/img/50-50.png" />
+                </div>
+                <div class="lifeline_mobile" ng-class="{used:game_quiz_user.use_plus_60=='1'}" ng-click="setLife('use_plus_60')">
+                    +30<br>
+                    <img src="/games/logic/quiz_new/media/img/plus_30.png" />
+                </div>
+            </div>
+            <div class="q_more q_time">
+                <h3 ng-bind="timer"></h3>
+                SECONDS
+            </div>
+        </div>
+        <div class="pb">
+            <div class="progress_bar_cont">
+                <div class="progress_bar_fill" ng-style="fill_style">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="question_mobile">
+            <span ng-bind="questions[0].question"></span>
+        </div>
+        
+        <div class="answer option" ng-repeat="(key, value) in questions[0].answers" id="ans_{{key}}" ng-click="setAns(key,questions[0].q_id);" ng-show="value!=''" >
+            <span cont-text-bind="{{value}}" ng-bind="value" ng-click="" ></span>
+        </div>
+    </div>
+
+
+    
+    
+</div>
+
+
+
+<style>
+    
+    .option.correct{
+        border:3px solid green;
+    }
+
+    .option.wrong{
+        border:3px solid red;
+    }
+
+    .option.correct_wrong{
+        border:3px solid green;
+    }
+    
+    
+    
+    .answer {
+        width:100%;
+        margin:0px;
+        border:0px;
+/*        -webkit-box-shadow: 0 0 3px 0 #ADADAD;
+        box-shadow: 0 0 3px 0 #ADADAD;*/
+        border:1px solid #ffffff;
+    }
+    
+    .question_mobile {
+        text-align:center;
+        padding:20px 10px;
+/*        background-color:#f8f8f8;
+        -webkit-box-shadow: 0 0 3px 0 #ADADAD;
+        box-shadow: 0 0 3px 0 #ADADAD;*/
+        font-size: 18px;
+        font-weight:bold;
+    }
+    
+    .data_row {
+        height:80px;
+        border-bottom:0px solid red;
+        padding:8px 0px;
+    }
+    
+    .data_row .q_more{
+        width:18%;
+        height:80px;
+        color:#808285;
+        font-size:10px;
+    }
+    
+    .data_row .q_more.q_time {
+        float:right;
+        border-left:2px solid #c3c4c6;
+    }
+    
+    .data_row .q_more.q_score {
+        border-right:2px solid #c3c4c6;
+    }
+    
+    
+    
+    .q_more h3 {
+        font-size:30px;
+        margin-top:10px;
+        color:#808285;
+    }
+    
+    .data_row .liflines_mobile {
+        float:left;
+        width:64%;
+        height:80px;
+    }
+    
+    .lifeline_mobile {
+        width:33.3%;
+        height:80px;
+        float:left;
+        border:0px solid blue;
+        text-align:center;
+        font-size:10px;
+    }
+    
+    .lifeline_mobile.used {
+        opacity: 0.2;
+        filter: alpha(opacity=20);
+    }
+    
+    .progress_bar_cont {
+       height:14px;
+       width:95%; 
+    }
+    
+    .progress_bar_fill {
+        height:10px;
+    }
+</style>

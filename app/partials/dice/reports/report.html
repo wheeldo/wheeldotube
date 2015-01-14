@@ -1,0 +1,89 @@
+<div id="top_screen" ng-include src="'/app/partials/dice/includes/top_screen.html?t=1'"></div>
+<div id="content_wrap" class="report_wrap" ng-init="fixLayout();reportInit()">
+    
+    <div id="content">
+        <div class="wrapper">                                                                                     
+            <h2>Game report <button style="margin-left:30px;" class="sys-button orange icon_edit" type="button" ng-click="editGame(gid)">Edit game</button></h2>
+            <img class="game_thumbnail" ng-src="{{report_general_data.thumbnail}}" ng-show="report_general_data.thumbnail" />
+            <div class="report_raw" ng-repeat="r in report_general_data.raw">
+                <label><span ng-bind="r[0]"></span>:</label>
+                <span ng-bind="r[1]"></span>
+            </div>
+            <div id="game_report_data" ng-include="report_url"></div>
+        </div> 
+    </div>    
+</div>
+<div id="footer" ng-include src="'/app/partials/dice/includes/footer.html'"></div>
+
+<style>
+    .report_wrap {
+        font-family: 'Arial';
+    }
+    
+    .user_image {
+        height:30px;
+        max-width:30px;
+    }
+    
+    table.data {
+        border-collapse: collapse;
+        width:100%;
+        margin-bottom:20px;
+    }
+    
+    table.data:last-of-type {
+        margin-bottom:0px;
+    }
+    
+    table.data th {
+        background-color:#EAEAEA;
+        text-align:left;
+    }
+    
+    table.data td,
+    table.data th{
+        border:1px solid #EAEAEA;
+        padding:5px;
+    }
+    
+    .report_box {
+        width:48%;
+        margin:3% 1%;
+        float:left;
+        border:1px solid #EAEAEA;
+        
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    h2 {
+        margin:10px 0px;
+        text-align:left;
+    }
+    
+    .game_thumbnail {
+        width:144px;
+        height:96px;
+        margin-bottom:20px;
+    }
+    
+    .report_raw {
+        height:30px;
+        font-size:16px;
+    }
+    
+    .report_raw label {
+        font-weight:bold;
+        color: #25abe0;
+        font-family: 'Arial';
+        font-weight: normal;
+        text-transform: uppercase;
+        display:inline-block;
+        float:left;
+        font-size:18px;
+        margin-right:10px;
+    }
+    
+    
+</style>

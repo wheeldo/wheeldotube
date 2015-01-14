@@ -1,0 +1,25 @@
+<div id="top_screen" ng-include src="'/app/partials/dice/includes/top_screen.html?t=1'"></div>
+<!--<div id="side_menu" ng-include src="'/app/partials/dice/includes/side_menu.html'"></div>-->
+<div id="content_wrap" ng-init="fixLayout();initChaim();">
+	{{testObject}}
+
+	<div ng-bind="testObject[0].name"></div>
+
+
+	<input type="text" ng-model="search" />
+	<div ng-repeat="user in testObject | filter:search" repeat-done="testRepeatDone()">
+		<h3 ng-bind="user.name"></h3>
+		<a ng-href="mailto:{{user.email}}" ng-bind="user.email"></a>
+		<button ng-click="deleteUser($index)">Delete</button>
+	</div>
+
+
+	<form ng-submit="form_test_submit()">
+		<input type="text" ng-model="f.name" />
+		<input type="text" ng-model="f.age" />
+		<input type="text" ng-model="f.email" />
+		<button type="submit">Submit</button>
+	</form>
+
+</div>
+<div id="footer" ng-include src="'/app/partials/dice/includes/footer.html'"></div>

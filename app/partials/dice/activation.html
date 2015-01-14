@@ -1,0 +1,37 @@
+<div id="top_screen" ng-include src="'/app/partials/dice/includes/top_screen.html'"></div>
+<div id="content_wrap">
+    <div id="content">
+        <div class="wrapper">
+            <div class="register_wrap" id="root_scope" ng-init="activationInit()">
+                <div class="gray_form reg_form cancel_error">
+                    <div class="processing">
+                        <img src="/media/img/ajax-loader.gif" /> <br><br>
+                        Processing, please wait...
+                    </div>
+                    <div class="thanks">
+
+                        <h2>Welcome to Wheeldo</h2>
+
+                        Thank you for registering with Wheeldo. <br> <br>
+                        Now you can play, share and create new games. <br> <br> <br>
+
+                        <button class="sys-button green" ng-click="sign_in_popup()" ng-show="!user_login">Sign in</button>
+                        <button class="sys-button blue" ng-click="__goto('')">Go to home page</button>
+            <!--            Redirecting In <span ng-bind="sec_left">10</span> seconds...  -->
+                    </div>
+                </div>
+            </div>
+        </div>
+<div id="footer" ng-include src="'/app/partials/dice/includes/footer.html'"></div>
+
+<style>
+    .register_wrap {
+        width:300px;
+        text-align:center;
+        margin-top:40px;
+    }
+    
+    h2 {
+        margin-bottom:30px;
+    }
+</style>

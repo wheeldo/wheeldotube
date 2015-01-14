@@ -1,0 +1,27 @@
+<div id="top_screen" ng-include src="'/app/partials/youtube/includes/top_screen.html'"></div>
+<div id="side_menu" ng-include src="'/app/partials/youtube/includes/side_menu.html'"></div>
+<div id="content_wrap">
+    <div id="play_content" ng-init="initPlay()" class="white">
+        <div id="player" ng-include src="'/app/partials/youtube/includes/player.html'" ng-controller='GameController'></div>
+        <div id="game_full_data">
+            <h1 ng-bind="game.name"></h1>
+            <div class="player_section"  ng-bind-html-unsafe="game.full_desc"></div>
+            <div class="player_section" ng-init="load_comments()">
+                <h3>COMMENTS (<fb:comments-count href="{{absUrl}}"/></fb:comments-count>)</h3>
+                <div class="fb-comments" data-href="{{absUrl}}" data-numposts="10" data-colorscheme="light" data-width="680"></div>
+<!--                <h3>ALL COMMENTS (<span ng-bind="comments.length">12</span>)</h3>
+                <div class="comment" ng-repeat="comment in comments">
+                    <img ng-src="{{comment.img}}" />
+                    <div class="content">
+                        <label><a ng-bind="comment.name"></a> <span style="margin-left:14px;" ng-bind="comment.time"></span></label>
+                        <div ng-bind="comment.content"></div>
+                        <label>Reply</label> 
+                    </div>
+                </div>-->
+                
+                <br class="clr" />
+            </div>
+        </div> 
+    </div>
+    
+</div>

@@ -1,0 +1,11 @@
+Options +FollowSymLinks   
+RewriteEngine On   
+ 
+RewriteCond %{SCRIPT_FILENAME} !-d   
+RewriteCond %{SCRIPT_FILENAME} !-f  
+
+RewriteRule ^login$ loginWindow.php
+RewriteRule ^cl$ log.php
+RewriteRule ^ws/(.*)$ $1.php
+RewriteRule ^getFile/(.*)$ download.php?filename=$1
+RewriteRule ^solutions/(.*)$ $1.php

@@ -1,0 +1,26 @@
+<div id="top_screen" ng-include src="'/app/partials/dice/includes/top_screen.html?t=1'"></div>
+<div id="content_wrap" ng-init="fixLayout();dashboard_init();" style="display:none;" ng-show="ready">
+    <div id="content">
+        <div class="wrapper">                                                                                     
+            <div class="content_headlines">
+                <label>Dashboard</label>
+                <div class="plan_use">
+                    
+                    <div>
+                        <span ng-bind="user_plan.name"></span> Plan (<span ng-bind="user_plan.use"></span>%)
+                        <div class="pb_w">
+                            <div class="pb_fill" ng-style="plan_fill"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <span ng-bind="user_plan.plan_plays"></span> plays / Month (<span ng-bind="user_plan.left"></span> left, until <span ng-bind="user_plan.end_per"></span>) <a style="float:right;" href="">Upgrade Plan</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div google-chart chart="chart_plays" style="{{chart.cssStyle}}" class="chart_small" /> 
+        </div>
+    </div>    
+</div>
+<img ng-hide="ready"  class="loader_n" src="/media/img/ajax-loader.gif" />
+<div id="footer" ng-include src="'/app/partials/dice/includes/footer.html'"></div>

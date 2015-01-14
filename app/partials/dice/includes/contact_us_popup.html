@@ -1,0 +1,48 @@
+<div id="root_scope">
+<div class="wrapper">
+    <a class="close_x" href="javascript:void(0)" ng-click="close_popup()"><img src="/media/css/dice/img/close.png" /></a>
+    <h4>Feedback, partnerships and general inquiries:</h4>
+    We would be happy to hear any feedback or ideas.
+    Contact us at <a href="mailto:info@wheeldo.com">info@wheeldo.com</a>.
+    <h5>You can also fill the contact form below and we will be happy to get back to you:</h5>
+    <div class="processing">
+        <img src="/media/img/ajax-loader.gif" /> <br><br>
+        Processing, please wait...
+    </div>
+    <form class="form_to_hide" ng-submit="contackUsSubmit()" form-autofill-fix>
+        <div class="form_row">
+            <label>Name</label>
+            <input type="text" name="name" ng-model="contact.name" ng-disabled="user_login" placeholder="Your name" ng-required />
+        </div>
+        <div class="form_row">
+            <label>Email</label>
+            <input type="email" name="email" ng-model="contact.email" ng-disabled="user_login" placeholder="Your E-mail" ng-required />
+        </div>
+        <div class="form_row">
+            <label>Message</label>
+            <textarea ng-model="contact.message" id="email_content" placeholder="Message" ng-minlength="5"></textarea>
+        </div>
+        <div class="note" ng-repeat="note in notes">
+            *<span ng-bind="note"></span>
+        </div>
+        <div class="form_row actions">
+            <button class="sys-button blue submit" ng-disabled="!contact.name||!contact.email||!contact.message" ng-class="{dis:!contact.name||!contact.email||!contact.message}">SEND</button>
+            <br class="clr">
+        </div>
+    </form>
+    <div class="thanks">
+        Your inquiry has been sent. <br>
+        <button class="sys-button blue submit"  ng-click="close_popup()">Close</button>
+    </div>
+</div>
+</div>
+
+<style>
+    .form_row textarea {
+        height:140px;
+    }
+
+    [disabled] {
+        background-color:gray !important;
+    }
+</style>

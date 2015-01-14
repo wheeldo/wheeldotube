@@ -1,0 +1,45 @@
+
+        <div class="widget-box">
+                <div class="widget-header">
+                        <h4>Add to questionnaire</h4>
+
+                        <div class="widget-toolbar">
+
+                                <a href="javascript:void(0)" ng-click="close_popup()">
+                                        <i class="icon-remove"></i>
+                                </a>
+                        </div>
+                </div>
+
+                <div class="widget-body">
+                        <div class="widget-main">
+                            <form ng-submit="addToQuestionnaire()">
+                                <h4>Add <span ng-bind="c_q"></span> question<span ng-show="c_q>1">s</span></h4>  
+                                <div>
+                                    <label for="form-field-select-3">Questionnaire name:</label>
+
+                                    <br />
+                                    <select class="width-80 chosen-select" id="questionnaire_id" data-placeholder="Choose a Questionnaire..." ng-init="loadQuestionnaires()">
+                                           <option ng-repeat="questionnaire in questionnaires" repeat-done="initChoosenSelect()" value="{{questionnaire.id}}" ng-bind="questionnaire.name"></option>
+                                    </select>
+                            </div>{{questionnaire_id}}
+
+
+                            
+                                <div class="clearfix form-actions">
+                                        <div class="col-md-offset-3 col-md-9">
+                                                <button type="submit" class="btn btn-info">
+                                                        <i class="icon-ok bigger-110"></i>
+                                                        Add question<span ng-show="c_q>1">s</span>
+                                                </button>
+
+                                                &nbsp; &nbsp; &nbsp;
+                                                <button type="button" class="btn" ng-click="close_popup()">
+                                                        Cancel
+                                                </button>
+                                        </div>
+                                </div>
+                            </form>
+                        </div>
+                </div>
+        </div>

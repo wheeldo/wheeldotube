@@ -1,0 +1,94 @@
+<div class="banner" ng-include src="'games/logic/quiz/app/partials/includes/banner.html'"></div>
+<div class="padding-big game_end" ng-init="gameEndInit()" id="root_scope">
+    <div class="game_end_content">
+        <h3><span tarnslate>You answered</span> <span ng-bind="end_data.right"></span> <span tarnslate>out of</span> <span ng-bind="end_data.total"></span> <span tarnslate>questions correctly and won</span> <span ng-bind="end_data.score"></span> <span tarnslate>points</span>!</h3>
+        <accordion close-others="false">
+            <accordion-group is-open="true">
+                <accordion-heading>
+                    <span tarnslate>Today’s Leaders</span>:
+                </accordion-heading>
+               <div class="leaders">
+                    <div class="leader" ng-repeat="leader in end_data.leaders">
+                        <span ng-bind="leader.name"></span>
+                        <span class="leader_score" ng-bind="leader.score"></span>
+                    </div>
+                    <br class="clr" />
+                </div>
+            </accordion-group>
+            <accordion-group is-open="true">
+                <accordion-heading>
+                    <span tarnslate>Want to win more points</span>?
+                </accordion-heading>
+                <button class="btn btn-info" ng-click="sendToFriend()"><span tarnslate>Send to a friend and win 100 points</span>!</button> 
+                <div style="margin-top:10px;" tarnslate ng-show="sendToFriendSent">Your invitation was sent, once your friend will join the game you will win 100 points</div>
+            </accordion-group>
+            <div ng-show="show_voucher">
+                <accordion-group is-open="false" >
+                    <accordion-heading>
+                        <span tarnslate>Congratulations, you won a voucher</span> - <span style="font-weight:bold;" ng-bind="voucher_name"></span>                       
+                    </accordion-heading>
+                    <button class="btn btn-success" id="sendVoucherButton" ng-click="sendVaucher()"><span tarnslate>Send me the voucher</span></button>
+                    <div class="hide voucher_wait"><span tarnslate>Please wait</span>...</div>
+                    <div class="hide voucher_sent"><span tarnslate>Voucher sent successfully</span>!</div>
+                    <div class="hide voucher_faild"><span tarnslate>Voucher sent failed</span>.</div>
+                    
+                </accordion-group>
+            </div>
+           <accordion-group is-open="true">
+                <accordion-heading>
+                    <span tarnslate>Recommended Game</span>:
+                </accordion-heading>
+               <div ng-show="recommended_game" class="recommended_game_box" ng-init="getRecommendedGame()" ng-click="loadAnotherGame(recommended_game.unique_id)">
+                   <div class="game_name" ng-bind="recommended_game.name"></div>
+                   <img class="thumbnail" ng-src="{{recommended_game.thumbnail}}" >
+               </div>                            
+            </accordion-group>            
+      </accordion>
+        
+    </div>
+    <div class="info">
+        <div class="wall-r" ng-include src="'games/logic/quiz/app/partials/includes/wall-r.html'"></div>
+    </div>
+</div>
+<div class="loading">
+    <div class="fill" style="width:{{loader_width}};">
+        
+    </div>
+</div>
+<style>
+    .recommended_game_box {
+        width:144px;
+        border:1px solid #46ACCA;
+        cursor:pointer;
+    }
+    
+    .recommended_game_box .thumbnail {
+        height:96px;
+        width:144px;
+        padding:0px;
+    }
+    
+    .recommended_game_box .game_name {
+        position: absolute;
+        top:2px;
+        font-size:12px;
+        background-color:black;
+        color:#ffffff;
+        width:100%;
+        padding:3px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    h3 {
+        font-size:20px;
+        line-height:22px;
+        margin-bottom:10px;
+    }
+    
+    .main_data {
+        font-size:18px;
+        line-height:22px;
+    }
+</style>

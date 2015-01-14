@@ -1,0 +1,54 @@
+<link rel="stylesheet" type="text/css" href="/media/css/dice/style_mobile.css">
+<div id="mobile_top_screen" ng-include src="'/app/partials/dice/mobile/includes/top_screen.html'"></div>
+<div id="root_scope">
+    
+<div id="content_wrap" class="channel" ng-init="channelInit();fixLayout()">
+    <div id="content">
+        <div class="wrapper">
+            <div class="banner"></div>
+            <h4 ng-bind="channel_data.name"></h4><button  class="subscribe" type="button" ng-click="subscribeChannle(channel_data.unique_id)" ng-bind-html="subscribe_text"></button>
+            <p ng-bind="channel_data.description"></p>
+            
+            <div class="channel_player">
+                <div class="player_top">
+                    <h1>
+                        <span class="game_name" ng-bind="game.name"></span>
+                    </h1>
+                    <br class="clr" />
+                </div> 
+                <div id="player" ng-include src="'/app/partials/dice/includes/player.html'" ng-controller='GameController'></div>
+            </div>
+            <hr>
+            <h4>More games in <span ng-bind="channel_data.name"></span> channel:</h4>
+
+            <div class="games_row" ng-include src="'/app/partials/dice/includes/suggested_channel_games.html'"></div>
+        </div>
+    </div>
+    
+</div>
+</div>
+<div id="mobile_footer" ng-include src="'/app/partials/dice/mobile/includes/footer.html'"></div>
+
+<style>
+    
+    
+    
+    .channel_small_icon {
+         background-image:url({{channel_data.small_icon}});
+    }   
+
+    .banner {
+         background-image:url({{channel_data.cover}});
+     }
+     
+     .channel_player {
+         margin-top:20px;
+     }
+     
+     .subscribe {
+         position:absolute;
+        margin-top:-30px;
+         right:0px;
+         z-index:20;
+     }
+</style>

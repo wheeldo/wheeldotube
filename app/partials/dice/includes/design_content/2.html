@@ -1,0 +1,94 @@
+<div class="left">
+    <div class="color_set">
+        &nbsp; Text color
+        <ui-colorpicker ng-model="new_game.game_design.color_1"></ui-colorpicker> &nbsp;&nbsp;
+         Hexadecimal value: &nbsp; <input type="text" ng-model='new_game.game_design.color_1' class="edit_table_input medium" maxlength="7" />
+        &nbsp;&nbsp;<img style="cursor:pointer" src="/media/css/dice/img/reset_icon.png" ng-click="resetColor('color_1','#FFFFFF')" />
+    </div>
+    <div class="color_set">
+        &nbsp; Ans box 1
+        <ui-colorpicker ng-model="new_game.game_design.color_2"></ui-colorpicker> &nbsp;&nbsp;
+        Hexadecimal value: &nbsp; <input type="text" ng-model='new_game.game_design.color_2' class="edit_table_input medium" maxlength="7" />
+        &nbsp;&nbsp;<img style="cursor:pointer" src="/media/css/dice/img/reset_icon.png" ng-click="resetColor('color_2','#6fcbea')" />
+    </div>
+    <div class="color_set">
+        &nbsp; Ans box 2
+        <ui-colorpicker ng-model="new_game.game_design.color_3"></ui-colorpicker> &nbsp;&nbsp;
+         Hexadecimal value: &nbsp; <input type="text" ng-model='new_game.game_design.color_3' class="edit_table_input medium" maxlength="7" />
+        &nbsp;&nbsp;<img style="cursor:pointer" src="/media/css/dice/img/reset_icon.png" ng-click="resetColor('color_3','#32c3ff')" />
+    </div>
+    <div class="color_set">
+        &nbsp; P. bar
+        <ui-colorpicker ng-model="new_game.game_design.color_4"></ui-colorpicker> &nbsp;&nbsp;
+        Hexadecimal value: &nbsp; <input type="text" ng-model='new_game.game_design.color_4' class="edit_table_input medium" maxlength="7" />
+        &nbsp;&nbsp;<img style="cursor:pointer" src="/media/css/dice/img/reset_icon.png" ng-click="resetColor('color_4','#a0c3da')" />
+    </div>
+
+    
+        <div class="form_row uploaderdz">
+            <button class="img_d_d"  type="button" ng-click="upload_file('new_game.game_design.banner','image',700,90)">
+                <div class="thumbnail_loader_before">
+                    Select image to upload banner
+                    <br>
+                    <span style="font-size:11px;">(jpg, png or gif only. 700 * 90 will be great)</span>
+                    <br>
+                    <img class="cloud_upload" src="/media/css/dice/img/cloud.png">
+                </div>
+            </button>
+        </div>
+
+    
+    
+    
+<!--    <form action="{{uploadUrls.background.url}}" method="post" id="background_upload_form" enctype="multipart/form-data" target="img_upload_frame" imgObj="background" res_mark="{{uploadUrls.background.res_mark}}">
+        <div class="form_row uploaderdz">
+            <input type="file" name="img_upload" id="img_upload3" ng-file-select="onIMGSelect($files,'background_upload_form')" />
+            <input type="hidden" name="res_mark" value="{{uploadUrls.background.res_mark}}" />
+            <input type="hidden" name="img_effect" value="c_fill,h_980,w_980" />
+            <button type="button" class="img_d_d" ng-click="selectFile('img_upload3')">
+                <div class="background_loader_before">
+                    Select image to upload Background<br> <span style="font-size:11px;">(jpg, png or gif only. 980 * 980 will be great)</span> <br>
+                    <img class="cloud_upload" src="/media/css/dice/img/cloud.png" />
+                </div>
+                <div class="loader background_loader"><img src="/media/img/loading.gif" /></div>
+            </button>
+        </div>
+    </form>-->
+</div>
+<div class="right">
+    <div class="preview_window" ng-init="ex={q:'Example question text?',answers:['Answer 1','Answer 2','Answer 3','Answer 4']}">
+        <h3>Preview</h3>
+        <div class="design_prev_wrapper">
+            <div class="banner">
+                <div class="remove_image" ng-show="new_game.game_design.banner!='' && new_game.game_design.banner!='http://res.cloudinary.com/wheeldo/image/upload/v1402560583/trivia_header_suh7fb.jpg'" ng-click="clear_upload_header_pic('img_upload4', 'banner_new_upload_form')"  >
+                    <img src="/media/css/dice/img/trash_pink.png" />
+                </div>
+                <img ng-show="new_game.game_design.banner" class="banner_bg" ng-src="{{new_game.game_design.banner}}" />
+            </div>
+            <div class="question">
+                <img style="width:100%;" src="/media/img/new_quiz_top_q.png" />
+            </div>
+            <div class="pb">
+                <div class="progress_bar_cont">
+                    <div class="progress_bar_fill" ng-style="fill_style">
+
+                    </div>
+                </div>
+            </div>
+            <div class="main_data">
+                
+
+                <div class="option big_blue_button" ng-repeat="val in ex.answers" ng-bind="val">
+                </div>
+
+                <div class="lifelines">
+                    <img style="width:100%;" src="/media/img/lifelines.jpg" />
+                    
+                </div>
+            </div>
+        </div>
+        <div ng-include src="'/app/partials/dice/includes/quiz_new_css.html?t={{t}}'"></div>
+    </div>
+</div>
+
+<br class="clr">

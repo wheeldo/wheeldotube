@@ -1,0 +1,510 @@
+<div id="root_scope">
+<div id="top_screen" ng-include src="'/app/partials/dice/includes/top_screen.html'"></div>
+<div id="content_wrap">
+    <div class="slogen" ng-include src="'/app/partials/dice/includes/slogen.html'"></div>
+    <img ng-hide="ready"  class="loader_n" src="/media/img/ajax-loader.gif" />
+    <div class="wrapper" id="create_game_content" ng-init="initCreateGame()" style="display:none;" ng-show="ready">
+        <h4>Create a game</h4>
+        <div class="backup_restore">Backup game exits, <a href="javascript:void(0)" ng-click="restore_backup()">click to restore</a></div>
+
+        <div class="back_next">
+            <div class="orde" ng-show="active_tab==1">
+                <span class="astr">*</span>
+                SELECT THE TYPE OF THE GAME
+            </div>
+
+            <a class="back" ng-click="back_tab()" ng-show="active_tab>1" style="display:none;">
+                BACK
+            </a>
+
+            <a class="next" ng-click="next_tab()" ng-show="active_tab<5">
+                NEXT
+            </a>
+
+            <br class="clr">
+        </div>
+        <div class="create_game_top" >
+            <div class="progress_tab active" tab_index="1" ng-click="createGameStagesClick(1)">
+                <label>
+                    1
+                    <img class="arr" src="/media/css/dice/img/arr_right.png" />
+                </label>
+                Game Type
+            </div>
+            <div class="progress_tab" tab_index="2" ng-click="createGameStagesClick(2)">
+                <label>
+                    2
+                    <img class="arr" src="/media/css/dice/img/arr_right.png" />
+                </label>
+                Details and Settings
+            </div>
+            <div class="progress_tab" tab_index="3" ng-click="createGameStagesClick(3)">
+                <label>
+                    3
+                    <img class="arr" src="/media/css/dice/img/arr_right.png" />
+                </label>
+                Content
+            </div>
+            <div class="progress_tab" tab_index="4" ng-click="createGameStagesClick(4)">
+                <label>
+                    4
+                    <img class="arr" src="/media/css/dice/img/arr_right.png" />
+                </label>
+                Design
+            </div>
+            <div class="progress_tab" tab_index="5" ng-click="createGameStagesClick(5)">
+                <label>
+                    5
+                    <img class="arr" src="/media/css/dice/img/arr_right.png" />
+                </label>
+                Publish
+            </div>
+        </div>
+
+
+        <div class="progress_tab_content active" tab_index="1">
+            <div class="pick_a_game_content">
+                <div class="game_pick no_{{$index}}" ng-repeat="game in game_types" ng-bind="game.name" ng-class="{comming_soon:game.status==2,premium:game.status==1,selected:game.selected}" ng-click="select_game($index)" repeat-done="selectGameAuto()">
+
+                </div>
+                <br class="clr">
+            </div>
+        </div>
+        <div class="progress_tab_content" tab_index="2">
+            <div class="description_content">
+                <div class="left">
+                    <img ng-show="new_game.thumbnail" style="width:240px;height:160px;" ng-src="{{new_game.thumbnail}}" />
+                    <button class="img_d_d"  type="button" ng-click="upload_file('new_game.thumbnail','image',240,160)">
+                        <div class="thumbnail_loader_before">
+                            Upload Game Image
+                            <br>
+                            <span style="font-size:11px;">(jpg, png or gif only. 240 * 160 will be great)</span>
+                            <br>
+                            <img class="cloud_upload" src="/media/css/dice/img/cloud.png">
+                        </div>
+                    </button>
+                </div>
+                <div class="right">
+                    <form ng-submit="createGame0Submit()" >
+                        <input type="hidden" name="new_game.thumbnail" ng-model="new_game.thumbnail" ng-value="uploadUrls.thumbnail.img"/>
+                        <div class="form_row">
+                            <label>Game name <span style="font-weight: normal; font-size: 0.8em;">(max 60 characters)</span>: <div class="help" popover-trigger="mouseenter" popover="Entice your audience to play the game with a creative title.  It will appear as a headline when you share on social media channels."><img style="height:100%;" src="/media/css/dice/img/more_info_icon.png"/></div></label>
+                            <input type="text" name="new_game.name" ng-model="new_game.name" placeholder="ENTER TEXT HERE..." required ng-minlength="1" maxlength="60" ng-maxlength="60" />
+                            
+                        </div>
+                        <div class="form_row">
+                            <label>Game description: <div class="help" popover-trigger="mouseenter" popover="Give your audience a brief description of your game.  It will appear as a subbheading under the title when shared on social media channels."><img style="height:100%;" src="/media/css/dice/img/more_info_icon.png"/></div></label>
+                            <textarea ng-model="new_game.full_desc" placeholder="ENTER TEXT HERE..."></textarea>
+                        </div>
+
+                        <div class="form_row" ng-init="advanced=false">
+                            <label>
+                                <a class="advanced" ng-class="{active:advanced}" ng-click="advanced=!advanced">Advanced</a>
+                            </label>
+                        </div>
+                        <div ng-show="advanced">
+<!--                            <div class="form_row">
+                                <label>Game tags:</label>
+                                <input type="text" name="new_game.tags" ng-model="new_game.tags" placeholder="ENTER TAGS HERE (SEPARATE BY ;). e.g.: Sport;News;Nature" />
+                            </div>-->
+                            <div class="form_row">
+                                <label>Game display language:</label>
+                                <select ng-model="new_game.lang">
+                                    <option value="en">English</option>
+                                    <option value="he">Hebrew</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form_row">
+                                <label>Channel:</label>
+                                <select ng-model="new_game.channel" ng-options="channel.name for channel in user.my_channels"></select>
+                            </div>
+                            <div class="form_row hide">
+                                <label>Game type:</label>
+                                <select ng-model="new_game.game_type" ng-options="type.name for type in game_types"></select>
+                            </div>
+                            <fieldset>
+                                <legend>Lead generation form:</legend>
+                                <div class="form_row">
+                                    <label>Sign Up Appearance:</label>
+                                    <select ng-model="new_game.open_status">
+                                        <option value="0">Never - No sign up required</option>
+                                        <option value="1">Middle - Sign up required after 3 questions</option>
+                                        <option value="2">Start - Sign up required to play</option>
+                                    </select>
+                                </div>
+                                <div class="form_row" ng-show="new_game.open_status==0">
+                                    <label>Sign up to see results:</label>
+                                    <select ng-model="new_game.results_signup">
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="form_row padd_left" ng-show="new_game.open_status!=0||new_game.results_signup==1">
+                                    <label>Sign up headline:</label>
+                                    <input type="text" ng-model="new_game.signup_headline" />
+                                </div>
+                             </fieldset>
+                             <fieldset>
+                                <legend>End game screen:</legend>
+                                <div class="form_row checkbox">
+                                    <label>
+                                      <input type="checkbox" ng-model="new_game.share_button" ng-true-value="1" ng-false-value="0"> Share button
+                                    </label>
+                                </div>
+                                <div class="form_row checkbox">
+                                    <label>
+                                      <input type="checkbox" ng-model="new_game.CTA_button" ng-true-value="1" ng-false-value="0"> Call to action button
+                                    </label>
+                                </div>
+                                <div class="form_row padd_left" ng-show="new_game.CTA_button">
+                                    <label>Call to action:</label>
+                                    <textarea ng-model="new_game.call_action_text" placeholder="ENTER TEXT HERE..."></textarea>
+                                    <input type="text" ng-fix-http="fixHttp()" id="call_action_link"  ng-model="new_game.call_action_link" placeholder="Link" />
+                                </div>
+                                <div class="form_row checkbox">
+                                    <label>
+                                      <input type="checkbox" ng-model="new_game.voucher" ng-true-value="1" ng-false-value="0"> Offer a Coupon/Voucher/Promo
+                                    </label>
+                                </div>
+                                <div class="form_row padd_left" ng-show="new_game.voucher">
+                                    <label>Coupon name:</label>
+                                    <input type="text" name="new_game.voucher_name" ng-model="new_game.voucher_name" maxlength="100" />
+                                </div>
+                                <div class="form_row padd_left" ng-show="new_game.voucher">
+                                    <label>Coupon Email:</label>
+                                    <button class="sys-button orange" type="button" ng-click="edit_voucher_email()">Edit email content</button>
+                                    <div class="email_wrapper">
+                                        <a href="javascript:void(0)"><img ng-src="{{new_game.game_design.banner}}" style="max-width:300px;" /></a>
+                                        <div style="padding:10px;">
+                                            <p>Coupon no: XXXXXXX_XXXX</p><br>
+                                            Hello John Doe, <br><br>
+                                            <p ng-bind-html="new_game.voucher_email.content"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                             </fieldset>
+<!--                            <div class="form_row">
+                                <label>Private game:</label>
+                                <select ng-model="new_game.private">
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>-->
+                            
+<!--                            <div class="form_row checkbox">
+                                <label>
+                                  <input type="checkbox" ng-model="new_game.prize" ng-true-value="1" ng-false-value="0"> Prize
+                                </label>
+                            </div>-->
+                            <div class="form_row" ng-show="new_game.prize">
+                                <label>Prize time limit (Hours):</label>
+                                <input style="width:40px;" type="text" name="new_game.prize_time_limit" ng-model="new_game.prize_time_limit" placeholder="e.g.:48" maxlength="3" />
+                            </div>
+                            <div class="form_row" ng-show="new_game.prize">
+                                <label>Prize text:</label>
+                                <input  type="text" name="new_game.prize_text" ng-model="new_game.prize_text" maxlength="100" />
+                            </div>
+                            
+                        </div>
+                    </form>
+                </div>
+                <br class="clr">
+            </div>
+        </div>
+        <div class="progress_tab_content" tab_index="3">
+            <div class="content_content" ng-show="new_game.game_type.id==1||new_game.game_type.id==2||new_game.game_type.id==4">
+                <div class="left">
+                    <form id="file_upload_form" target="upload_target" method="post" enctype="multipart/form-data" action="{{quiz_uploader.action}}" res_mark="{{quiz_uploader.hash}}">
+                        <input type="file" class="file" name="file" id="content_file" ng-file-select="onQuizFileSelect($files);" accept=".xls, .xlsx" />
+                        <input type="hidden" name="res_mark" value="{{quiz_uploader.hash}}" />
+                        <input type="hidden" name="url_notify" value="{{quiz_uploader.url_notify}}" />
+                        <img class="loader" src="/media/img/ajax-loader.gif" />
+                        <button type="button" class="img_d_d" ng-click="selectContentFile()">
+                            <div class="thumbnail_loader_before">
+                                Upload a Quiz from a File <br> <span style="font-size:11px;">(Excel file - xls, xlsx)</span> <br>
+                                <img class="cloud_upload" src="/media/css/dice/img/cloud.png" />
+                            </div>
+                            <div class="loader thumbnail_loader"><img src="/media/img/loading.gif" /></div>
+                        </button>
+                    </form>
+                    <a style="display:block;padding:5px 0px;color:#e02a7b;text-decoration: underline;text-align:center;" href="/download?filename=quiz_example.xlsx" target="_blank">Download Quiz Template File</a>
+                    <iframe id="upload_target" name="upload_target" src="" style="width:0;height:0;border:0px solid #fff;"></iframe>
+                    
+                    
+                    <button style="width:100%;height:64px;-webkit-box-shadow: 2px 2px 3px 0 #858585;box-shadow: 2px 2px 3px 0 #858585;" type="button" class="sys-button orange" ng-click="loadQuestionnaires()">Choose A Ready Made Game</button>
+                </div>
+                <div class="right">
+                    <div ng-show="new_game.game_type.id==2||new_game.game_type.id==4">
+                        <h5>Title Page Text:</h5>
+                        <div class="form_row">
+                            <input type="text"  ng-model="new_game.quiz_game_data.instruction_text" placeholder="Enter Text Here..." tabindex="0" />
+                            <div class="ans_options">
+                                <a class="add_image" style="display:block;margin-right:2px;" href="javascript:void(0)" ng-click="upload_file('new_game.quiz_game_data.instruction_img','image',500,300)"></a>
+                            </div>
+                        </div>
+                        <div style="text-align:center;width:400px;border:1px solid #eeeeee;padding:20px;">
+                            <img style="margin-bottom:10px;max-width:300px;" ng-show="new_game.quiz_game_data.instruction_img" ng-src="{{new_game.quiz_game_data.instruction_img}}" /> <br>
+                            <div style="font-size:16px;" ng-bind="new_game.quiz_game_data.instruction_text"></div>
+                            <button style="display:block;margin-top:20px;border:0;width:100%;height:30px; background-color: #98b724;color:#ffffff;font-weight:bold;font-size:20px;">Go!</button>
+                        </div>
+                        <hr>
+                    </div>
+                    <a class="addNewQuestionLink" href="javascript:void(0)" ng-click="addNewQuestion()">+ Add a Question</a>
+                    <br class="clr" />
+                    <div class="question" ng-repeat="q in new_game.quiz_data" ng-show="$index==active_Q">
+
+                        <div class="form_row">
+                            <input type="text" name="new_game.name" ng-model="q.question" placeholder="Write The Question" tabindex="1" />
+                            <div class="ans_options">
+                                <a ng-show="new_game.game_type.id==4" class="add_image" style="display:block;margin-right:2px;" href="javascript:void(0)" ng-click="upload_file('new_game.quiz_data.'+$index+'.media','image',700,400)"></a>
+                                <a class="remove_ans" style="display:block;margin-right:2px;" href="javascript:void(0)" ng-click="deleteQuizRow($index)"></a>
+                            </div>
+                            <div ng-show="new_game.game_type.id==4">
+                                <img style="max-height:80px;" ng-src="{{q.media}}" ng-show="q.media" />
+                            </div>
+                            <div ng-show="new_game.game_type.id==4">
+                                <a class="addNewQuestionLink" href="javascript:void(0)" ng-click="addEditor('new_game.quiz_data.'+$index+'.more_text')">Add More Info. for this Answer</a>
+                                <br class="clr" />
+                            </div>
+                            <div class="yui3-cssreset" style="padding:20px;border:1px solid #eeeeee;" ng-show="new_game.quiz_data[$index].more_text" ng-bind-html="new_game.quiz_data[$index].more_text">
+                                
+                            </div>
+                        </div>
+                        <div class="form_row ans_row" ng-repeat="answer in q.answers">
+                            <input class="answer_input" type="text" name="answer.text" ng-model="answer.text" placeholder="ANSWER" maxlength="250" ng-maxlength="250" tabindex="{{$index+2}}" />
+                            <div class="ans_options">
+                                <img src="/media/css/dice/img/checked_answer.png" ng-show="($index+1)==q.answer" />
+                                <img src="/media/css/dice/img/unchecked_answer.png" style="cursor:pointer;" ng-hide="($index+1)==q.answer" ng-click="q.answer=$index+1" />
+                                <a ng-show="new_game.game_type.id==4" class="add_image" style="display:block;float:right;margin-left:4px;" href="javascript:void(0)" ng-click="upload_file('new_game.quiz_data.'+$parent.$index+'.answers.'+$index+'.media','image',250,142)"></a>
+                                <a class="remove_ans" href="javascript:void(0)" ng-click="removeAns($index,$parent.$index)"></a>
+                            </div>
+                            <img style="max-width:100px;" ng-src="{{answer.media}}" ng-show="answer.media" >
+                        </div>
+                        
+                        <a style="display:block;margin-top:3px;" href="javascript:void(0)" ng-click="addAnswer($index)">+ Add an Answer</a>
+                        <div class="note">
+                            *Answer limit: 250 characters.
+                        </div>
+                    </div>
+                    <div class="paging">
+                        <a class="scr_left" href="javascript:void(0)" ng-click="page_quiz_left()" ng-show="show_l_arr"><img src="/media/css/dice/img/arr_small_left.png" /></a>
+                        <a class="scr_right" href="javascript:void(0)" ng-click="page_quiz_right()" ng-show="show_r_arr"><img src="/media/css/dice/img/arr_small_right.png" /></a>
+                        <div class="pagin_num_box">
+                            <div class="paging_in" style="width:{{50*new_game.quiz_data.length}}px">
+                                <a class="q_no" href="javascript:void(0)" ng-repeat="q in new_game.quiz_data" ng-class="{active:$index==active_Q}" ng-click="setActiveQ($index)">{{$index+1}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br class="clr">
+            </div>
+            
+            <div class="content_content" ng-show="new_game.game_type.id==3">
+                <div class="left">
+                    <form id="file_upload_form_test_yourself" target="upload_target" method="post" enctype="multipart/form-data" action="{{testyourself_uploader.action}}" res_mark="{{testyourself_uploader.hash}}">
+                        <input type="file" class="file" name="file" id="content_file_test_yourself" ng-file-select="onTestYourselfFileSelect($files);" accept=".xls, .xlsx" />
+                        <input type="hidden" name="res_mark" value="{{testyourself_uploader.hash}}" />
+                        <input type="hidden" name="url_notify" value="{{testyourself_uploader.url_notify}}" />        
+                        <button type="button" class="img_d_d" ng-click="selectTestYourselfContentFile()">
+                            <div class="thumbnail_loader_before">
+                                Upload Test yourself file <br> <span style="font-size:11px;">(Excel file - xls, xlsx)</span> <br>
+                                <img class="cloud_upload" src="/media/css/dice/img/cloud.png" />
+                            </div>
+                            <div class="loader thumbnail_loader"><img src="/media/img/loading.gif" /></div>
+                        </button>
+                    </form>
+                    <a style="display:block;padding:5px 0px;color:#e02a7b;text-decoration: underline;text-align:center;" href="/download?filename=test_yourself_example.xlsx" target="_blank">Download sample file</a>
+                    
+<!--                    <button style="width:100%;height:64px;-webkit-box-shadow: 2px 2px 3px 0 #858585;box-shadow: 2px 2px 3px 0 #858585;" type="button" class="sys-button orange" ng-click="loadQuestionnaires()">Choose A Ready Made Game</button>-->
+                </div>
+                <div class="right">
+                    <input type="text" name="test_yourself_data.main_question" ng-model="new_game.test_yourself_data.main_question.text" placeholder="Main question" tabindex="0" />
+                    <div class="ans_options">
+                        <a class="add_image" style="display:block;margin-right:2px;" href="javascript:void(0)" ng-click="upload_file('new_game.test_yourself_data.main_question.media','image',300,300)"></a>
+                    </div>
+                    <img style="max-height:100px;" ng-src="{{new_game.test_yourself_data.main_question.media}}" ng-show="new_game.test_yourself_data.main_question.media" />
+                    <hr>
+                    <a class="addNewQuestionLink" href="javascript:void(0)" ng-click="addNewQuestionTestYourself()">+ Add a Question</a>
+                    <br class="clr" />
+                    <div class="question" ng-repeat="q in new_game.test_yourself_data.questions" ng-show="$index==active_Q">
+
+                        <div class="form_row">
+                            
+                            <input type="text" name="new_game.name" ng-model="q.text" placeholder="Write The Question" tabindex="1" />
+                            <div class="ans_options">
+                                <a class="remove_ans" style="display:block;margin-right:2px;" href="javascript:void(0)" ng-click="deleteQuizRowTestYourself($index)"></a>
+                                <a class="add_image" style="display:block;margin-right:2px;" href="javascript:void(0)" ng-click="upload_file('new_game.test_yourself_data.questions.'+$index+'.media','image',300,300)"></a>
+                            </div>
+                            <img style="max-height:80px;" ng-src="{{q.media}}" ng-show="q.media" />
+                        </div>
+                        <div class="form_row ans_row" ng-repeat="answer in q.answers">
+                            <input class="answer_input" type="text" name="answer.text" ng-model="answer.text" placeholder="ANSWER" maxlength="160" ng-maxlength="160" tabindex="{{$index+2}}" />
+                            <div class="ans_options" style="width:250px;">
+<!--                                <a class="add_image" style="display:block;margin-right:2px;" href="javascript:void(0)" ng-click="upload_image('new_game__test_yourself_data__questions__'+$parent.$index+'__answers__'+$index+'__media','jpg, png or gif only. 300  X 300 recommended 1Mb Maximum','c_fill,h_300,w_300')"></a>-->
+                                <select ng-model="answer.strength">
+                                    <option value="0">No connection</option>
+                                    <option value="25">Weak connection</option>
+                                    <option value="50">Medium connection</option>
+                                    <option value="75">Good connection</option>
+                                    <option value="100">Very strong connection</option>
+                                </select>
+                                <a class="remove_ans" style="display:block;" href="javascript:void(0)" ng-click="removeAnsTestYourself($index,$parent.$index)"></a>
+                            </div>
+                            <img style="max-height:60px;" ng-src="{{answer.media}}" ng-show="answer.media" />
+                        </div>
+                        
+                        <a style="display:block;margin-top:3px;" href="javascript:void(0)" ng-click="addAnswerTestYourself($index)">+ Add an Answer</a>
+                        <div class="note">
+                            *Answer limit: 160 characters.
+                        </div>
+                    </div>
+                    <div class="paging">
+                        <a class="scr_left" href="javascript:void(0)" ng-click="page_quiz_left()" ng-show="show_l_arr"><img src="/media/css/dice/img/arr_small_left.png" /></a>
+                        <a class="scr_right" href="javascript:void(0)" ng-click="page_quiz_right()" ng-show="show_r_arr"><img src="/media/css/dice/img/arr_small_right.png" /></a>
+                        <div class="pagin_num_box">
+                            <div class="paging_in" style="width:{{50*new_game.test_yourself_data.questions.length}}px">
+                                <a class="q_no" href="javascript:void(0)" ng-repeat="q in new_game.test_yourself_data.questions" ng-class="{active:$index==active_Q}" ng-click="setActiveQ($index)">{{$index+1}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    
+                    <div class="table_wrapper">
+                        <table>
+                            <tr>
+                                <th style="width:120px;">Range</th>
+                                <th>Result text</th>
+                                <th style="width:60px;">Image</th>
+                                <th style="width:50px;">
+                            </tr>
+                            <tr ng-repeat="res in new_game.test_yourself_data.results">
+                                <td ng-bind="getResultRange($index)"></td>
+                                <td>
+                                    <input type="text" ng-model="res.headline" placeholder="Result headline" />
+                                    <textarea ng-model="res.text" placeholder="Main result text"></textarea>
+                                    <input type="text" ng-model="res.cta" placeholder="Call to action" />
+                                    <input type="text" ng-model="res.link" ng-fix-http="fixHttp()" id="res_link{{$index}}" placeholder="Call to action link" />
+                                </td>
+                                <td><img style="max-height:60px;" ng-src="{{res.media}}" ng-show="res.media" /></td>
+                                <td>                                    
+                                    <a class="add_image" style="display:block;margin-right:2px;" href="javascript:void(0)" ng-click="upload_file('new_game.test_yourself_data.results.'+$index+'.media','image',300,300)"></a>
+                                    <a class="remove_ans" style="display:block;margin-right:2px;" ng-click="removeResult($index)"></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <a style="display:block;margin-top:3px;" href="javascript:void(0)" ng-click="addResult()">+ Add result</a>
+                    </div>
+                </div>
+                <br class="clr">
+            </div>
+        </div>
+        <div class="progress_tab_content" tab_index="4">
+
+            
+            <div class="design_content" ng-include src="design_url"></div>
+<!--            <div ng-show="new_game.game_type.id==1" class="design_content quiz_template" ng-include src="'/app/partials/dice/includes/design_content/1.html?t={{t}}'"></div>
+            <div ng-show="new_game.game_type.id==2" class="design_content quiz_new_template" ng-include src="'/app/partials/dice/includes/design_content/2.html?t={{t}}'"></div>
+            <div ng-show="new_game.game_type.id==3" class="design_content quiz_new_template" ng-include src="'/app/partials/dice/includes/design_content/3.html?t={{t}}'"></div>-->
+            
+            
+        </div>
+        <div class="progress_tab_content" tab_index="5">
+            <div class="publish_content">
+                <div class="left">
+                    <h5>Game name:</h5>
+                    <p ng-bind="new_game.name"></p>
+                    <h5>Description:</h5>
+                    <p ng-bind="new_game.full_desc"></p>
+                    <h5>Tags:</h5>
+                    <p ng-bind="new_game.tags"></p>
+                    <h5>Number of questions:</h5>
+                    <p ng-bind="new_game.quiz_data.length"></p>
+                </div>
+                <div class="right">
+                    <div style="-webkit-box-shadow: 2px 2px 3px 0 #858585;box-shadow: 2px 2px 3px 0 #858585;" id="publish_new_game" ng-click="publish_game()">
+                        Publish Game
+                    </div>
+
+                    <div class="games_row prev_game" style="display: none;">
+                        <div class="game_small color_box_1" >
+                            <div class="user_image">
+                                <img ng-src="{{user.image}}" />
+                            </div>
+                            <div class="padding">
+                                <a class="game_thumb_cont" href="javascript:void(0)">
+                                    <img class="thumbnail" ng-src="{{new_game.thumbnail}}" ng-show="new_game.thumbnail" />
+                                    <img class="thumbnail" ng-src="/media/css/dice/img/thumb_def.jpg" ng-hide="new_game.thumbnail" />
+                                </a>
+                                <div class="info">
+                                    <a class="game_name" href="javascript:void(0)" ng-bind="new_game.name"></a>
+                                    <div class="by">by <a href="javascript:void(0)" class="nocolor" ng-bind="new_game.channel.name"></a></div>
+                                    <div class="ago">Just now</div>
+                                </div>
+
+                                <div class="bottom">
+                                    <div class="clock"></div>
+                                    <div class="plays">
+                                        <span ng-bind="0"></span> played
+                                    </div>
+                                    <br class="clr" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="share_links">
+                        <div class="link">GAME LINK: <a ng-href="{{new_game_link}}" target="_blank" ng-bind="new_game_link"></a></div>
+<!--                        <div class="link blue" ng-init="embed_open=false" >
+                            <div style="cursor:pointer;" ng-click="embed_open=!embed_open"><img src="/media/css/dice/img/embed_icon.png" /> &nbsp; EMBED CODE </div>
+                            <div style="display:none;" ng-show="embed_open">
+                                <textarea class="selectAll" ng-bind="embed_link" ng-click="embedClick()"></textarea>
+                            </div>
+                        </div>-->
+
+                        <div style="cursor:pointer;" class="link blue" ng-click="invite_followers()"><img src="/media/css/dice/img/email_icon.png" /> &nbsp; INVITE SUBSCRIBERS VIA E-MAIL  </div>
+
+                        <div style="cursor:pointer;" class="link blue" ng-click="shareOptionGame(new_game_unique_id)"><img src="/media/css/dice/img/fb_link_icon.png" /> &nbsp; SHARE </div>
+                    </div>
+
+
+                </div>
+                <br class="clr">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!--<pre>{{new_game | json}}<pre>-->
+
+<!--<pre>{{new_game.test_yourself_data | json}}<pre>-->
+
+
+<style>
+    .padd_left {
+        padding-left:30px;
+    }
+    
+    .help {
+        display:inline-block;
+        height:24px;
+        width:24px;
+    }
+    
+    #side_menu {
+        display:none;
+    }
+    
+    #content_wrap {
+        padding-left:0px;
+    }
+    
+    #create_game_content{
+        max-width:1100px !important;
+    }
+</style>

@@ -1,0 +1,268 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+   padding:0px;
+    width:100%;
+    /*max-width:1000px;*/ 
+    margin:0px auto;
+}
+
+body {
+    padding:0px;
+    width:100%;
+    /*max-width:1000px;*/
+    margin:0px auto;
+    padding-top:50px;
+    padding-bottom:60px;
+    -webkit-box-shadow: 2px 2px 2px 3px #E0E0E0;
+    box-shadow: 2px 2px 2px 3px #E0E0E0;
+}
+
+.mobile_content {
+    width:100%;
+    /*max-width:1000px;*/
+}
+
+.fade_sm_open {
+    display:none;
+    position:fixed;
+    width:100%;
+    height:120%;
+    top:50px;
+    left:0px;
+    background-image:url('img/gbg.png');
+    background-repeat: repeat;
+    
+}
+
+#side_menu {
+    transition: all 0.5s ease-in-out 0.1s;
+    -webkit-transition: all 0.5s ease-in-out 0.1s;
+    -moz-transition: all 0.5s ease-in-out 0.1s;
+    -ms-transition: all 0.5s ease-in-out 0.1s;
+    -o-transition: all 0.5s ease-in-out 0.1s;
+    left:-240px;
+    display:block;
+}
+
+
+#content_wrap {
+    padding-left:0px;
+}
+
+.sm_open .fade_sm_open {
+    display:block;
+}
+
+.sm_open #side_menu{
+    left:0px;
+}
+.hide_me{
+    
+}
+#mobile_top_screen {
+    background-color:#25abe0;
+    height:50px;
+    line-height:50px;
+    position:fixed;
+    top:0px;
+    z-index:200;
+    width:100%;
+    /*max-width:1000px;*/
+    padding:0px 10px;
+    -webkit-box-shadow: 2px 2px 6px 0 #ABABAB;
+    box-shadow: 2px 2px 6px 0 #ABABAB;
+}
+
+.slogen {
+    padding-top:0px;
+    height:80px;
+}
+
+.games_row .gallery_wrapper {
+  margin-left:10px;  
+}
+
+.games_row .load_left {
+    left:0px;
+}
+
+h3.game_row_headline {
+    margin:5px 10px;
+    font-size:16px;
+    height:20px;
+    line-height:16px;
+    padding:0px;
+}
+
+#mobile_footer {
+   display:none;
+   background-color:#25abe0;
+   height:50px;
+   line-height:50px;
+   position:fixed;
+   bottom:0px;
+   z-index:10;
+   z-index:200;
+   width:100%;
+   /*max-width:1000px;*/
+   padding:0px 10px;
+   margin-top:10px;
+   -webkit-box-shadow: 2px 2px 6px 0 #ABABAB;
+   box-shadow: 2px 2px 6px 0 #ABABAB;
+}
+
+#mobile_footer .social {
+    float:right;
+    background-color:#ffffff;
+    padding:0px 20px;
+    -webkit-box-shadow: 2px 2px 6px 0 #ABABAB;
+   box-shadow: 2px 2px 6px 0 #ABABAB;
+
+    
+}
+
+.games_row .game_small .info {
+    height:auto;
+}
+
+
+.channel_player {
+    width:auto;
+}
+
+.channel h4 {
+    padding-left:5px;
+}
+
+.channel p {
+   padding-left:5px; 
+}
+
+#mobile_footer .copyright {
+    float:left;
+}
+
+#play_content {
+    width:100%;
+   /*max-width:1000px;*/
+   margin-top:3px;
+}
+
+.player_top {
+    height:20px;
+}
+
+.player_top h1 {
+    width:100%;
+    height:20px;
+    line-height:20px;
+    font-size:16px;
+}
+
+.player_top h2 {
+    width:30%;
+    border-left:3px solid #ffffff;
+    display:none;
+}
+
+#play_content .plays {
+    height:20px;
+    line-height:20px;
+    font-size:14px;
+}
+
+.user_settings {
+    padding:15px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.banner_1_mobile {
+    height:350px;
+    background-image:url('/media/img/hp_banner/0_mobile.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;    
+}
+
+.loginPopUp {
+    max-width:500px;
+    width:100%;
+}
+
+@media screen and (max-width:768px) {
+    .modal {
+        left:0;
+        width:94%;
+        margin-left:3%;
+    }
+    
+    .friends_fb_join {
+        display:none;
+    }
+    
+    
+    .loginPopUp .form_row {
+        margin-bottom:0px;
+    }
+    
+    .loginPopUp label {
+        height: 20px;
+        line-height: 20px;
+        font-size:13px;
+    }
+    
+    .loginPopUp input[type="text"], .loginPopUp input[type="password"], .loginPopUp input[type="email"], .loginPopUp textarea {
+        margin:1px 0px;
+    }
+    
+    .loginPopUp input, .loginPopUp textarea {
+        width:100%;
+    }
+    
+    .loginPopUp h1 {
+        font-size:22px;
+    }
+    
+    .or_wrap {
+        display:none;
+    }
+}
+
+
+@media screen and (max-width:480px) {
+    
+    h1 {
+        font-size:20px;
+    }
+    
+    .slogen {
+        height:40px;
+    }
+    
+    .slogen h2 {
+        display:none;
+    }
+    
+    .user_name_top {
+         display:none;
+    }
+    
+    .already_member {
+        font-size:14px;
+    }
+    .channel h4 {
+        font-size:14px;
+    }
+}
+
+@media screen and (max-width:1280px) {
+    .game_row_list .thumbnail_wrap {
+        display:block;
+    }
+}

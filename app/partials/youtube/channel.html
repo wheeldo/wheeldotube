@@ -1,0 +1,26 @@
+<div id="top_screen" ng-include src="'/app/partials/youtube/includes/top_screen.html'"></div>
+<div id="side_menu" ng-include src="'/app/partials/youtube/includes/side_menu.html'"></div>
+<div id="root_scope">
+    
+<div id="content_wrap" class="channel" ng-init="channelInit()">
+    <div id="content">
+        <div class="white">
+            <div class="banner" ng-include src="'/app/partials/youtube/includes/channel_banner.html'"></div>
+            <div class="padding-big">
+                <h1 class="channel_name" ng-bind="channel_data.name"></h1>
+                <p ng-bind="channel_data.description"></p>
+            </div>
+            <div class="channel_menu">
+                <ul>
+                    <li class="active">
+                        <a href="javascript:void(0)">
+                            Home
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</div>

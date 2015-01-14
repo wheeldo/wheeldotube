@@ -1,0 +1,49 @@
+<div id="top_screen" ng-include src="'/app/partials/youtube/includes/top_screen.html'"></div>
+<div id="side_menu" ng-include src="'/app/partials/youtube/includes/side_menu.html'"></div>
+<div id="root_scope">
+    
+<div id="content_wrap" class="channel" ng-init="myChannelInit()">
+    <div id="content">
+        <div class="white">
+            <div class="banner" ng-include src="'/app/partials/youtube/includes/channel_banner_editable.html'"></div>
+            <div class="padding-big">
+                <input id="channel_name" type="text" ng-model="channel_data.name"  />
+                <h1 class="channel_name" ng-bind="channel_data.name" ng-click="edit_h_field('channel_name')"></h1>
+                <textarea id="channel_description" ng-model="channel_data.description"></textarea>
+                <p class="channel_description" ng-bind="channel_data.description" ng-click="edit_h_field('channel_description')"></p>
+            </div>
+            <div class="channel_menu">
+                <ul>
+                    <li tab_ac="home" class="active">
+                        <a href="javascript:void(0)" ng-click="setChannelTab('home')">
+                            Home
+                        </a>
+                    </li>
+                    <li tab_ac="content">
+                        <a href="javascript:void(0)" ng-click="setChannelTab('content')">
+                            Content
+                        </a>
+                    </li>
+                    <li tab_ac="users">
+                        <a href="javascript:void(0)" ng-click="setChannelTab('users')">
+                            Users
+                        </a>
+                    </li>
+                    <li tab_ac="settings">
+                        <a href="javascript:void(0)" ng-click="setChannelTab('settings')">
+                            Settings
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+        <div class="channel_tab home white " ng-include src="'/app/partials/youtube/includes/channel_home.html'"></div>
+        <div class="channel_tab content white" ng-include src="'/app/partials/youtube/includes/channel_content.html'"></div>
+        <div class="channel_tab active users white" ng-include src="'/app/partials/youtube/includes/channel_users.html'"></div>
+        <div class="channel_tab settings white" ng-include src="'/app/partials/youtube/includes/channel_settings.html'"></div>
+    </div>
+    
+</div>
+</div>

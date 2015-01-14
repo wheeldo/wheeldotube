@@ -1,0 +1,46 @@
+<div class="reg_wrapper" ng-init="test()">
+    <h4>Fill in your friend details:</h4>
+    <form role="form" ng-submit="sendToFriend()">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Friend's First name:</label>
+          <input name="fname" type="text" class="form-control" placeholder="First name" ng-model="send_to_friend.fname">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Friend's Last name:</label>
+          <input name="lname" type="text" class="form-control" placeholder="Last name" ng-model="send_to_friend.lname">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Friend's Email address</label>
+          <input name="email"  id="reg_email" type="email" class="form-control" placeholder="Enter email" requierd ng-model="send_to_friend.email">
+        </div>
+        <div class="error" ng-bind="error"></div>
+        <button type="submit" class="btn btn-warning">Send</button>
+    </form>
+
+</div>
+
+
+<style>
+    
+    .error {
+        font-size:12px;
+        color:red;
+        margin:5px 0px;
+    }
+    
+    .ng-valid.emailNotValid,
+    .ng-valid.emailNotValid:focus {
+        border-color:#FF0303;
+        -webkit-box-shadow: 0 0 3px 0 #FF0303;
+        box-shadow: 0 0 3px 0 #FF0303;
+        
+    }
+    
+    .ng-valid.emailValid,
+    .ng-valid.emailValid:focus {
+        border-color:#009600;
+        -webkit-box-shadow: 0 0 3px 0 #009600;
+        box-shadow: 0 0 3px 0 #009600;
+        
+    }
+</style>

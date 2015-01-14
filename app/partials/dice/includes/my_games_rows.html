@@ -1,0 +1,89 @@
+<!--<pre>{{my | json}}</pre>-->
+<div class="game_list_wrap" ng-init="load_my('my');">
+    <div ng-repeat="game in my | filter:games_search" class="game_row_list game_{{$index}}" repeat-done="set_guidance('games_dashboard')">
+        <div class="thumbnail_wrap color_box_{{get_color_box(game.id)}}" ng-click="go_game(game.link)">
+                <img ng-src="{{game.thumbnail}}" ng-show="game.thumbnail" />
+                <img ng-src="/media/css/dice/img/thumb_{{get_color_box(game.id)}}.jpg" ng-hide="game.thumbnail" />
+        </div>
+        <div class="actions">
+                <button class="sys-button blue3 edit_b  icon_edit" ng-click="editGame(game.unique_id)">Edit</button>
+                <button class="sys-button green icon_share" ng-click="shareOptionGame(game.unique_id)">Share</button>
+                <button class="sys-button orange icon_report" ng-click="gameFullReport(game.game_type,game.unique_id)">Report</button>
+                <button class="sys-button pink  icon_delete" ng-click="deleteGameMy($index)">Delete</button>
+        </div>
+        
+        <div class="info">
+            <a class="game_name" target="_blank" ng-href="{{game.link}}"><span ng-bind="game.name"></span> <span style="font-family:Arial;text-transform: none;font-size:16px;text-align:left;direction:ltr;">(<span ng-bind="game.game_type_name"></span>, <span ng-bind="game.plays"></span> plays)</span></a> <br>
+            <p ng-bind="game.full_desc"></p>
+            <a class="channel_name" ng-href="{{game.channel}}" ng-bind="game.channel_name"></a>
+        </div>
+        
+    </div>
+</div>
+
+<style>
+    
+    
+    
+    .channel_name {
+        color:#aaaaaa;
+    }
+    
+    .game_name {
+        color: #25abe0;
+        font-family: 'Helvetica';
+        font-size: 30px;
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .game_list_wrap {
+        margin-top:0px;
+    }
+    
+    .game_row_list {
+        padding:30px 0px;
+        border-bottom:1px solid #D3D3D3;
+        height:160px;
+    }
+    
+    .game_row_list .thumbnail_wrap {
+        height:160px;
+        width:240px;
+        float:left;
+        margin-right:20px;
+        cursor:pointer;
+    }
+    
+    .game_row_list .thumbnail_wrap img{
+        height:160px;
+        width:240px;
+    }
+    
+    .game_row_list .info {
+        float:left;
+        padding:5px 0px;
+        width:610px;
+    }
+
+    .game_row_list .info h2 {
+        text-align:left;
+    }
+    
+    
+    .game_row_list .actions {
+        float:right;
+        width:150px;
+        height:160px;
+        border-left:0px solid blue;
+    }
+    
+    .game_row_list .actions button {
+        width:150px;
+        margin-bottom:10px;
+    }
+    
+</style>

@@ -1,0 +1,43 @@
+<div id="top_screen" ng-include src="'/app/partials/dice/includes/top_screen.html'"></div>
+<!--<div id="side_menu" ng-include src="'/app/partials/dice/includes/side_menu.html'"></div>-->
+<div id="content_wrap" ng-init="settings_init()">
+    <div id="content">
+        <div class="wrapper user_settings">
+            <h3>User settings:</h3>
+            <form ng-submit="saveSettings()">
+                
+                <div class="form_row">
+                    <label>Image:</label>
+                    <img ng-src="{{user_data.image}}" class="rounded_image_large" />
+                    <input type="hidden" name="image" ng-model="user_data.image" />
+                    <button class="sys-button green" type="button" ng-click="upload_image('user_data__image','jpg, png or gif only. 100 X 100 recommended 1Mb Maximum','c_fill,h_100,w_100')">Change image</button>
+                </div>
+                
+                <div class="form_row">
+                    <label>First Name:</label>
+                    <input type="text" name="fname" ng-model="user_data.fname" />
+                </div>
+                
+                <div class="form_row">
+                    <label>Last Name:</label>
+                    <input type="text" name="lname" ng-model="user_data.lname" />
+                </div>
+                
+                <div class="form_row">
+                    <label>Email:</label>
+                    <input type="email" name="email" ng-model="user_data.email" />
+                </div>
+                
+                
+
+                <input name="small_icon" type="hidden" ng-model="channel_data.small_icon" />
+
+                <div class="form_row actions">
+                    <button class="sys-button blue submit">Save</button>
+                    <br class="clr">
+                </div>
+            </form>
+        </div>
+    </div>    
+</div>
+<div id="footer" ng-include src="'/app/partials/dice/includes/footer.html'"></div>

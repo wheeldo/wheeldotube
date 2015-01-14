@@ -1,0 +1,17 @@
+<div class="suggested_loader_games_row_inner" ng-init="load_suggested('suggested_loader')">
+    <div class="game_small" ng-repeat="game in suggeted">
+        <div class="padding">
+            <a class="game_thumb_cont" ng-href="{{game.link}}">
+                <img ng-src="{{game.thumbnail}}" />
+            </a>
+            <a class="game_name" ng-href="{{game.link}}" ng-bind="game.name"></a>
+            <ul class="e_data">
+                <li>by <a ng-href="{{game.channel}}" class="nocolor" ng-bind="game.channel_name"></a></li>
+                <li><span ng-bind="game.plays"></span> plays</li>
+                <li class="weak_font" ng-bind="game.u_time">2 weeks ago</li>
+            </ul>
+        </div>
+    </div>
+    <br class="clr" />
+</div>
+<div class="loader_center suggested_loader" ng-init="__v_loader()"><img src="media/img/ajax-loader.gif" /></div>

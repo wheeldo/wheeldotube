@@ -1,0 +1,14 @@
+* {
+    direction:rtl;
+}
+
+
+.result_body img {
+    float:left;
+    margin-left:0px;
+    margin-right:20px;
+}
+
+.res_text {
+    text-align:right;
+}

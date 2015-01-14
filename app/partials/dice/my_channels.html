@@ -1,0 +1,33 @@
+<div id="top_screen" ng-include src="'/app/partials/dice/includes/top_screen.html?t=1'"></div>
+<!--<div id="side_menu" ng-include src="'/app/partials/dice/includes/side_menu.html'"></div>-->
+<div id="content_wrap" ng-init="fixLayout();">
+    <div class="slogen" ng-include src="'/app/partials/dice/includes/slogen.html'"></div>
+    <div id="content">
+        <div class="wrapper" ng-init="my_channels_init()">
+            <h3 class="game_row_headline">My Channels</h3>
+            
+            <div class="channel_block" ng-repeat="channel in channels" >
+                <a href="/my_channel/{{channel.unique_id}}">
+                    <h3 ng-bind="channel.name"></h3>
+                    <div class="bg" style="background-image:url('{{channel.cover}}')">
+                    </div>
+
+                </a>
+            </div>
+            <div id="add_new_channel_button" class="" ng-click="addNewChannel()">+ Add new channel</div>
+        </div>
+        <div class="wrapper" ng-show="shared_channels">
+            <h3 class="game_row_headline">Shared channels</h3>
+            
+            <div class="channel_block" ng-repeat="channel in shared_channels" >
+                <a href="/my_channel/{{channel.unique_id}}">
+                    <h3 ng-bind="channel.name"></h3>
+                    <div class="bg" style="background-image:url('{{channel.cover}}')">
+                    </div>
+
+                </a>
+            </div>
+        </div>
+    </div>    
+</div>
+<div id="footer" ng-include src="'/app/partials/dice/includes/footer.html'"></div>

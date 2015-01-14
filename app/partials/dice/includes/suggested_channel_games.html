@@ -1,0 +1,46 @@
+<div class="gallery_wrapper" gallery="suggested" ng-swipe-right="load_suggested_left('suggested')" ng-swipe-left="load_suggested_right('suggested')">
+    <div class="suggested_loader_games_row_inner" ng-init="load_suggested_channel('suggested')" >
+        <div class="game_small color_box_{{get_color_box(game.id)}}" ng-repeat="game in suggested" repeat-done="checkArrows()">
+            <div class="user_image">
+                <img ng-src="{{game.small_icon}}" />
+            </div>
+            <div class="padding">
+                <a class="game_thumb_cont" ng-click="loadChannelGame($index)">
+                    <img class="thumbnail" ng-src="{{game.thumbnail}}" ng-show="game.thumbnail" />
+                    <img class="thumbnail" ng-src="/media/css/dice/img/thumb_{{get_color_box(game.id)}}.jpg" ng-hide="game.thumbnail" />
+                </a>
+                <div class="info">
+                    <a class="game_name" ng-click="loadChannelGame($index)" ng-bind="game.name"></a>
+                    <div class="by">by <a ng-href="{{game.channel}}" class="nocolor" ng-bind="game.channel_name"></a></div>
+                    <div class="ago" ng-bind="game.u_time"></div>
+                </div>
+
+
+
+            </div>
+            <div class="bottom">
+                <div class="clock" ng-show="game.prize==1&&game.prize_time_limit>0">
+                    <div ng-init="clockTick($index)" class="clock_tick" ng-bind="clocks[$index].visual"></div>
+                </div>
+                <div class="leader" ng-show="game.prize==1&&game.prize_time_limit<=0">
+                    Winner:<br>
+                    <span ng-bind="game.winner"></span>
+                </div>
+                <div class="leader" ng-show="game.prize==0">
+                    Leader:<br>
+                    <span ng-bind="game.leader"></span>
+                </div>
+                <div class="plays">
+                    <span ng-bind="game.plays"></span> played
+                </div>
+                <br class="clr" />
+            </div>
+        </div>
+
+        <br class="clr" />
+    </div>
+    <div class="loader_center suggested_loader" ng-init="__v_loader()"><img src="/media/img/ajax-loader.gif" /></div>
+</div>
+<div class="load_left suggested" ng-click="load_suggested_left('suggested')"></div>
+<div class="load_right suggested" ng-click="load_suggested_right('suggested')"></div>
+

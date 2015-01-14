@@ -1,0 +1,39 @@
+<div id="top_screen" ng-include src="'/app/partials/dice/includes/top_screen.html?t=1'"></div>
+<!--<div id="side_menu" ng-include src="'/app/partials/dice/includes/side_menu.html'"></div>-->
+<div id="content_wrap" ng-init="fixLayout();">
+    <div ng-hide="user_login" class="hp_banner banner_1" ng-include src="'/app/partials/dice/includes/banner_1.html?t=1'"></div>
+    
+    <div ng-show="user_login" class="slogen" ng-include src="'/app/partials/dice/includes/slogen.html'"></div>
+    <div ng-show="user_login" class="motivation_bar" ng-include src="'/app/partials/dice/includes/motivation_bar.html'"></div>
+    
+    <div id="content">
+        <div class="wrapper" ng-if="!user_login"> 
+            <h3 class="game_row_headline">Featured games</h3>
+            <div class="games_row" ng-include src="'/app/partials/dice/includes/featured_games.html?t=1'"></div>
+        </div>
+        <div class="wrapper" ng-if="user_login"> 
+            <h3 class="game_row_headline">Recommended games</h3>
+            <div class="games_row" ng-include src="'/app/partials/dice/includes/suggested_games.html?t=1'"></div>
+            
+            <h3 class="game_row_headline">Popular games</h3>
+            <div class="games_row" ng-include src="'/app/partials/dice/includes/popular_games.html'" ></div>
+        </div>
+        
+    </div>    
+</div>
+<div id="footer" ng-include src="'/app/partials/dice/includes/footer.html'"></div>
+<div id="preload-01"></div>
+<div id="preload-02"></div>
+<div id="preload-03"></div>
+<div id="preload-04"></div>
+<div id="preload-05"></div>
+<style>
+    #preload-01 { background: url(/media/img/hp_banner/0.jpg) no-repeat -9999px -9999px; }
+    #preload-02 { background: url(/media/img/hp_banner/1.jpg) no-repeat -9999px -9999px; }
+    #preload-03 { background: url(/media/img/hp_banner/2.jpg) no-repeat -9999px -9999px; }
+    #preload-04 { background: url(/media/img/hp_banner/3.jpg) no-repeat -9999px -9999px; }
+    #preload-05 { background: url(/media/img/hp_banner/4.jpg) no-repeat -9999px -9999px; }
+</style>
+
+
+

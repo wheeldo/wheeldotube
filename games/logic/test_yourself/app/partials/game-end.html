@@ -1,0 +1,89 @@
+<div class="main_wrapper" ng-init="gameEndInit()" id="root_scope">
+    <div class="banner" ng-include src="'games/logic/test_yourself/app/partials/includes/banner.html'"></div>
+<!--    <div>Your score is: <span ng-bind="end_data.score"></span></div>-->
+    <div class="game-end" ng-show="end_data">
+        <div class="result_body">
+            <h2 ng-bind="result.headline"></h2>
+            <img class="res_image" style="max-height:150px;" ng-src="{{result.media}}" ng-show="result.media" />
+            <div class="res_text" ng-bind-html="result.text"></div>
+            <br class="clr">
+        </div>
+        <div ng-show="result.link&&result.cta">
+            <a class="end_button cta_button website" target="_blank" ng-href="{{result.link}}" ng-bind="result.cta"></a>
+        </div>
+        
+        
+        <div ng-hide="result.link&&result.cta">
+            <div ng-show="show_voucher">
+                <div class="hide voucher_wait"><span tarnslate>Please wait</span>...</div>
+                <div class="hide voucher_sent"><span tarnslate>Coupon sent successfully</span>!</div>
+                <div class="hide voucher_faild"><span tarnslate>Coupon sent failed</span>.</div>
+           </div>
+            <button ng-show="CTA_button" class="end_button cta_button website" ng-click="callAction();ctaClicked();" ng-bind="cta_text">Visit Website</button>
+            <button ng-show="share_button" class="end_button share" ng-click="shareGame();shareClicked()" tarnslate>Share</button>
+            <button  ng-show="show_voucher" class="end_button coupon" ng-click="sendVaucher();couponClicked();">Claim Coupon</button>
+        </div>
+    </div>
+    <div class="wait" ng-hide="end_data">
+        <span tarnslate>Calculating results please wait...</span><br>
+        <img src="/media/img/player_loader.gif" />
+    </div>
+</div>
+
+<style>
+    .result_body {
+        margin:0px 20px;
+        padding:10px;
+        border:0px solid #EEEEEE;
+    }
+    
+    .result_body h2 {
+        font-size:28px;
+        margin-bottom:7px;
+    }
+    
+    .result_body div {
+        margin:0;
+        font-size:16px;
+    }
+    
+    
+    
+    a.end_button {
+        display:inline-block;
+        margin:0px;
+        line-height:60px;
+        text-align: center;
+        color:#ffffff;
+        padding-right:10px;
+        margin-top:10px;
+    }
+    
+    a.end_button:hover {
+        text-decoration: none;
+        color:#ffffff;
+    }
+    
+    .cta_button {
+        background-color:#98B724;
+    }
+    
+    .reg_wrapper h4 {
+        margin-bottom:10px;
+    }
+    
+    .reg_wrapper .fb_connect {
+        margin-bottom:5px;
+    }
+    
+    .reg_wrapper .checkbox,
+    .reg_wrapper .checkbox label{
+        height:30px;
+        line-height:30px;
+    }
+    
+    .reg_wrapper .checkbox input[type="checkbox"] {
+        float:left;
+        width:30px !important;
+    }
+</style>

@@ -1,0 +1,583 @@
+
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='313' ,  `user_id`='4417' ,  `user_name`='nimrod ragozin' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='314' ,  `user_id`='4417' ,  `user_name`='nimrod ragozin' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4566' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4565' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4569' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4570' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4571' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4572' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4573' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4574' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4575' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4576' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4577' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4578' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4579' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4581' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4582' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4583' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4584' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4585' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4586' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4587' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4588' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4589' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4590' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4591' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4592' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4593' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4594' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4595' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4596' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4597' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4598' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4599' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='315' ,  `user_id`='4600' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='197' ,  `user_id`='1381' ,  `user_name`='Chaim Leichman' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='62' ,  `user_id`='1381' ,  `user_name`='Chaim Leichman' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='155' ,  `user_id`='1381' ,  `user_name`='Chaim Leichman' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='326' ,  `user_id`='1381' ,  `user_name`='Chaim Leichman' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='327' ,  `user_id`='4647' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='327' ,  `user_id`='4648' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='327' ,  `user_id`='4639' ,  `user_name`='Miriam Leichman' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='327' ,  `user_id`='4649' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='327' ,  `user_id`='4650' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='327' ,  `user_id`='4651' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='327' ,  `user_id`='4652' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5480' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='365' ,  `user_id`='5480' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5481' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5482' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5483' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5484' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5485' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5486' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5487' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5488' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5489' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5490' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5491' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5492' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5493' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5494' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5495' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5496' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5497' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5498' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5499' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5500' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5501' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5502' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5503' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5504' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5505' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5506' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5508' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='488' ,  `user_id`='5507' ,  `user_name`='Eyal Sheleg' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5507' ,  `user_name`='Eyal Sheleg' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='488' ,  `user_id`='5511' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5512' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='488' ,  `user_id`='5513' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='528' ,  `user_id`='4654' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='528' ,  `user_id`='5891' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='528' ,  `user_id`='5894' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='528' ,  `user_id`='1381' ,  `user_name`='Chaim Leichman' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='528' ,  `user_id`='5895' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='528' ,  `user_id`='5896' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='528' ,  `user_id`='5897' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='528' ,  `user_id`='5898' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='528' ,  `user_id`='' ,  `user_name`=' ' ,  `ghost`='' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='528' ,  `user_id`='5899' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='528' ,  `user_id`='5900' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='528' ,  `user_id`='5901' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='528' ,  `user_id`='5902' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='528' ,  `user_id`='5903' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='528' ,  `user_id`='5904' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='528' ,  `user_id`='5905' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='530' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='531' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='532' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='533' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='534' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='448' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='417' ,  `user_id`='5887' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='417' ,  `user_id`='5900' ,  `user_name`='sdsdsd sd' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='448' ,  `user_id`='5901' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='417' ,  `user_id`='5901' ,  `user_name`='123 123' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='417' ,  `user_id`='5902' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='480' ,  `user_id`='5902' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='535' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='535' ,  `user_id`='5904' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='480' ,  `user_id`='5905' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='155' ,  `user_id`='5905' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='480' ,  `user_id`='5906' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='480' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='536' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='536' ,  `user_id`='5908' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='448' ,  `user_id`='5909' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='448' ,  `user_id`='5910' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='448' ,  `user_id`='5911' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='448' ,  `user_id`='' ,  `user_name`=' ' ,  `ghost`='' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='155' ,  `user_id`='5915' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5915' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='448' ,  `user_id`='5915' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='450' ,  `user_id`='5915' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='552' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='448' ,  `user_id`='5917' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='553' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='554' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='554' ,  `user_id`='5918' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='480' ,  `user_id`='5919' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='417' ,  `user_id`='5920' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='417' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5921' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5922' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5923' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='408' ,  `user_id`='5924' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='568' ,  `user_id`='5945' ,  `user_name`='aviad 14:24 bb' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='569' ,  `user_id`='5946' ,  `user_name`='aviad 14:26 bbb' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='568' ,  `user_id`='6122' ,  `user_name`='aviad 15:14 bbb' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='569' ,  `user_id`='6123' ,  `user_name`='aaa aaaa' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='570' ,  `user_id`='6124' ,  `user_name`='as sa' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='571' ,  `user_id`='6125' ,  `user_name`='as as' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='572' ,  `user_id`='6126' ,  `user_name`='aa aa' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='576' ,  `user_id`='6128' ,  `user_name`='afsd asas' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='578' ,  `user_id`='6130' ,  `user_name`='Aviad test2' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='417' ,  `user_id`='6130' ,  `user_name`='Aviad test2' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='448' ,  `user_id`='6130' ,  `user_name`='Aviad test2' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='579' ,  `user_id`='6140' ,  `user_name`='Aviad Blumenfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='580' ,  `user_id`='6161' ,  `user_name`='aviad blu' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='46' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='581' ,  `user_id`='6171' ,  `user_name`='123 456' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='539' ,  `user_id`='6179' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='539' ,  `user_id`='6177' ,  `user_name`='as as' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='539' ,  `user_id`='6178' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='583' ,  `user_id`='6179' ,  `user_name`='as as' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='287' ,  `user_id`='6182' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='122' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='120' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='285' ,  `user_id`='6182' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='284' ,  `user_id`='6183' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='539' ,  `user_id`='6183' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='539' ,  `user_id`='6182' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='586' ,  `user_id`='6182' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='587' ,  `user_id`='6182' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='587' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='588' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='589' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='590' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='591' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='592' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='593' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='594' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='617' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='598' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='598' ,  `user_id`='6194' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='622' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='622' ,  `user_id`='' ,  `user_name`=' ' ,  `ghost`='' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='623' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='623' ,  `user_id`='6382' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='669' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='561' ,  `user_id`='' ,  `user_name`=' ' ,  `ghost`='' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='670' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1409056306' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='e16cf1d65d' ,  `reg_time`='1409056306' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='669' ,  `user_id`='' ,  `user_name`=' ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='669' ,  `user_id`='6763' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='671' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='671' ,  `user_id`='6767' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='671' ,  `user_id`='6768' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='672' ,  `user_id`='6768' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='672' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='672' ,  `user_id`='6769' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='307' ,  `user_id`='6771' ,  `user_name`='Aviad 2' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1409566030' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='dd08dc54bc' ,  `reg_time`='1409566030' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1409566076' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='37585a0534' ,  `reg_time`='1409566076' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='677' ,  `user_id`='6775' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='677' ,  `user_id`='6776' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='677' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='677' ,  `user_id`='6782' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='700' ,  `user_id`='7285' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='669' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='704' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='704' ,  `user_id`='7321' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='705' ,  `user_id`='7321' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='705' ,  `user_id`='7322' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='705' ,  `user_id`='7323' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='705' ,  `user_id`='7324' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='705' ,  `user_id`='7325' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='705' ,  `user_id`='7326' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='705' ,  `user_id`='7327' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1410173759' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='0d47fcd5fc' ,  `reg_time`='1410173759' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1410173991' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='aa3a62046b' ,  `reg_time`='1410173991' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1410174047' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='ec0d69005d' ,  `reg_time`='1410174047' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1410174175' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='0803358137' ,  `reg_time`='1410174175' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1410174185' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='3b87f95c47' ,  `reg_time`='1410174185' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1410174189' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='69e226b50d' ,  `reg_time`='1410174189' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1410174195' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='4447393d07' ,  `reg_time`='1410174195' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1410174213' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='e842faef45' ,  `reg_time`='1410174213' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1410174227' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='c41bb7a8c4' ,  `reg_time`='1410174227' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1410174270' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='6a318b1db1' ,  `reg_time`='1410174270' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1410174287' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='1690c58816' ,  `reg_time`='1410174287' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1410174304' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='c25c43d92c' ,  `reg_time`='1410174304' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1410174311' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='92460c11a0' ,  `reg_time`='1410174311' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1410174338' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='a4d7ffedee' ,  `reg_time`='1410174338' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1410174350' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='b85fdcc463' ,  `reg_time`='1410174350' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1410174361' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='28c7a302f4' ,  `reg_time`='1410174361' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1410174371' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='7a61d2cdc7' ,  `reg_time`='1410174371' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1410174380' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='4db680c3c1' ,  `reg_time`='1410174380' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='711' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='711' ,  `user_id`='7452' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='711' ,  `user_id`='7453' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='713' ,  `user_id`='7455' ,  `user_name`='1234 1234' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='716' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='716' ,  `user_id`='7473' ,  `user_name`='Aviad Blumenfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='716' ,  `user_id`='4049' ,  `user_name`='Steve Lederer' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='719' ,  `user_id`='7483' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='722' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='723' ,  `user_id`='' ,  `user_name`=' ' ,  `ghost`='' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='723' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='725' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='726' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='727' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='728' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='729' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='730' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='733' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='733' ,  `user_id`='7505' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='307' ,  `user_id`='7508' ,  `user_name`='av ad' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='734' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1412087058' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='a10dbff8af' ,  `reg_time`='1412087058' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='734' ,  `user_id`='' ,  `user_name`=' ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='734' ,  `user_id`='7511' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1412087113' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='2035dcf35a' ,  `reg_time`='1412087113' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='734' ,  `user_id`='7512' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='734' ,  `user_id`='7513' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='734' ,  `user_id`='7514' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='734' ,  `user_id`='7517' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='734' ,  `user_id`='7518' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='780' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='780' ,  `user_id`='9341' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='780' ,  `user_id`='9342' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='780' ,  `user_id`='9343' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='780' ,  `user_id`='9344' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='780' ,  `user_id`='9345' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='780' ,  `user_id`='9346' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='780' ,  `user_id`='9347' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1412173176' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='8bf187cbbe' ,  `reg_time`='1412173176' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1412173249' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='0060eca649' ,  `reg_time`='1412173249' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='771' ,  `user_id`='9350' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1412173345' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='886d205331' ,  `reg_time`='1412173345' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1412173409' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='c8d57a65f2' ,  `reg_time`='1412173409' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='729' ,  `user_id`='9355' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='729' ,  `user_id`='9356' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='729' ,  `user_id`='9357' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='783' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='783' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='780' ,  `user_id`='9752' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='307' ,  `user_id`='9754' ,  `user_name`='123 123' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='787' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='788' ,  `user_id`='9756' ,  `user_name`='AVIAD Blu' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='797' ,  `user_id`='9756' ,  `user_name`='AVIAD Blu' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='819' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='820' ,  `user_id`='10332' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='819' ,  `user_id`='10333' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='820' ,  `user_id`='10333' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='820' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1413117549' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='f7c8b814fb' ,  `reg_time`='1413117549' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Guest' ,  `lname`='' ,  `email`='127.0.0.1_1413118617' ,  `password`='' ,  `image`='/media/img/u_default.jpg' ,  `activation_link`='' ,  `unique_link`='835fe0cbd9' ,  `reg_time`='1413118617' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='820' ,  `user_id`='' ,  `user_name`=' ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='820' ,  `user_id`='10335' ,  `user_name`='Guest ' ,  `ghost`='1' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='822' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `game_quiz_user` SET  `game_id`='824' ,  `user_id`='50' ,  `user_name`='Aviad Bluemnfeld' ,  `ghost`='0' ,  `id`=NULL  

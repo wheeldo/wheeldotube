@@ -1,0 +1,11 @@
+<link rel="stylesheet" type="text/css" href="/media/css/dice/style_mobile.css">
+<div id="mobile_top_screen" ng-include src="'/app/partials/dice/mobile/includes/top_screen.html'"></div>
+<div class="content panel">
+  <input ng-model="angular" ng-init="angular='angular-mobile-nav'">
+  <p style="text-align: center;">{{angular}} lets you do transitions between partials for easy angular mobile app creation.</p>
+  <ul>
+    <li><a ng-tap="$navigate.go('/one')">First Page</a></li>
+    <li><a ng-tap="$navigate.go('/two', 'slide')">Page Two</a></li>
+    <li><a ng-tap="$navigate.go('/backwards')">Logout</a></li>
+  </ul>
+</div>

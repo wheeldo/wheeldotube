@@ -1,0 +1,43 @@
+<button type="button" class="action-btn blue edit_img" ng-click="openImageUploader('channel_cover_popup')">
+    <li class="icons icon-edit"></li>
+</button>
+<div class="uploader_popup channel_cover_popup">
+    <form action="{{uploadUrls.channel_cover.url}}" method="post" id="channel_cover_upload_form" enctype="multipart/form-data" target="img_upload_frame" imgObj="channel_cover" res_mark="{{uploadUrls.channel_cover.res_mark}}">
+
+             <input type="file" name="img_upload" id="img_upload" ng-file-select="onUserIMGSelect($files,'channel_cover_upload_form','user__my_channels__0__cover')" />
+             <input type="hidden" name="res_mark" value="{{uploadUrls.channel_cover.res_mark}}" />
+             <button type="button" class="img_d_d" ng-click="selectFile()">
+                 <div class="channel_cover_loader_before">
+                     Select image to upload <br> <span style="font-size:11px;">(jpg, png or gif only. 1300 X 210 recommended)</span> <br>
+                     <img class="cloud_upload" src="/media/img/UploadCloud.png" />
+                 </div>
+                 <div class="loader channel_cover_loader"><img src="/media/img/loading.gif" /></div>
+             </button>
+     </form>
+ </div>
+<div class="user_photo">
+    <button type="button" class="action-btn blue edit_img" ng-click="openImageUploader('user_image_popup')">
+        <li class="icons icon-edit"></li>
+    </button>
+    <div class="uploader_popup user_image_popup">
+       <form action="{{uploadUrls.user_image.url}}" method="post" id="user_img_upload_form" enctype="multipart/form-data" target="img_upload_frame" imgObj="user_image" res_mark="{{uploadUrls.user_image.res_mark}}">
+
+                <input type="file" name="img_upload" id="img_upload" ng-file-select="onUserIMGSelect($files,'user_img_upload_form','user__image')" />
+                <input type="hidden" name="res_mark" value="{{uploadUrls.user_image.res_mark}}" />
+                <button type="button" class="img_d_d" ng-click="selectFile()">
+                    <div class="user_image_loader_before">
+                        Select image to upload <br> <span style="font-size:11px;">(jpg, png or gif only. 100 X 100 recommended)</span> <br>
+                        <img class="cloud_upload" src="/media/img/UploadCloud.png" />
+                    </div>
+                    <div class="loader user_image_loader"><img src="/media/img/loading.gif" /></div>
+                </button>
+        </form>
+        <iframe id="img_upload_frame" name="img_upload_frame" onload="img_upload_done()"></iframe>
+    </div>
+    <img ng-src="{{user.image}}" class="user_image" />
+</div>
+<style>
+.banner {
+     background-image:url({{channel_data.cover}});
+ }
+</style>

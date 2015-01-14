@@ -1,0 +1,23 @@
+<div class="side_menu_wrapper">
+    <ul class="sm_nav">
+        <li>
+            <a href="#/" ng-class="{active:path=='/'}">
+                <img class="menu_icon home" src="/media/img/px.png" />
+                <span>What to play</span>
+            </a>
+        </li>
+        <li ng-show="user_login">
+            <a ng-href="#/my_channel/{{user.my_channels[0].unique_id}}" ng-class="{active:path=='/my_channel/'+user.my_channels[0].unique_id}">
+                <img class="menu_icon channel" src="/media/img/px.png" />
+                <span>My Channel</span>
+            </a>
+        </li>
+        <li ng-show="user_login">
+            <a href="javascript:void(0)">
+                <img class="menu_icon subscriptions" src="/media/img/px.png" />
+                <span>My Subscriptions</span>
+            </a>
+        </li>
+    </ul>
+    <h3>Subscriptions</h3>
+</div>

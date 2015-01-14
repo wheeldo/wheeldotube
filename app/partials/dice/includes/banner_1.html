@@ -1,0 +1,110 @@
+<div ng-init="slide_hp_init()" class="banner_wrap">
+    <div class="text_box_wrapper">
+        <div class="text_box">
+            <!--<h1>Content marketing meets gamification</h1>-->
+            <h1>Content marketing games</h1>
+            <h2>Engage</h2>
+            <h2>Go Viral</h2>
+            <h2>Convert</h2>
+            <div class="create_your_game_now ng-scope" ng-click="create_your_game_now()"> Sign Up, It's Free! </div>
+        </div>
+    </div>
+    <div class="banners">
+        <div class="banner_img in_start"></div>
+        <div class="banner_img going_out"></div>
+    </div>
+
+
+</div>
+
+<style>
+    .banner_wrap {
+        max-width:1920px;
+        overflow:hidden;
+    }
+
+    .banner_img {
+        height:600px;
+        background-image:url('/media/img/hp_banner/0.jpg');
+        background-position: center;
+        z-index:3;
+        -webkit-transition: left {{switch_time}}ms ease-in-out;
+        -moz-transition: left {{switch_time}}ms ease-in-out;
+        -ms-transition: left {{switch_time}}ms ease-in-out;
+        -o-transition: left {{switch_time}}ms ease-in-out;
+        transition: left {{switch_time}}ms ease-in-out;
+        left:0px;
+    }
+
+
+    .in_start {
+        height:600px;
+        position:absolute;
+        top:0px;
+        width:1920px;
+        left:1920px;
+        z-index:10;
+        -webkit-transition: left {{switch_time}}ms ease-in-out;
+        -moz-transition: left {{switch_time}}ms ease-in-out;
+        -ms-transition: left {{switch_time}}ms ease-in-out;
+        -o-transition: left {{switch_time}}ms ease-in-out;
+        transition: left {{switch_time}}ms ease-in-out;
+    }
+
+    .in_start.in {
+        left:0px;
+    }
+
+    .out {
+        left:-1000px;
+    }
+
+    .text_box_wrapper {
+        width:100%;
+        max-width:1045px;
+    }
+
+    .text_box {
+        position:absolute;
+        z-index:20;
+        left:0px;
+        top:90px;
+        border:0px solid black;
+        width:430px;
+        height:300px;
+        color:#ffffff;
+        text-align:left;
+    }
+
+    .text_box h1 {
+        font-size:48px;
+        line-height:52px;
+        color:#ffffff;
+        text-align:left;
+        text-transform: capitalize;
+        font-family: 'Roboto-Light';
+    }
+
+    .text_box h2 {
+        font-size:30px;
+        line-height:50px;
+        color:#ffffff;
+        text-align:left;
+        font-weight:normal;
+        text-transform: initial;
+        font-family: 'Roboto-Light';
+    }
+    .text_box h2:first-of-type { margin-top:35px; }
+
+    .text_box .create_your_game_now {
+        margin:50px 0px;
+        -webkit-border-radius: 8px;
+        border-radius: 8px;
+        background-color: #98b724;
+        -webkit-box-shadow: 2px 2px 3px 0 #383838;
+        box-shadow: 2px 2px 3px 0 #383838;
+    }
+
+
+
+</style>

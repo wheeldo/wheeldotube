@@ -1,0 +1,22 @@
+<div id="root_scope">
+<div class="wrapper">
+    <a class="close_x" href="javascript:void(0)" ng-click="close_popup()"><img src="/media/css/dice/img/close.png" /></a>
+        <div class="form_row">
+            <textarea ng-bind-html="content" id="content"  ng-init="initCK('content')"></textarea>
+        </div>
+        <div class="form_row actions">
+            <button class="sys-button blue submit" ng-click="save()" >SAVE</button>
+            <br class="clr">
+        </div>
+</div>
+</div>
+
+<style>
+    .form_row textarea {
+        height:200px;
+    }
+    
+    [disabled] {
+        background-color:gray !important;
+    }
+</style>

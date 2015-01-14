@@ -1,0 +1,21 @@
+<div class="banner" ng-include src="'games/logic/quiz/app/partials/includes/banner.html'"></div>
+<div class="padding-big" ng-init="gameInit()" id="root_scope">
+    <div class="main_data_mobile"></div>
+    <div class="question " ng-bind="questions[0].question"></div>
+    <div class="game_options">
+        <div>
+            <div class="option normal" ng-repeat="(key, value) in questions[0].answers" ng-bind="value" ng-click="setAns(key,questions[0].q_id)" id="ans_{{key}}" ng-show="value!=''">
+            </div>
+        </div>
+    </div>
+    
+    <div class="info">
+        <div class="wall-r" ng-include src="'games/logic/quiz/app/partials/includes/wall-r.html'"></div>
+        <div class="game-info" ng-include src="'games/logic/quiz/app/partials/includes/game-info.html'"></div>
+    </div>
+</div>
+<div class="loading">
+    <div class="fill" style="width:{{loader_width}};">
+        
+    </div>
+</div>

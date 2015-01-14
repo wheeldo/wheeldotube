@@ -1,0 +1,272 @@
+<div id="root_scope">
+<div id="top_screen" ng-include src="'/app/partials/dice/includes/top_screen.html'"></div>
+<div id="content_wrap">
+    <div id="create_game_content" ng-init="initCreateGame()">        
+        <div class="top">
+            <div class="stages">
+                <div class="stage active" tab_index="0">
+                    <div class="con_bg first"></div>
+                    Pre set
+                </div>
+                <div class="stage" tab_index="1">
+                    Content
+                </div>
+                <div class="stage" tab_index="2">                    
+                    Design
+                </div>
+                <div class="stage last" tab_index="3">
+                    Publish &amp; Share
+                </div>
+            </div>
+            <div class="bottom_con"></div>
+        </div>
+        <div class="tabs_content">
+            <div class="tab active" tab_index="0">
+                <div class="form cancel_error">
+                    <form action="{{uploadUrls.thumbnail.url}}" method="post" id="img_upload_form" enctype="multipart/form-data" target="img_upload_frame" imgObj="thumbnail" res_mark="{{uploadUrls.thumbnail.res_mark}}">
+                        <div class="form_row uploaderdz">
+                            <label>Game Thumbnail</label>
+                            <img style="max-height:100px;" ng-src="{{uploadUrls.thumbnail.img}}" />
+                            <input type="file" name="img_upload" id="img_upload" ng-file-select="onIMGSelect($files,'img_upload_form')" accept="image/*" />
+                            <input type="hidden" name="res_mark" value="{{uploadUrls.thumbnail.res_mark}}" />
+                            <button type="button" class="img_d_d" ng-click="selectFile()">
+                                <div class="thumbnail_loader_before">
+                                    Select image to upload <br> <span style="font-size:11px;">(jpg, png or gif only. 170 * 100 will be great)</span> <br>
+                                    <img class="cloud_upload" src="/media/img/UploadCloud.png" />
+                                </div>
+                                <div class="loader thumbnail_loader"><img src="/media/img/loading.gif" /></div>
+                            </button>
+                            <br class="clr">
+                        </div>
+                    </form>
+                    <iframe id="img_upload_frame" name="img_upload_frame" onload="img_upload_done()"></iframe>
+                    
+                    <form ng-submit="createGame0Submit()" >
+                        <input type="hidden" name="new_game.thumbnail" ng-model="new_game.thumbnail" ng-value="uploadUrls.thumbnail.img"/>
+                        <div class="form_row">
+                            <label>Game name:</label>
+                            <input type="text" name="new_game.name" ng-model="new_game.name" placeholder="Game name" required />
+                        </div>
+                        <div class="form_row">
+                            <label>Game description:</label>
+                            <textarea ng-model="new_game.full_desc" placeholder="Game description"></textarea>
+                        </div>
+                        <div class="form_row">
+                            <label>Channel:</label>
+                            <select ng-model="new_game.channel" ng-options="channel.name for channel in user.my_channels"></select>
+                        </div>
+                        <div class="form_row">
+                            <label>Game type:</label>
+                            <select ng-model="new_game.game_type" ng-options="type.name for type in game_types"></select>
+                        </div>
+                        <div class="form_row">
+                            <label>Open status:</label>
+                            <select ng-model="new_game.open_status">
+                                <option value="0">Open</option>
+                                <option value="1">Half open</option>
+                                <option value="2">Close</option>
+                            </select>
+                        </div>
+                        <div class="form_row">
+                            <label>Private game:</label>
+                            <select ng-model="new_game.private">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div class="form_row actions">
+                            <button class="sys-button blue2 submit">Next</button>
+                        </div>
+                    </form>
+                </div>
+                
+                
+                
+            </div>
+            <div class="tab" tab_index="1">
+                <div style="margin-bottom:5px;">Upload question file: </div>
+                <form id="file_upload_form" target="upload_target" method="post" enctype="multipart/form-data" action="{{quiz_uploader.action}}" res_mark="{{quiz_uploader.hash}}">
+                    <input type="file" class="file" name="file" ng-file-select="onQuizFileSelect($files);" accept=".xls, .xlsx" />
+                    <input type="hidden" name="res_mark" value="{{quiz_uploader.hash}}" />
+                    <input type="hidden" name="url_notify" value="{{quiz_uploader.url_notify}}" />
+                    <img class="loader" src="media/img/ajax-loader.gif" />
+                </form>
+                <a style="display:block;padding:5px 0px;" href="/download?filename=quiz_example.xlsx">(Download sample file)</a>
+                <iframe id="upload_target" name="upload_target" src="" style="width:0;height:0;border:0px solid #fff;"></iframe>
+                
+                <a class="addNewQuestionLink" href="javascript:void(0)" ng-click="addNewQuestion()">+ Add new question</a>
+                <table class="quiz">
+                    <tr>
+                        <th>Question</th>
+                        <th>Rank</th>
+                        <th>Answers</th>
+                        <th></th>
+                    </tr>
+                    <tr ng-repeat="data in new_game.quiz_data">
+                        <td>
+                            <textarea ng-model="data.question"> </textarea>
+                        </td>
+                        <td>
+                            <input type="text" ng-model="data.rank" ng-value="data.rank" class="edit_table_input small" />
+                        </td>
+                        <td>
+                            <div class="ans_row" ng-repeat="ans in data.answers">
+                                <input type="radio" ng-model="data.answer" ng-value="$index+1" />
+                                <input type="text" ng-model="ans.text" class="edit_table_input" />
+<!--                                <span ng-show="($index+1)==data.answer">(V)</span>-->
+                                <a href="javascript:void(0)" ng-click="removeAns($index,$parent.$index)">[x]</a>
+                            </div>
+                            <a style="display:block;margin-top:3px;" href="javascript:void(0)" ng-click="addAnswer($index)">+ Add</a>
+                        </td>
+                        <td>
+<!--                            <button type="button" class="action-btn blue" ng-click="editQuizRow($index)">
+                                <li class="icons icon-edit"></li>
+                            </button>-->
+                            <button type="button" class="action-btn red" ng-click="deleteQuizRow($index)">
+                                <li class="icons icon-delete"></li>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+                <form ng-submit="createGame1Submit()" >
+                <input type="hidden" ng-model="new_game.quiz_data" value="{{quiz_data}}" />
+                <div class="form_row actions">
+                    <button type="button" class="sys-button blue2" ng-click="setActiveTab(0)">Back</button>
+                    <button class="sys-button blue2 submit">Next</button>
+                </div>
+                </form>
+            </div>
+            <div class="tab cancel_error" tab_index="2">
+                <form ng-submit="createGame2Submit()" >
+                    <div class="form_row actions">
+                        <button type="button" class="sys-button blue2" ng-click="setActiveTab(1)">Back</button>
+                        <button class="sys-button blue2 submit">Next</button>
+                    </div>
+                    <div class="form_row">
+                        <label>Color set 1:</label>
+                        <div style="float:left;">Color: <ui-colorpicker ng-model="new_game.game_design.color_1"></ui-colorpicker></div>
+                        <div style="float:left;margin-left:20px;">Hexadecimal value: <input ng-model='new_game.game_design.color_1' class="edit_table_input medium" maxlength="7" />
+                            <button type="button" class="action-btn blue" ng-click="resetColor('color_1','#24244F')">
+                                <li class="icons icon-reset"></li>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <label>Color set 2:</label>
+                        <div style="float:left;">Color: <ui-colorpicker ng-model="new_game.game_design.color_2"></ui-colorpicker></div>
+                        <div style="float:left;margin-left:20px;">Hexadecimal value: <input ng-model='new_game.game_design.color_2' class="edit_table_input medium" maxlength="7" />
+                        <button type="button" class="action-btn blue" ng-click="resetColor('color_2','#48AAEC')">
+                            <li class="icons icon-reset"></li>
+                        </button>
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <label>Color set 3:</label>
+                        <div style="float:left;">Color: <ui-colorpicker ng-model="new_game.game_design.color_3"></ui-colorpicker></div>
+                        <div style="float:left;margin-left:20px;">Hexadecimal value: <input ng-model='new_game.game_design.color_3' class="edit_table_input medium" maxlength="7" />
+                        <button type="button" class="action-btn blue" ng-click="resetColor('color_3','#e6eff5')">
+                            <li class="icons icon-reset"></li>
+                        </button>
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <label>Color set 4:</label>
+                        <div style="float:left;">Color: <ui-colorpicker ng-model="new_game.game_design.color_4"></ui-colorpicker></div>
+                        <div style="float:left;margin-left:20px;">Hexadecimal value: <input ng-model='new_game.game_design.color_4' class="edit_table_input medium" maxlength="7" />
+                        <button type="button" class="action-btn blue" ng-click="resetColor('color_4','#a0c3da')">
+                            <li class="icons icon-reset"></li>
+                        </button>
+                        </div>
+                    </div>
+                    <br class="clr" />
+                </form>
+                
+                  <form action="{{uploadUrls.banner.url}}" method="post" id="banner_upload_form" enctype="multipart/form-data" target="img_upload_frame" imgObj="banner" res_mark="{{uploadUrls.banner.res_mark}}">
+                        <div class="form_row uploaderdz">
+                            <label>Banner</label>
+                            <input type="file" name="img_upload" id="img_upload" ng-file-select="onIMGSelect($files,'banner_upload_form')" />
+                            <input type="hidden" name="res_mark" value="{{uploadUrls.banner.res_mark}}" />
+                            <button type="button" class="img_d_d" ng-click="selectFile()">
+                                <div class="banner_loader_before">
+                                    Select image to upload <br> <span style="font-size:11px;">(jpg, png or gif only. 980 * 180 will be great)</span> <br>
+                                    <img class="cloud_upload" src="/media/img/UploadCloud.png" />
+                                </div>
+                                <div class="loader banner_loader"><img src="/media/img/loading.gif" /></div>
+                            </button>
+                            <br class="clr">
+                        </div>
+                    </form>
+                    <form action="{{uploadUrls.background.url}}" method="post" id="background_upload_form" enctype="multipart/form-data" target="img_upload_frame" imgObj="background" res_mark="{{uploadUrls.background.res_mark}}">
+                        <div class="form_row uploaderdz">
+                            <label>Background</label>
+                            <input type="file" name="img_upload" id="img_upload" ng-file-select="onIMGSelect($files,'background_upload_form')" />
+                            <input type="hidden" name="res_mark" value="{{uploadUrls.background.res_mark}}" />
+                            <button type="button" class="img_d_d" ng-click="selectFile()">
+                                <div class="background_loader_before">
+                                    Select image to upload <br> <span style="font-size:11px;">(jpg, png or gif only. 980 * 980 will be great)</span> <br>
+                                    <img class="cloud_upload" src="/media/img/UploadCloud.png" />
+                                </div>
+                                <div class="loader background_loader"><img src="/media/img/loading.gif" /></div>
+                            </button>
+                            <br class="clr">
+                        </div>
+                    </form>
+                
+                
+                <div class="design_prev_wrapper" style="background-image:url({{new_game.game_design.background}});">
+                    <div class="banner"> <img class="banner_bg" ng-src="{{new_game.game_design.banner}}" /></div>
+                    <div class="padding-big" ng-init="gameInit()" id="root_scope">
+                        <div class="main_data_mobile"></div>
+                        <div class="question " ng-bind="questions[0].question"></div>
+                        <div class="game_options">
+                            <div>
+                                <div class="option normal" ng-repeat="(key, value) in questions[0].answers" ng-bind="value" ng-click="setAns(key,questions[0].q_id)" id="ans_{{key}}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info">
+                            <div class="wall-r" ng-include src="'games/logic/quiz/app/partials/includes/wall-r.html'"></div>
+                            <div class="game-info" ng-include src="'games/logic/quiz/app/partials/includes/game-info.html'"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-info" ng-include src="'/app/partials/includes/quiz_css.html'"></div>
+
+            </div>
+            <div class="tab" tab_index="3">
+                <div id="publish_new_game" ng-click="publish_game()">
+                    Publish Game
+                </div>
+                <div class="publish_arrow"></div>
+                <h4>Get share link</h4>
+                
+                <div class="share_links">
+                    <div class="share_link">
+                        <label>Direct link</label>:
+                        <a ng-href="{{new_game_link}}" target="_blank" ng-bind="new_game_link"></a>
+                    </div>
+                    
+                    <div class="share_link">
+                        <label>Embed code:</label>:
+                        <textarea class="selectAll" ng-bind="embed_link" ng-click="embedClick()"></textarea>
+                    </div>
+                    
+                    <div class="share_link">
+                        <label>Facebook share:</label>:
+                        
+                        <a href="javascript:void(0)" class="fb_share" ng-click="facebookShareGame()">
+                            <img src="media/img/fb_botton_bg.png" />
+                            &nbsp;
+                            Share
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>    
+</div>
+
+</div>

@@ -1,0 +1,22 @@
+<div class="main_wrapper" ng-init="inst_init()" id="root_scope">
+    <div class="banner" ng-include src="'games/logic/test_yourself/app/partials/includes/banner.html?t=1'"></div>
+    <div class="instractions" ng-class="{image:game_data.main_question_image}">
+        <h2 ng-bind="game_data.main_question"></h2>
+        <img ng-src="{{game_data.main_question_image}}" ng-show="game_data.main_question_image" />
+        <br>
+        
+        
+        <button class="start" ng-click="startClicked();startGame();play_token()" tarnslate>Start</button>
+    </div>
+    
+</div>
+
+<style> 
+    .instractions {
+        padding-top:80px;
+    } 
+    
+    .instractions.image {
+        padding-top:20px;
+    }
+</style>

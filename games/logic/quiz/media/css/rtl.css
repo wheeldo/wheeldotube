@@ -1,0 +1,44 @@
+* {
+    direction:rtl;
+}
+
+.leaders {
+    
+}
+
+.leader_score {
+    float:left;
+}
+
+.reg_wrapper,
+.reg_wrapper h4,
+.reg_wrapper form,
+.reg_wrapper div,
+.reg_wrapper input,
+.reg_wrapper label{
+    direction:ltr;
+}
+
+@media screen and (max-width:600px) {
+
+    .mobile_float {
+        height:40px;
+        float:right;
+        margin-top:8px;
+    }
+    
+    .strikes {
+        margin-right:5px;
+    }
+    
+
+    
+}
+
+@media screen and (max-width:380px) {
+    .strikes {
+        margin-left:5px;
+    }
+    
+}
+

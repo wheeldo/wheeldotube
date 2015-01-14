@@ -1,0 +1,4 @@
+<div ng-init="init_player()">
+    <div class="loader_center" ng-init="__v_loader()"><img src="/media/img/player_loader.gif" style="height:35px;" /></div>
+    <iframe scrolling="no" id="game_frame" ng-src="{{game_src}}" onload="fixLayout();$('.loader_center').hide();"> </iframe>
+</div>

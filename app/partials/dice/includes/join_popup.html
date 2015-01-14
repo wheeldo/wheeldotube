@@ -1,0 +1,81 @@
+
+<div id="root_scope">
+<div class="wrapper">
+    <a class="close_x" href="javascript:void(0)" ng-click="close_popup()"><img src="/media/css/dice/img/close.png" /></a>
+    <div class="friends_fb_join">
+        <iframe src="//www.facebook.com/plugins/facepile.php?app_id&amp;href=https%3A%2F%2Fwww.facebook.com%2Fwheeldotraining&amp;action&amp;width=440&amp;height&amp;max_rows=1&amp;colorscheme=light&amp;size=medium&amp;show_count=true&amp;appId=1511607775728782" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:440px;height:60px;margin-bottom:20px;" allowTransparency="true"></iframe>
+    </div>
+    <div class="already_member">ALREADY A MEMBER? <a href="javascript:void(0)" ng-click="sign_in()">SIGN IN</a> >></div>
+
+
+    <div class="or_wrap">
+        <span>or</span>
+    </div>
+
+    <div class="processing">
+        <img src="/media/img/ajax-loader.gif" /> <br><br>
+        Processing, please wait...
+    </div>
+    <form ng-submit="registerSubmit()">
+    	<div style="margin-bottom:1em; text-align:center;">
+	    	<a ng-controller="appCtrl" href="javascript:void(0)" ng-click="login()" style="display:block; float:left; margin-left:30px;">
+	    		<img class="arr" data-role="fb-login-btn" src="/media/img/facebook-connect-logo.png" style="max-width: 176px;" />
+	    	</a>
+	    	<div ng-app="directive.g+signin" style="display:block; float:right; margin-right:30px; position:relative;">
+	    		<google-plus-signin clientid="764213770164-90t6jal11arn0v8n2eeinp39s82e8spe.apps.googleusercontent.com" language="en"></google-plus-signin>
+	    	</div>
+	    	<div style="clear: both"></div>
+	    </div>
+
+	    <div class="or_wrap">
+	        <span>or</span>
+	    </div>
+
+            <div class="form_row">
+                <label>First name:</label>
+                <input type="text" name="fname" ng-model="fname" placeholder="First name" required />
+            </div>
+            <div class="form_row">
+                <label>Last name:</label>
+                <input type="text" name="lname" ng-model="lname" placeholder="Last name" required />
+            </div>
+            <div class="form_row">
+                <label>Email:</label>
+                <input type="email" id="email" name="email" ng-model="email" placeholder="Email address" required blur-set="checkIFEmailExits(email)" />
+            </div>
+            <div class="form_row">
+                <label>Password:</label>
+                <input type="password" name="password" ng-minlength="6"  ng-model="password" placeholder="Your password (more than 6 characters ) " required /> <!--ng-pattern="/^.*(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[\d\W]).*$/"-->
+            </div>
+            <div class="form_row">
+                <label>Re-type:</label>
+                <input type="password" name="retype_password" ng-minlength="6" ng-model="retype_password" placeholder="Re-type your password" required />
+            </div>
+            <div class="note" ng-repeat="note in notes">
+                *<span ng-bind="note"></span>
+            </div>
+            <div style="text-align:right;margin-bottom:10px;">
+                By signing up, I agree to Wheeldo’s  <a href="#/article/terms" target="_blank">Terms of service</a>.
+            </div>
+            <div class="form_row actions">
+                <button ng-click="regClicked()" class="sys-button blue submit">Join</button>
+            </div>
+            <br class="clr">
+        </form>
+    <div class="thanks">
+
+        <h4>Thank you for Your Registration</h4>
+
+        Thank you for registering with Wheeldo. <br> <br>
+
+        Your account has been created and a verification email has been sent to your registered email address. <br> <br>
+
+        Please click on the verification link included in the email to activate your account. <br> <br>
+
+        Your account will not be activated until you verify your email address. <br><br>
+
+
+        <button class="sys-button blue" ng-click="close()">Close</button>
+    </div>
+</div>
+</div>

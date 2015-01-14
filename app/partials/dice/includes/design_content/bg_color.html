@@ -1,0 +1,71 @@
+<div class="left">
+    <div class="color_set">
+        &nbsp; Text color
+        <ui-colorpicker ng-model="new_game.game_design.color_4"></ui-colorpicker> &nbsp;&nbsp;
+         Hexadecimal value: &nbsp; <input type="text" ng-model='new_game.game_design.color_4' class="edit_table_input medium" maxlength="7" />
+        &nbsp;&nbsp;<img style="cursor:pointer" src="/media/css/dice/img/reset_icon.png" ng-click="resetColor('color_4','#FFFFFF')" />
+    </div>
+
+    <div class="form_row uploaderdz">
+        <button class="img_d_d"  type="button" ng-click="upload_file('new_game.game_design.background','image',1980,700)">
+            <div class="thumbnail_loader_before">
+                Upload an Image for Your Background
+                <br>
+                <span style="font-size:11px;">(jpg, png or gif only. 1980 * 700 will be great)</span>
+                <br>
+                <img class="cloud_upload" src="/media/css/dice/img/cloud.png">
+            </div>
+        </button>
+    </div>
+    
+    
+
+</div>
+<div class="right">
+    <div class="preview_window" ng-init="ex={q:'Example question text?',answers:['Answer 1','Answer 2','Answer 3','Answer 4']}">
+        <h3>Preview</h3>
+        <div class="design_prev_wrapper">
+            This is your text color. <br>  
+            Make sure it's easy to read!
+        </div>
+        <div ng-include src="'/app/partials/dice/includes/bg_color_css.html?t={{t}}'"></div>
+    </div>
+</div>
+
+<br class="clr">
+
+
+<div class="full">
+    <h3>You can choose your design from our gallery:</h3>
+    <div class="design_gallery" ng-repeat="design in op_design" ng-style="design.style" ng-click="setDesign(design)">
+        <div class="text_wrap_design">
+            Lorem ipsum dolor sit amet, <br> 
+            consectetur adipiscing elit
+        </div>
+    </div>
+    <br class="clr">
+</div>
+
+
+<style>
+    .design_gallery {
+        cursor:pointer;
+        background-size: 100%;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        float:left;
+        width:340px;
+        height:120px;
+        margin:4px;
+        border:1px solid #25ABE0;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+    }
+    
+    .design_gallery .text_wrap_design {
+        text-align:center;
+        margin-top:40px;
+        font-size:17px;
+    }
+</style>

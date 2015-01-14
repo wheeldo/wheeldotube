@@ -1,0 +1,39 @@
+<div class="banner" ng-include src="'games/logic/quiz/app/partials/includes/banner.html'"></div>
+<div class="padding-big" ng-init="inst_init()" id="root_scope">
+    <div class="content" ng-hide="instructions" >
+        <span tarnslate>Welcome</span>! 
+        <br><br>
+
+
+
+<!--        <span tarnslate>This quiz has</span> 10 <span tarnslate>questions</span>. <br>-->
+        <br>
+
+
+        <span tarnslate>You get 1 minute per question to select the correct answer.</span><br>
+        <span tarnslate>Answer as quickly as possible to maximize your score!</span><br><br>
+
+
+        <span tarnslate>You have 3 lifelines to help you out:</span><br>
+        50:50 - <span tarnslate>Only 2 answers!</span><br>
+        +30 - <span tarnslate>Give youself an extra 30 seconds!</span><br>
+        Skip - <span tarnslate>Skip to the next question</span>...
+        
+        <div id="good-luck" tarnslate>Good Luck!</div>
+        <button type="button" class="min_button go" ng-click="__go()" tarnslate>Go!</button>
+        
+    </div>
+    
+    <div class="content" ng-show="instructions" ng-bind-html-unsafe="instructions">
+        
+    </div>
+    
+    <div class="info">
+        <div class="wall-r" ng-include src="'games/logic/quiz/app/partials/includes/wall-r.html'"></div>
+    </div>
+</div>
+<div class="loading">
+    <div class="fill" style="width:{{loader_width}};">
+        
+    </div>
+</div>

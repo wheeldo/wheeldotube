@@ -1,0 +1,76 @@
+<div class="channel_games" ng-init="loadChannelGames()">
+    <div class="game game_id_{{game.id}}" ng-repeat="game in channel_games">
+        <div class="image" style="background-image:url('{{game.thumbnail}}')" ng-show="game.thumbnail"></div>
+        <div class="image" style="background-image:url('media/css/dice/img/thumb_{{get_color_box(game.id)}}.jpg')" ng-hide="game.thumbnail"></div>
+        <span ng-bind="game.name"></span>
+        <button class="sys-button pink" ng-click="deleteGame($index)">Delete</button>
+<!--        <button class="sys-button orange">Duplicate</button>-->
+        <button class="sys-button green" ng-click="gameReport(game.id)">Report</button>
+        <button class="sys-button blue3" ng-click="editGame(game.unique_id)">Edit</button>
+        
+        
+        <div class="report_data">
+            <div class="report_loader game_id_{{game.id}}_loader">
+                <img src="/media/img/2.gif" />
+            </div>
+            <div class="report_loaded_data game_id_{{game.id}}_data">
+                <table>
+                    <tr>
+                        <th>Number of players:</th>
+                        <td ng-bind="reports[game.id].players"></td>
+                    </tr>
+                    <tr>
+                        <th>% of players out of your channel subscribers:</th>
+                        <td><span ng-bind="reports[game.id].channel_subscribers"></span>%</td>
+                    </tr>
+                    <tr>
+                        <th>Bounce rate:</th>
+                        <td><span ng-bind="reports[game.id].bounce"></span>%</td>
+                    </tr>
+                    <tr>
+                        <th>Top 5 leaders</th>
+                        <td>
+                            <div class="" ng-repeat="leader in reports[game.id].leaders"><span ng-bind="$index+1"></span>) <span ng-bind="leader"></span></div>
+
+                        </td>
+                    </tr>
+<!--                    <tr>
+                        <th>How many signed up to your channel through this game:</th>
+                        <td>I don't know... :(</td>
+                    </tr>-->
+                </table>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<style>
+    .report_loader {
+        text-align:center;
+    }
+    
+    .report_loaded_data {
+        border-top:1px solid #98B724;
+        display:none;
+    }
+    
+    .game {
+        overflow:hidden;
+    }
+    
+    .game.open {
+        height:auto;
+    }
+    .report_data {
+/*        height:400px;*/
+        font-size:14px;
+        line-height:20px;
+    }
+    
+    th {
+        text-align:left;
+        vertical-align: top;
+        padding-right:10px;
+    }
+</style>

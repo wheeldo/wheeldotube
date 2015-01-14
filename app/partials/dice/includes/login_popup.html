@@ -1,0 +1,42 @@
+<div id="root_scope">
+<div class="wrapper">
+<!--    <a class="close_x" href="javascript:void(0)" ng-click="close_popup()"><img src="/media/css/dice/img/close.png" /></a>-->
+    <h1>Login to Wheeldo</h1>
+    <div class="processing">
+        <img src="/media/img/ajax-loader.gif" /> <br><br>
+        Processing, please wait...
+    </div>
+
+    <form data-role="login-form" ng-submit="signInSubmit()" form-autofill-fix>
+    	<div style="margin-bottom:1em; text-align:center;">
+	    	<a ng-controller="appCtrl" href="javascript:void(0)" ng-click="login()" style="display:block; float:left; margin-left:30px;">
+	    		<img class="arr" data-role="fb-login-btn" src="/media/img/facebook-connect-logo.png" style="max-width: 176px;" />
+	    	</a>
+	    	<div class="google_button" ng-app="directive.g+signin" style="display:block; float:right; margin-right:30px; position:relative; ">
+	    		<google-plus-signin clientid="764213770164-90t6jal11arn0v8n2eeinp39s82e8spe.apps.googleusercontent.com" language="en"></google-plus-signin>
+	    	</div>
+	    	<div style="clear: both"></div>
+	    </div>
+
+        <div class="form_row">
+            <label>Email</label>
+            <input type="email" name="email" ng-model="email" placeholder="Email address" ng-required />
+        </div>
+        <div class="form_row">
+            <label>Password</label>
+            <input type="password" name="password" ng-minlength="6" ng-model="password" placeholder="Your password" ng-required />
+        </div>
+        <div class="note" ng-repeat="note in notes">
+            *<span ng-bind="note"></span>
+        </div>
+        <div class="form_row actions">
+            <button type="button" class="sys-button trans" ng-click="forgotPassword()">Forgot password?</button>
+            <button class="sys-button blue submit" ng-click="signClicked()">Login</button>
+            <br class="clr">
+        </div>
+    </form>
+</div>
+<div class="popup_bottom">
+    <div class="reg">Not a member yet? <a href="javascript:void(0)" ng-click="reg()">Register now</a> - it’s fun and easy!</div>
+</div>
+</div>

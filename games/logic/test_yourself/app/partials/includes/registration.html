@@ -1,0 +1,73 @@
+<div class="reg_wrapper" ng-init="test()">
+    <h4>Want to join this game?</h4>
+
+	<form role="form" ng-submit="registerNewUser()">
+	    <div class="form-group fb_connect">
+	    	<a ng-controller="appCtrl" href="javascript:void(0)" ng-click="login()">
+	    		<img class="arr" data-role="fb-login-btn" src="/media/img/facebook-connect-logo.png" style="max-width: 180px;" />
+	    	</a>
+	    </div>
+	    <div class="form-group google_connect">
+	    	<div ng-app="directive.g+signin" style="">
+	    		<google-plus-signin clientid="764213770164-90t6jal11arn0v8n2eeinp39s82e8spe.apps.googleusercontent.com" language="en"></google-plus-signin>
+	    	</div>
+	    </div>
+        <div class="form-group">
+          <!--<label for="exampleInputEmail1">First name:</label>-->
+          <input name="fname" type="text" class="form-control" placeholder="First name" ng-model="reg.fname">
+        </div>
+        <div class="form-group">
+          <!--<label for="exampleInputEmail1">Last name:</label>-->
+          <input name="lname" type="text" class="form-control" placeholder="Last name" ng-model="reg.lname">
+        </div>
+        <div class="form-group">
+          <!--<label for="exampleInputEmail1">Email address</label>-->
+          <input name="email"  id="reg_email" ng-change="checkEmail()" type="email" class="form-control" placeholder="Enter email" requierd ng-model="reg.email">
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" ng-model="reg.remember" ng-checked="true"> Remember me on this computer
+          </label>
+        </div>
+        <!--<div class="checkbox">
+          <label>
+            <input type="checkbox" ng-model="reg.subscribe" ng-checked="true"> Subscribe to this channel
+          </label>
+        </div>-->
+        <input type="hidden" ng-model="reg.subscribe" ng-init="reg.subscribe=1" value="1" />
+        <div class="error" ng-bind="error"></div>
+        <button type="submit" class="btn btn-default">Sign up</button>
+    </form>
+
+</div>
+
+
+<style>
+    
+    
+    .btn {
+        background-color: #98b724 !important;
+    }
+
+    .error {
+        font-size:12px;
+        color:red;
+        margin:5px 0px;
+    }
+
+    .ng-valid.emailNotValid,
+    .ng-valid.emailNotValid:focus {
+        border-color:#FF0303;
+        -webkit-box-shadow: 0 0 3px 0 #FF0303;
+        box-shadow: 0 0 3px 0 #FF0303;
+
+    }
+
+    .ng-valid.emailValid,
+    .ng-valid.emailValid:focus {
+        border-color:#009600;
+        -webkit-box-shadow: 0 0 3px 0 #009600;
+        box-shadow: 0 0 3px 0 #009600;
+
+    }
+</style>

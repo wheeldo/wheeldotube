@@ -1,0 +1,148 @@
+<div class="main_wrapper" ng-init="gameEndInit()" id="root_scope" style="display:none;" ng-show="ready">
+    <div class="banner" ng-include src="'games/logic/quiz_new/app/partials/includes/banner.html'"></div>
+
+    <div class="main_data no_banners">
+        <h3 style="margin-bottom:20px;"><span tarnslate>You answered</span> <span ng-bind="end_data.right"></span> <span tarnslate>out of</span> <span ng-bind="end_data.total"></span> <span tarnslate>questions correctly and won</span> <span ng-bind="end_data.score"></span> <span tarnslate>points</span>. 
+            (You placed <span ng-bind="end_data.your_rank"></span> out of <span ng-bind="end_data.total_players"></span>)</h3>
+       <accordion close-others="false">
+            <accordion-group is-open="true">
+                <accordion-heading>
+                    <span tarnslate>Today’s Leaders</span>:
+                </accordion-heading>
+               <div class="leaders">
+                    <div class="leader" ng-repeat="leader in end_data.leaders">
+                        <span ng-bind="leader.name"></span>
+                        <span class="leader_score" ng-bind="leader.score"></span>
+                    </div>
+                    <br class="clr" />
+                </div>
+            </accordion-group>
+<!--            <accordion-group is-open="true">
+                <accordion-heading>
+                    <span tarnslate>{{ gameDetails.call_action_text }}
+                </accordion-heading>
+                <button class="btn btn-info" ng-click="callAction()" ><span tarnslate>{{ gameDetails.call_action_btnText }}</button> 
+                <div style="margin-top:10px;" tarnslate ng-show="sendToFriendSent">Your invitation was sent, once your friend will join the game you will win 100 points</div>
+            </accordion-group>-->
+<!--            <div ng-show="show_voucher">
+                <accordion-group is-open="false" >
+                    <accordion-heading>
+                        <span tarnslate>Congratulations, you won a voucher</span> - <span style="font-weight:bold;" ng-bind="voucher_name"></span>                       
+                    </accordion-heading>
+                    <button class="btn btn-success" id="sendVoucherButton" ng-click="sendVaucher()"><span tarnslate>Send me the voucher</span></button>
+                    <div class="hide voucher_wait"><span tarnslate>Please wait</span>...</div>
+                    <div class="hide voucher_sent"><span tarnslate>Voucher sent successfully</span>!</div>
+                    <div class="hide voucher_faild"><span tarnslate>Voucher sent failed</span>.</div>
+                </accordion-group>
+            </div>-->
+<!--           <accordion-group is-open="true">
+                <accordion-heading>
+                    <span tarnslate>Recommended Game</span>:
+                </accordion-heading>
+               <div ng-show="recommended_game" class="recommended_game_box" ng-init="getRecommendedGame()" ng-click="loadAnotherGame(recommended_game.unique_id)">
+                   <div class="game_name" ng-bind="recommended_game.name"></div>
+                   <img class="thumbnail" ng-src="{{recommended_game.thumbnail}}" >
+               </div>
+            </accordion-group>-->
+      </accordion>
+       <div style="text-align: center;">
+       
+       
+           <button ng-show="CTA_button" class="end_button website cta_button" ng-click="callAction();ctaClicked();" ><span ng-bind="cta_text"></span></button> 
+           <div style="margin-top:10px;" tarnslate ng-show="sendToFriendSent">Your invitation was sent, once your friend will join the game you will win 100 points</div>
+           <button ng-show="show_voucher" class="end_button coupon cta_button" id="sendVoucherButton" ng-click="sendVaucher();couponClicked();">You won <span ng-bind="voucher_name"></span> - <span tarnslate>Send me the Coupon</span></button>
+           
+           <button ng-show="share_button" class="end_button share" ng-click="shareGame();shareClicked()" tarnslate>Share</button>
+       </div>
+       
+       <div ng-show="show_voucher" style="margin-top:20px;">
+            
+            <div class="hide voucher_wait"><span tarnslate>Please wait</span>...</div>
+            <div class="hide voucher_sent"><span tarnslate>Coupon sent successfully</span>!</div>
+            <div class="hide voucher_faild"><span tarnslate>Coupon sent failed</span>.</div>
+       </div>
+    </div>
+    
+</div>
+
+
+<style>
+    
+    .cta_button {
+        background-color:#98B724;
+    }
+    
+    .main_data {
+        padding:20px;
+    }
+    .link_end,
+    .link_end:hover{
+        background:none;
+        color:#ffffff;
+        background-color:#98B724 !important;
+    }
+    
+    
+    .full-size {
+        width:100%;
+        font-size:120%;
+        line-height:110%;
+    }
+    
+    .recommended_game_box {
+        width:144px;
+        border:1px solid #46ACCA;
+        cursor:pointer;
+    }
+    
+    .recommended_game_box .thumbnail {
+        height:96px;
+        width:144px;
+        padding:0px;
+    }
+    
+    .recommended_game_box .game_name {
+        position: absolute;
+        top:2px;
+        font-size:12px;
+        background-color:black;
+        color:#ffffff;
+        width:100%;
+        padding:3px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    h3 {
+        font-size:20px;
+        line-height:22px;
+        margin-bottom:10px;
+    }
+    
+    .main_data {
+        font-size:18px;
+        line-height:22px;
+    }
+    
+    
+    .reg_wrapper h4 {
+        margin-bottom:10px;
+    }
+    
+    .reg_wrapper .fb_connect {
+        margin-bottom:5px;
+    }
+    
+    .reg_wrapper .checkbox,
+    .reg_wrapper .checkbox label{
+        height:30px;
+        line-height:30px;
+    }
+    
+    .reg_wrapper .checkbox input[type="checkbox"] {
+        float:left;
+        width:30px !important;
+    }
+    
+</style>

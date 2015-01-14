@@ -1,0 +1,39 @@
+<div id="lifes">
+    <div class="life l50_50" ng-class="{used:game_quiz_user.use_5050=='1'}" ng-click="setLife('use_5050')">
+        <div class="mobile">
+            <div class="not_used">
+                <img src="games/logic/quiz_new/media/img/life.png" />
+            </div>
+            <div class="used">
+                <img src="games/logic/quiz_new/media/img/life_used.png" />
+            </div>
+            50:50
+        </div>
+    </div>
+    <div class="life plus_30" ng-class="{used:game_quiz_user.use_plus_60=='1'}" ng-click="setLife('use_plus_60')">
+        <div class="mobile">
+            <div class="not_used">
+                <img src="games/logic/quiz_new/media/img/life.png" />
+            </div>
+            <div class="used">
+                <img src="games/logic/quiz_new/media/img/life_used.png" />
+            </div>
+            +30
+        </div>
+    </div>
+    <div class="life skip" ng-class="{used:game_quiz_user.use_skip=='1'}"ng-click="setLife('use_skip')">
+        <div class="mobile">
+            <div class="not_used">
+                <img src="games/logic/quiz_new/media/img/life.png" />
+            </div>
+            <div class="used">
+                <img src="games/logic/quiz_new/media/img/life_used.png" />
+            </div>
+            Skip
+        </div>
+    </div>
+</div>
+
+<div class="preset" id="preset_1"></div>
+<div class="preset" id="preset_2"></div>
+<div class="preset" id="preset_3"></div>

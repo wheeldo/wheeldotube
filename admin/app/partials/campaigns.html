@@ -1,0 +1,227 @@
+<div ng-init="loadCampaigns()">
+    <button class="btn btn-pink" ng-click="addNewCampaign()"><i class="icon-plus align-top bigger-125"></i> Create new campaign</button>
+            <div class="table-responsive">
+            <table id="sample-table-1" class="table table-striped table-bordered table-hover">
+                    <thead>
+                            <tr>
+                                    <th class="center" style="width:40px;">
+                                            <label>
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                            </label>
+                                    </th>
+                                    <th style="width:30px;">
+                                        ID
+                                    </th>
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        Date
+                                    </th>
+                                    <th style="width:80px;">
+                                        ---
+                                    </th>
+                            </tr>
+                    </thead>
+                    <tbody>
+                            <tr ng-repeat="campaign in campaigns">
+                                    <td class="center">
+                                            <label>
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                            </label>
+                                    </td>
+
+                                    <td ng-bind="campaign.id"></td>
+                                    <td ng-bind="campaign.name"></td>
+                                    <td ng-bind="campaign.time"></td>
+                                    <td>
+                                            <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
+
+                                                    <button class="btn btn-xs btn-info" ng-click="edit_campaign(campaign.id);">
+                                                            <i class="icon-edit bigger-120"></i>
+                                                    </button>
+
+                                                    <button class="btn btn-xs btn-danger" ng-click="delete_campaign(campaign.id)">
+                                                            <i class="icon-trash bigger-120"></i>
+                                                    </button>
+
+                                            </div>
+
+                                    </td>
+                            </tr>
+
+                    </tbody>
+            </table>
+    </div><!-- /.table-responsive -->
+    
+    
+    <div class="campaign_edit" ng-show="campaign_edit">
+        
+        <h3 class="header smaller lighter purple">"<span ng-bind="campaign_edit.campaign.name"></span>" Campaign</h3>
+        <div class="col-sm-6">
+                <div class="tabbable">
+                        <ul id="myTab" class="nav nav-tabs">
+                                <li class="active">
+                                        <a href="#home" data-toggle="tab">
+                                                <i class="green icon-desktop bigger-110"></i>
+                                                Game Pages
+                                        </a>
+                                </li>
+
+                                <li>
+                                        <a href="#profile" data-toggle="tab">
+                                                <i class="green icon-cog bigger-110"></i>
+                                                Settings
+                                        </a>
+                                </li>
+
+                        </ul>
+
+                        <div class="tab-content">
+                                <div class="tab-pane in active" id="home">
+                                        <button class="btn btn-minier btn-pink" ng-click="addNewCampaignPage(campaign_edit.campaign.id)"><i class="icon-plus align-top bigger-125"></i> Add new game page</button>
+                                        <table class="pages_table">
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Title</th>
+                                                <th>Link</th>
+                                                <th>Close</th>
+                                                <th style="width:70px;"></th>
+                                            </tr>
+                                            <tr ng-repeat="page in campaign_edit.pages">
+                                                <td ng-bind="page.time"></td>
+                                                <td ng-bind="page.title"></td>
+                                                <td><a target="_blank" ng-href="http://www.wheeldo.co/cmp/{{page.link}}">http://www.wheeldo.co/cmp/{{page.link}}</a></td>
+                                                <td>
+                                                    <label>
+                                                        <input type="checkbox" ng-change="setPageCloseValue(page.id,page.close)" class="ace ace-switch" ng-model="page.close" ng-true-value="1" ng-false-value="0" >
+                                                        <span class="lbl"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <button ng-click="edit_campaign_page($index);" class="btn btn-minier btn-info">
+                                                            <i class="icon-edit bigger-120"></i>
+                                                    </button>
+                                                    <button ng-click="delete_campaign_page($index);" class="btn btn-minier btn-danger">
+                                                            <i class="icon-trash bigger-120"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                </div>
+
+                                <div class="tab-pane" id="profile">
+                                        <form ng-submit="saveCampaign()">
+                                            <input type="hidden" ng-model="campaign_edit.campaign.id" />
+                                            <div>
+                                                <label>Campaign name</label>
+                                                <input type="text" class="form-control" ng-model="campaign_edit.campaign.name" />
+                                            </div>
+                                            <div class="clearfix form-actions">
+                                                    <div class="col-md-offset-3 col-md-9">
+                                                            <button type="submit" class="btn btn-info">
+                                                                    <i class="icon-ok bigger-110"></i>
+                                                                    Submit
+                                                            </button>
+                                                    </div>
+                                            </div>
+                                        </form>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <div class="col-sm-6" ng-show="page_campaign_edit">
+                <div class="widget-box">
+                        <div class="widget-header">
+                                <h4 class="smaller" ng-bind="page_campaign_edit.title">
+                                        
+                                </h4>
+                        </div>
+
+                        <div class="widget-body">
+                                <div class="widget-main">
+    
+                                        <div>
+                                            <label for="form-field-8">Title</label>
+                                            <input type="text" id="form-field-8" class="form-control" ng-model="page_campaign_edit.title" placeholder="Campaign Page Title">
+                                        </div>
+                                        <div>
+                                            <label for="form-field-8">Title</label>
+                                            <input type="text" id="form-field-8" class="form-control" ng-model="page_campaign_edit.link" placeholder="Campaign Page Link">
+                                        </div>
+                                        <div>
+                                            <label for="form-field-8">Description</label>
+                                            <div class="wysiwyg-editor" id="editor1"></div>
+                                            <textarea id="desc_text" class="form-control" ng-model="page_campaign_edit.desc"></textarea>
+                                        </div>
+                                        <div class="img_upload_frame1_form">
+                                            <label for="form-field-8">Background image (1920X1080)</label>
+                                            <img class="bg_image_page" ng-src="{{page_campaign_edit.image}}" ng-show="page_campaign_edit.image" />
+                                            <form method="post" action="{{uploadUrls.img_upload_frame1.url}}" enctype="multipart/form-data" target="img_upload_frame" id="img_upload_frame1" res_mark="{{uploadUrls.img_upload_frame1.res_mark}}">
+                                                <input type="hidden" name="res_mark" value="{{uploadUrls.img_upload_frame1.res_mark}}" />
+                                                <input type="hidden" name="img_effect" value="c_fill,h_1080,w_1920" />
+                                                <input ng-file-select="onIMGSelect($files,'img_upload_frame1')" type="file" name="img_upload" id="id-input-file-3" />
+                                            </form>
+                                            <iframe id="img_upload_frame" name="img_upload_frame"></iframe>
+                                        </div>
+                                        <div class="img_loader img_upload_frame1">
+                                            <img src="admin/assets/img/loading.gif" /> Uploading...
+                                        </div>
+                                        <div>
+                                            <label for="form-field-8">Game</label>
+                                            <input type="text" id="form-field-1" class="form-control" ng-model="page_campaign_edit.game" ng-change="loadGame()" placeholder="Game id">
+                                        </div>
+                                        <div>
+                                            
+                                        </div>
+                                        <hr>
+                                        <p>
+                                                <span ng-click="save_campaign_page()" title="" data-placement="bottom" data-rel="tooltip" class="btn btn-info btn-sm tooltip-info" data-original-title="Bottm Info">Save</span>
+                                        </p>
+                                </div>
+                        </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .bg_image_page {
+        max-width:300px;
+        max-height:50px;
+    }
+    
+    .pages_table {
+        border-collapse: collapse;
+        width:100%;
+        margin-top:20px;
+    }
+    
+    .pages_table td {
+        border:1px solid #F3F3F3;
+        padding:2px;
+    }
+    
+    .img_loader {
+        height:40px;
+        line-height:40px;
+        display:none;
+    }
+    #img_upload_frame {
+        display:none;
+    }
+    textarea.form-control {
+        height:100px !important;
+        margin-bottom:10px;
+    }
+    .table-responsive {
+        margin-top:20px;
+        max-width:500px;
+    }
+    
+    #desc_text {
+        display:none;
+    }
+</style>

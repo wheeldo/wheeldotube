@@ -1,0 +1,113 @@
+<div class="wrapper">
+    <a class="close_x" href="javascript:void(0)" ng-click="close_popup()"><img src="/media/css/dice/img/close.png" /></a>
+    <div class="loadQuestionnaires_wrapper">
+        <h4>Ready Made Trivia Games</h4>
+        <div class="search_top_qqq">
+            <form ng-submit="search(this.skey)">
+                <input type="text" ng-model="skey" placeholder="Search" />
+                <button type="submit" class="sys-button green">Search</button>
+            </form>
+        </div>
+        <div class="qqq_wrapper">
+            <div class="qqq" ng-repeat="qqq in questionnaires" ng-class="{odd:$index%2==0}" ng-click="load_questionary($index)">
+                <div class="qqq_name" ng-bind="qqq.name"></div>
+                <div class="qqq_noq">
+                    <span ng-bind="qqq.noq"></span> questions
+                </div>
+                <div class="qqq_actions">
+                    <a>Choose</a>
+                </div>
+
+    <!--            <div class="q_name" ng-bind="q.name"></div>-->
+                <br class="clr" />
+            </div>
+        </div>
+
+    <!--    <select ng-model="q_selected" ng-options="q.name for q in questionnaires"></select>-->
+
+
+
+
+    </div>
+</div>
+
+<style>
+    
+    .close_x {
+        position: absolute;
+        right: 3px;
+        top: 1px;
+        z-index:100;
+    }
+    
+    .search_top_qqq {
+        height:40px;
+        border-bottom:1px solid black;
+        margin-bottom:5px;
+    }
+    
+    .search_top_qqq input {
+        height:32px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width:350px;
+    }
+    
+    .loadQuestionnaires_wrapper {
+        padding:10px;
+    }
+    
+    .qqq_wrapper {
+        max-height:400px;
+        overflow-x:hidden;
+        overflow-y: auto;
+    }
+    
+    .qqq { 
+        height:22px;
+        line-height:22px;
+        margin-top:3px;
+        border-bottom:0px solid black;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding:0px 10px;
+        cursor:pointer;
+        background-color:#1688B5;
+        color:#ffffff;
+    }
+    
+    .qqq.odd {
+        background-color:#98DCF7;
+        color:#000000;
+    }
+    
+    .qqq:hover {
+        background-color:#E8CCCC;
+        color:#000000;
+    }
+    
+    .qqq_name {
+        float:left;
+        height:22px;
+        width:280px;
+    }
+    
+    .qqq_noq {
+        float:left;
+        height:22px;
+    }
+    
+    .qqq_actions {
+        float:right;
+        height:22px;
+        
+    }
+    
+    .qqq_actions a {
+        color:blue;
+    }
+    
+    
+</style>

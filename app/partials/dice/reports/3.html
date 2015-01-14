@@ -1,0 +1,142 @@
+<div>
+    <div class="report_box">
+        <div google-chart chart="chart_game_results" style="{{chart.cssStyle}}" class="chart_small" /> 
+    </div>
+
+    <div class="report_box">
+        <div google-chart chart="chart_traffic_data" style="{{chart.cssStyle}}" class="chart_small" /> 
+    </div>
+
+        
+    <div class="report_box" style='border:0;'>
+        <h4>Traffic Funnel</h4>
+        <table class="data">
+            <tr>
+                <th></th>
+                <th>Unique</th>
+                <th>Drop</th>
+            </tr>
+            <tr>
+                <td>All traffic</td>
+                <td ng-bind="funnel.all"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Start the game</td>
+                <td ng-bind="funnel.start_game"></td>
+                <td><span ng-bind="funnel_drop.start_game"></span>%</td>
+            </tr>
+            <tr>
+                <td>Finished the game</td>
+                <td ng-bind="funnel.finish_game"></td>
+                <td><span ng-bind="funnel_drop.finish_game"></span>%</td>
+            </tr>
+            <tr>
+                <td>Call to action</td>
+                <td ng-bind="funnel.end_game_ctas"></td>
+                <td><span ng-bind="funnel_drop.end_game_ctas"></span>%</td>
+            </tr>
+        </table>
+        <h4>Call To Action</h4>
+        <table class="data">
+            <tr>
+                <th>Type</th>
+                <th>Unique</th>
+            </tr>
+            <tr>
+                <td>User call to action</td>
+                <td ng-bind="funnel.cta"></td>
+            </tr>
+            <tr>
+                <td>Coupon</td>
+                <td ng-bind="funnel.coupon"></td>
+            </tr>
+            <tr>
+                <td>Share</td>
+                <td ng-bind="funnel.share"></td>
+            </tr>
+        </table>
+        <h4>Leads data</h4>
+        <table class="data">
+            <tr>
+                <th>Type</th>
+                <th>Unique</th>
+            </tr>
+            <tr>
+                <td>Leads collected</td>
+                <td ng-bind="leads_counter"></td>
+            </tr>
+            <tr>
+                <td>Users "Skip this stage"</td>
+                <td ng-bind="skip_reg_counter"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="report_box">
+        <div id="funnelContainer"></div>
+    </div> 
+        
+        
+    <br class="clr">
+
+    <div class="">
+        <h3>Game Results</h3>
+        <table class="data">
+            <tr ng-repeat="res in report_results_data.game_results">
+                <td style="width:30px;text-align:center;" ng-bind="$index+1"></td>
+                <td ng-bind="res"></td>
+            </tr>
+        </table>
+        
+        
+        <h3 ng-show="report_leads">Leads <a ng-click="report_leads_download()" href="javascript:void(0)" class="xlsx_download">Download File</a></h3>
+        <table class="data" ng-show="report_leads">
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Registration Date</th>
+
+            </tr>
+            <tr ng-repeat="user in report_leads">
+                <td style="width:30px;text-align:center;" ng-bind="$index+1"></td>
+                <td ng-bind="user.fname+' '+user.lname"></td>
+                <td ng-bind="user.email"></td>
+                <td ng-bind="user.reg_time"></td>
+            </tr>
+        </table>
+        
+        
+        <h3>Game Users</h3>
+        <div style="margin-bottom:20px;" class="multi_actions" ng-show="show_multi">
+            <button style="width:220px;" class="sys-button pink edit_b icon_delete" ng-click="resetGameRecords()">Delete <span ng-bind="records_C"></span> records</button>
+        </div>
+        <table class="data">
+            <tr>
+                <th style="text-align:center;width:40px;"><input ng-model="user_check_all" type="checkbox" ng-change="checkAll()" /></th>
+                <th></th>
+                <th></th>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Score</th>
+                <th style='width:90px;'>Skip registration</th>
+                <th style='width:80px;'>More data</th>
+                <th>Result</th>
+            </tr>
+            <tr ng-repeat="user in report_results_data.players_list">
+                 <td style="text-align:center;"><input type="checkbox" ng-model="user.selected" ng-change="checkIfMultipleOption()" /></td>
+                <td style="width:30px;text-align:center;" ng-bind="$index+1"></td>
+                <td style="width:30px;"><img class="user_image" ng-src="{{user.image}}" /></td>
+                <td ng-bind="user.name"></td>
+                <td ng-bind="user.time"></td>
+                <td ng-bind="user.score"></td>
+                <td ng-bind="user.skip_reg"></td>
+                <td style="text-align: center;"><a ng-click="showUserMoreData(user.ID,user.start_time)" href="javascript:void(0)"><img src="/media/css/dice/img/more_info_icon.png" /></a></td>
+                <td ng-bind="user.result"></td>
+            </tr>
+        </table>
+        <div style="margin-bottom:20px;" class="multi_actions" ng-show="show_multi">
+            <button style="width:220px;" class="sys-button pink edit_b icon_delete" ng-click="resetGameRecords()">Delete <span ng-bind="records_C"></span> records</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="mobile_content">
+
+    <div class="fade_sm_open"></div>
+    <div id="side_menu">
+        <div class="u_data">
+            <img class="rounded_image_large" ng-src="{{user.image}}" /> <br>
+            <span ng-bind="user.name"></span>
+        </div>
+        <div class="sm_section" ng-show="user_login">
+            <ul>
+                <li><a href="/settings">Settings</a></li>
+                <li><a href="javascript:void(0)" ng-click="changePassword()">Change password</a></li>
+                <li><a href="javascript:void(0)" ng-click="contactUs()">Feedback/Contact us</a></li>
+                <li><a href="javascript:void(0)" ng-click="logOut()">Sign out</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="logo_wrapper">
+        <a href="/" id="log_link">
+            <img src="/media/css/dice/img/wheeldo_logo.png" />
+        </a>
+        <!--<a class="smenu_link" href="javascript:void(0)" ng-click="sm_toggle()"></a>-->
+    </div>
+
+    <a class="top_link" ng-click="sign_in_popup()" ng-hide="user_login">
+        Sign in
+    </a>
+
+    <a class="top_link" ng-click="user_popup()" ng-show="user_login">
+        <img class="rounded_image" ng-src="{{user.image}}" />
+        <span ng-bind="user.name" class="user_name_top"></span>
+    </a>
+</div>

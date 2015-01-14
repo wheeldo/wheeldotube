@@ -1,0 +1,81 @@
+<div class="left">
+    <div class="color_set">
+        &nbsp; Color set 1
+        <ui-colorpicker ng-model="new_game.game_design.color_1"></ui-colorpicker> &nbsp;&nbsp;
+         Hexadecimal value: &nbsp; <input type="text" ng-model='new_game.game_design.color_1' class="edit_table_input medium" maxlength="7" /> 
+        &nbsp;&nbsp;<img style="cursor:pointer" src="/media/css/dice/img/reset_icon.png" ng-click="resetColor('color_1',new_game.game_default_design.color_1)" />
+    </div>
+    <div class="color_set">
+        &nbsp; Color set 2
+        <ui-colorpicker ng-model="new_game.game_design.color_2"></ui-colorpicker> &nbsp;&nbsp;
+         Hexadecimal value: &nbsp; <input type="text" ng-model='new_game.game_design.color_2' class="edit_table_input medium" maxlength="7" />  
+        &nbsp;&nbsp;<img style="cursor:pointer" src="/media/css/dice/img/reset_icon.png" ng-click="resetColor('color_2',new_game.game_default_design.color_2)" />
+    </div>
+    <div class="color_set">
+        &nbsp; Color set 3
+        <ui-colorpicker ng-model="new_game.game_design.color_3"></ui-colorpicker> &nbsp;&nbsp;
+          Hexadecimal value: &nbsp; <input type="text" ng-model='new_game.game_design.color_3' class="edit_table_input medium" maxlength="7" />  
+        &nbsp;&nbsp;<img style="cursor:pointer" src="/media/css/dice/img/reset_icon.png" ng-click="resetColor('color_3',new_game.game_default_design.color_3)" />
+    </div>
+    <div class="color_set">
+        &nbsp; Color set 4
+        <ui-colorpicker ng-model="new_game.game_design.color_4"></ui-colorpicker> &nbsp;&nbsp;
+          Hexadecimal value: &nbsp; <input type="text" ng-model='new_game.game_design.color_4' class="edit_table_input medium" maxlength="7" />  
+        &nbsp;&nbsp;<img style="cursor:pointer" src="/media/css/dice/img/reset_icon.png" ng-click="resetColor('color_4',new_game.game_default_design.color_4)" />
+    </div>
+
+    <form action="{{uploadUrls.banner.url}}" method="post" id="banner_upload_form" enctype="multipart/form-data" target="img_upload_frame" imgObj="banner" res_mark="{{uploadUrls.banner.res_mark}}">
+        <div class="form_row uploaderdz">
+            <input type="file" name="img_upload" id="img_upload2" ng-file-select="onIMGSelect($files,'banner_upload_form')" />
+            <input type="hidden" name="res_mark" value="{{uploadUrls.banner.res_mark}}" />
+            <input type="hidden" name="img_effect" value="c_fill,h_180,w_980" />
+            <button type="button" class="img_d_d" ng-click="selectFile('img_upload2')">
+                <div class="banner_loader_before">
+                    Select image to upload banner<br> <span style="font-size:11px;">(jpg, png or gif only. 980 * 180 will be great)</span> <br>
+                    <img class="cloud_upload" src="/media/css/dice/img/cloud.png" />
+                </div>
+                <div class="loader banner_loader"><img src="/media/img/loading.gif" /></div>
+            </button>
+        </div>
+    </form>
+    <form action="{{uploadUrls.background.url}}" method="post" id="background_upload_form" enctype="multipart/form-data" target="img_upload_frame" imgObj="background" res_mark="{{uploadUrls.background.res_mark}}">
+        <div class="form_row uploaderdz">
+            <input type="file" name="img_upload" id="img_upload3" ng-file-select="onIMGSelect($files,'background_upload_form')" />
+            <input type="hidden" name="res_mark" value="{{uploadUrls.background.res_mark}}" />
+            <input type="hidden" name="img_effect" value="c_fill,h_980,w_980" />
+            <button type="button" class="img_d_d" ng-click="selectFile('img_upload3')">
+                <div class="background_loader_before">
+                    Select image to upload Background<br> <span style="font-size:11px;">(jpg, png or gif only. 980 * 980 will be great)</span> <br>
+                    <img class="cloud_upload" src="/media/css/dice/img/cloud.png" />
+                </div>
+                <div class="loader background_loader"><img src="/media/img/loading.gif" /></div>
+            </button>
+        </div>
+    </form>
+</div>
+<div class="right">
+    <div class="preview_window">
+        <h3>Preview</h3>
+        <div class="design_prev_wrapper" style="background-image:url({{new_game.game_design.background}});">
+            <div class="banner"> <img class="banner_bg" ng-src="{{new_game.game_design.banner}}" /></div>
+            <div class="padding-big" ng-init="gameInit()" id="root_scope">
+                <div class="main_data_mobile"></div>
+                <div class="question " ng-bind="questions[0].question"></div>
+                <div class="game_options">
+                    <div>
+                        <div class="option normal" ng-repeat="(key, value) in questions[0].answers" ng-bind="value">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info" ng-init="game_progress={answerd:1,total:5}">
+                    <div class="wall-r" ng-include src="'/games/logic/quiz/app/partials/includes/wall-r.html'"></div>
+                    <div class="game-info" ng-include src="'/games/logic/quiz/app/partials/includes/game-info.html'"></div>
+                </div>
+            </div>
+        </div>
+        <div ng-include src="'/app/partials/dice/includes/quiz_css.html'"></div>
+    </div>
+</div>
+
+<br class="clr">

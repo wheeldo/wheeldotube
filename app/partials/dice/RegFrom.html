@@ -1,0 +1,58 @@
+<div class="register_wrap" id="root_scope" ng-init="signInInit()">
+    <div class="logo_cont">
+        <img src="/media/img/logo.png" alt="logo" id="logo" />
+    </div>
+    <h2>Create new account</h2>
+    <div class="gray_form reg_form cancel_error">
+        <div class="processing">
+            <img src="media/img/ajax-loader.gif" /> <br><br>
+            Processing, please wait...
+        </div>
+        <form ng-submit="registerSubmit()">
+            <div class="form_row">
+                <label>First name:</label>
+                <input type="text" name="fname" ng-model="fname" placeholder="First name" required />
+            </div>
+            <div class="form_row">
+                <label>Last name:</label>
+                <input type="text" name="lname" ng-model="lname" placeholder="Last name" required />
+            </div>
+            <div class="form_row">
+                <label>Email:</label>
+                <input type="email" id="email" name="email" ng-model="email" placeholder="Email address" required blur-set="checkIFEmailExits(email)" />
+            </div>
+            <div class="form_row">
+                <label>Password:</label>
+                <input type="password" name="password" ng-minlength="6"  ng-model="password" placeholder="Your password (more than 6 characters ) " required /> <!--ng-pattern="/^.*(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[\d\W]).*$/"-->
+            </div>
+            <div class="form_row">
+                <label>Re-type:</label>
+                <input type="password" name="retype_password" ng-minlength="6" ng-model="retype_password" placeholder="Re-type your password" required />
+            </div>
+            <div class="note" ng-repeat="note in notes">                
+                *<span ng-bind="note"></span>
+            </div>
+            <div class="form_row actions">
+                <button ng-click="regClicked()" class="sys-button orange submit">Register</button>
+            </div>
+            <div>
+                <a href="javascript:void(0)" ng-click="__goto('/')">Back to home page</a>
+            </div>
+        </form>
+        <div class="thanks">
+            
+            <h4>Thank you for Your Registration</h4>
+
+            Thank you for registering with Wheeldo. <br> <br>
+            
+            Your account has been created and a verification email has been sent to your registered email address. <br> <br>
+            
+            Please click on the verification link included in the email to activate your account. <br> <br>
+
+            Your account will not be activated until you verify your email address. <br><br>
+            
+            
+            <button class="sys-button blue" ng-click="__goto('')">Go to home page</button>
+        </div>
+    </div>
+</div>

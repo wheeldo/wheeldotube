@@ -1,0 +1,192 @@
+<div class="share_wrap" ng-init="share_game_init()" style="display:none;" ng-show="ready">
+    <h4>Social share <span ng-show='!full_share' style="text-transform:none;font-size:12px;font-family:Arial;">(<span ng-bind="result_share"></span>)</span></h4>
+
+    <div class="social_links">
+<!--        <a class="fb" ng-href="https://www.facebook.com/sharer.php?u=http://www.wheeldo.co/play?gid={{game.unique_id}}%26r=facebook" target="_blank">-->
+        <a class="fb" ng-href="{{facebook_url}}" target="_blank">
+            SHARE
+        </a>
+        
+        <a class="in" linkedin ng-href="{{linkedin_url}}" target="_blank">
+            SHARE
+        </a>
+        
+        <a class="tw" target="_blank" href="{{tweeter_url}}" target="_blank">
+            TWEET
+        </a>
+        <br class="clr" />
+    </div>
+    <hr>
+    <div ng-show="full_share">
+        <h4>Share By embed in your website</h4>
+        <div>
+            <textarea readonly="" class="selectAll" id="embd_text" ng-bind="embed_link" ng-click="selectAll('embd_text')"></textarea>
+        </div>
+        <hr>
+    </div>
+    <h4>Share Links </h4>
+    
+    <button ng-show="full_share" class="trackable_button" ng-click="newTrackableLink()">Create trackable share link</button>
+    <div>
+        <label> Web</label><input readonly="" type="text" class="selectAll" id="gm_link" ng-model="new_game_link" ng-click="selectAll('gm_link')" />
+    </div>
+    
+    <div ng-repeat="link in trackable_links" ng-show="link.link">
+        <label ng-bind="link.name"></label><input readonly="" type="text" class="selectAll trackable_links" id="{{link.link}}" value="{{new_game_link}}?r={{link.link}}" ng-click="selectAll(link.link)" />
+    </div>
+    
+    
+    <img ng-hide="ready"  class="loader_n" src="/media/img/ajax-loader.gif" />
+</div>
+
+
+<style>
+    
+    label {
+        font-size:12px;
+        height:14px;
+        color:#ffffff;
+        text-decoration: underline;
+    }
+    
+    .trackable_button {
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        border:0;
+        background-color:#298CAD;
+        height:22px;
+        line-height:20px;
+        font-size:12px;
+        color:#ffffff;
+        
+    }
+    
+    [readonly]:hover {
+        cursor:copy;
+    }
+    
+    input[type='text'] {
+        padding:0px;
+    }
+    
+    #gm_link,
+    .trackable_links{
+        color:#ffffff !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+    
+    hr {
+        border-width: 1px !important;
+        border-color:#989898 !important;
+    }
+    
+    .selectAll {
+        margin:0 2%;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width:96%;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        resize: none;
+        border:0 !important;
+        background: none !important;
+        background-color: transparent !important;
+        color:#ffffff;
+        overflow: hidden;
+    }
+    
+    .selectAll:focus {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    
+    textarea {
+        height:80px;
+    }
+    
+    h4 {
+        color:#ffffff;
+        text-transform: uppercase;
+        margin-top:10px
+    }
+    
+    textarea {
+        padding:0px;
+    }
+    
+    #custom-tweet-button a {
+        display: block;
+        padding: 2px 5px 2px 20px;
+        background: url('https://twitter.com/favicons/favicon.ico') 1px center no-repeat;
+        border: 1px solid #ccc;
+    }
+
+    
+    .social_links {
+        height:40px;
+        text-align:center;
+        margin:10px 0px;
+    }
+    
+    .social_links a {
+        display:inline-block;
+        margin:0px 5px;
+        width:120px;
+        height:40px;
+        line-height:40px;
+        color:#ffffff;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        font-size:16px;
+        background-position: left center;
+        background-repeat: no-repeat;
+        padding-left:10px;
+    }
+    
+    .social_links a:hover {
+        text-decoration: none;
+    }
+    
+    .social_links a.fb {
+        background-color:#2D4373;
+        background-image: url('/media/img/fb_icon.png');
+    }
+    
+    .social_links a.in {
+        background-color:#1D87BE;
+        background-image: url('/media/img/in_icon.png');
+    }
+    
+    .social_links a.tw{
+        background-color:#00ACEE;
+        background-image: url('/media/img/tw_icon.png');
+    }
+        
+
+    body{
+        background-image:url('/media/img/guidance_bg.png');
+    }
+    
+    .share_wrap {
+        width:100%;
+        max-width:600px;
+        height:400px;
+        border:0px solid #ffffff;
+    }
+    
+    @media screen and (max-width:440px) {
+        .social_links {
+            height:auto;
+        }
+        .social_links a {
+            font-size:13px;
+            padding-left:15px;
+            width:80px;
+            float:left;
+            margin-bottom:5px;
+        }
+    }
+    
+</style>

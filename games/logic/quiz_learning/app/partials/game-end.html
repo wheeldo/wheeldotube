@@ -1,0 +1,204 @@
+<div class="main_wrapper" ng-init="gameEndInit()" id="root_scope" ng-show="ready">
+    <div class="banner" ng-include src="'games/logic/quiz_new/app/partials/includes/banner.html'"></div>
+
+    <div class="main_data no_banners">
+        <h3 style="margin-bottom:20px;"><span tarnslate>You answered</span> <span ng-bind="end_data.right"></span> <span tarnslate>out of</span> <span ng-bind="end_data.total"></span> <span tarnslate>questions correctly</span>.
+<!--                and won</span> <span ng-bind="end_data.score"></span> <span tarnslate>points</span>. -->
+        </h3>
+       
+       <div>
+           <button ng-show="CTA_button" class="end_button website cta_button" ng-click="callAction();ctaClicked();" ><span ng-bind="cta_text"></span></button> 
+           <div style="margin-top:10px;" tarnslate ng-show="sendToFriendSent">Your invitation was sent, once your friend will join the game you will win 100 points</div>
+           <button ng-show="show_voucher" class="end_button coupon cta_button" id="sendVoucherButton" ng-click="sendVaucher();couponClicked();">You won <span ng-bind="voucher_name"></span> - <span tarnslate>Send me the Coupon</span></button>
+           
+           <button ng-show="share_button" class="end_button share" ng-click="shareGame();shareClicked()" tarnslate>Share</button>
+       </div>
+       
+       <div ng-show="show_voucher" style="margin-top:20px;">
+            
+            <div class="hide voucher_wait"><span tarnslate>Please wait</span>...</div>
+            <div class="hide voucher_sent"><span tarnslate>Coupon sent successfully</span>!</div>
+            <div class="hide voucher_faild"><span tarnslate>Coupon sent failed</span>.</div>
+       </div>
+        
+        
+    </div>
+    
+    
+    
+    <h3 tarnslate>Question summary:</h3>
+        <div class="question_summary">
+            
+            <div class="question" ng-repeat="(q_id,q) in questions_data" ng-class="{right:q.right==end_data.user_answers[q_id]}">
+                <div>
+                    <label tarnslate>Question:</label> <span ng-bind="q.question"></span>
+                </div>
+                <div >
+                    <label tarnslate>Your answer:</label> <span class="your_ans_feedback" ng-class="{wrong:q.right!=end_data.user_answers[q_id]}" ng-bind="q.answers[end_data.user_answers[q_id]].content"></span>
+                </div>
+                <div>
+                    <label tarnslate>Right answer:</label> <span ng-bind="q.answers[q.right].content"></span>
+                    <div ng-show="q.more_text" class="read_more" ng-init="read_more[q_id]=false"><a ng-click="read_more[q_id]=!read_more[q_id]" href="javascript:void(0)" tarnslate>Read more</a></div>
+                    <div class="more" ng-bind-html="q.more_text" ng-show="read_more[q_id]"></div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+<div class="wait" ng-hide="ready">
+    <span tarnslate>Calculating results, Please wait</span>...
+    <div class="pb">
+        <div class="calculating"></div>
+    </div>
+</div>
+<style>
+    .your_ans_feedback {
+        color:green;
+    }
+    
+    .your_ans_feedback.wrong {
+        color:red;
+    }
+    
+    button {
+        background-color:#98B724;
+        border:0;
+        height:34px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        font-size:15px;
+        color:#ffffff;
+        padding:0px 20px;
+        margin-top:10px;
+        font-weight:bold;
+    }
+    
+    .more {
+        text-align: justify;
+    }
+    .question_summary {
+        color:#000000;
+        max-height:450px;
+        overflow-x:hidden;
+        overflow-y: auto;
+    }
+    
+    .question {
+        border-bottom:1px solid #66697B;
+        font-size:14px;
+        padding:5px;
+        background-image:url('/games/logic/quiz_learning/media/img/wbg.png');
+    }
+    
+    .question.right {
+        
+    }
+    
+    .question div{
+        margin-bottom:5px;
+    }
+    
+    .question label {
+        display:inline;
+        font-weight:bold;
+        font-size:16px;
+    }
+    .pb {
+        margin-top:40px;
+        width:90%;
+        height:20px;
+        border:1px solid #66697B;
+        overflow: hidden;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+    }
+    
+    
+    
+    .wait {
+        text-align:center;
+        font-size:30px;
+        margin-top:100px;
+        max-width:700px;
+    }
+    
+    .cta_button {
+        background-color:#98B724;
+    }
+    
+    .main_data {
+        padding:20px;
+        padding-top:40px;
+    }
+    .link_end,
+    .link_end:hover{
+        background:none;
+        color:#ffffff;
+        background-color:#98B724 !important;
+    }
+    
+    
+    .full-size {
+        width:100%;
+        font-size:120%;
+        line-height:110%;
+    }
+    
+    .recommended_game_box {
+        width:144px;
+        border:1px solid #46ACCA;
+        cursor:pointer;
+    }
+    
+    .recommended_game_box .thumbnail {
+        height:96px;
+        width:144px;
+        padding:0px;
+    }
+    
+    .recommended_game_box .game_name {
+        position: absolute;
+        top:2px;
+        font-size:12px;
+        background-color:black;
+        color:#ffffff;
+        width:100%;
+        padding:3px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    h3 {
+        font-size:20px;
+        line-height:22px;
+        margin-bottom:10px;
+    }
+    
+    .main_data {
+        font-size:18px;
+        line-height:22px;
+    }
+    
+    
+    .reg_wrapper h4 {
+        margin-bottom:10px;
+    }
+    
+    .reg_wrapper .fb_connect {
+        margin-bottom:5px;
+    }
+    
+    .reg_wrapper .checkbox,
+    .reg_wrapper .checkbox label{
+        height:30px;
+        line-height:30px;
+    }
+    
+    .reg_wrapper .checkbox input[type="checkbox"] {
+        float:left;
+        width:30px !important;
+    }
+    
+</style>

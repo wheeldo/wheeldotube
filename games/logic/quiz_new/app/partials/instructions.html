@@ -1,0 +1,118 @@
+<div class="main_wrapper" ng-init="inst_init()" id="root_scope">
+    <div class="banner" ng-include src="'games/logic/quiz_new/app/partials/includes/banner.html'"></div>
+    
+    <div class="main_data no_banners instractions {{no_inst_class}}" style="display:none;" ng-show="ready">
+        <div class="content inst"  >
+            <span tarnslate  ng-click="__go()">Welcome</span>! 
+            <br><br> 
+            
+            <span tarnslate>You get 1 minute per question to select the correct answer.</span><br>
+            <span tarnslate>Answer as quickly as possible to maximize your score!</span><br><br>
+
+
+            <span tarnslate>You have 3 lifelines to help you out:</span><br>
+            50:50 - <span tarnslate>Only 2 answers!</span><br>
+            +30 - <span tarnslate>Give youself an extra 30 seconds!</span><br>
+            Skip - <span tarnslate>Skip to the next question</span>...
+
+            <div id="good-luck" tarnslate>Good Luck!</div>
+            <button type="button" class="start"  ng-click="__go();startClicked();play_token();" tarnslate>Go!</button>
+
+        </div>
+        <div class="content start_page">
+            <div>
+                <img class="start_image" ng-src="{{startPage.instruction_img}}" ng-show="startPage.instruction_img" />
+            </div>
+            <div class="game_start_text">
+                <h1 ng-bind="startPage.instruction_text"></h1>
+            </div>
+            <button type="button" class="start"  ng-click="__go();startClicked();play_token();" tarnslate>Go!</button>
+
+        </div>
+    </div>
+    
+    
+</div>
+<style>
+
+    .content {
+        display:none;
+    }
+    
+    
+    .instractions .content.start_page {
+        display:none;
+    }
+    .instractions .content.inst {
+        display:block;
+    }
+    
+    .instractions.no_inst_class .content.inst {
+        display: none;
+    }
+    
+    
+    .instractions.no_inst_class .content.start_page {
+        display: block;
+    }
+
+    .start {
+        background:none;
+        color:#ffffff;
+        background-color:#98B724 !important;
+    }
+    
+    .start:hover {
+        background:none;
+        color:#ffffff;
+        background-color:#98B724 !important;
+    }
+    
+    
+    .instractions.no_inst_class {
+        text-align:center;
+        padding:20px;
+    }
+    
+    .instractions.no_inst_class .start_image {
+
+        max-width:500px;
+        width:100%;
+    }
+    
+    .instractions.no_inst_class .game_start_text {
+        margin-top:20px;
+    }
+    
+    .instractions.no_inst_class .game_start_text h1 {
+        font-size:28px;
+    }
+    
+    .instractions.no_inst_class .start {
+        display:block;
+        width:100%;
+        margin:20px auto;
+        background-color:#98B724;
+        color:#ffffff;
+        border:0px;
+        height:40px;
+        line-height: 40px;
+        font-size:30px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        max-width:500px;
+    }
+    
+    
+    @media screen and (max-width:540px) {
+        .instractions {
+            font-size: 16px;
+            line-height: 18px;
+
+        }
+        
+        .start {
+            width:100%;
+        }
+    }
+</style>

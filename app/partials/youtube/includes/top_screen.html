@@ -1,0 +1,59 @@
+<div class="wrapper">
+    <div id="logo-container">
+        <a href="/#/"><img src="/media/img/logo.png" alt="logo" id="logo" /></a>
+        <button id="sm_toggle" class="sys-button" type="button" onclick="sm_toggle()"></button>
+    </div>
+    <div id="header-search">
+        <form ng-submit="submitSearch()">
+            <div class="input_wrap">
+                <label>
+                    <input type="text" ng-model="search_query" name="search_query" class="search_top" tabindex="1" autofocus="" autocomplete="off" dir="ltr" spellcheck="false" />
+                </label>
+            </div>
+            <button id="search-btn" tabindex="2" type="submit" dir="ltr">
+                <span>Search </span>
+            </button>
+        </form>
+    </div>
+    
+    
+
+    <div id="top-user">
+        <div ng-show="user_login">
+            <span class="user_name" ng-bind="user.name" ng-click="toggle_user_data=!toggle_user_data"></span>
+            <img ng-src="{{user.image}}" style="width:30px;height:30px;" ng-click="toggle_user_data=!toggle_user_data" />
+            <a href="javascript:void(0)" class="notifications"></a>
+        </div>
+        <div ng-hide="user_login">
+            <button class="sys-button blue" ng-click="signIn()">Sign in</button>
+        </div>
+
+    </div>
+    
+    <div id="top-create_game" ng-show="user_login">
+        <button class="sys-button" ng-click="createGame()">Create game</button>
+    </div>
+    
+    <br class="clr" />
+</div>
+
+<div id="user-data" ng-show="toggle_user_data&&user_login">
+    <div class="user_data_right">
+        <div class="profile">
+            <img ng-src="{{user.image}}" />
+            <div>
+                <span ng-bind="user.name"></span>
+                <span ng-bind="user.email"></span>
+            </div>
+        </div>
+        <h4>Account</h4>
+        <a href="javascript:void(0)">Settings</a>
+        <a href="javascript:void(0)" ng-click="__goto('signOut')">Sign out</a>
+        
+        
+        
+    </div>
+    
+    
+    <br class="clr" />
+</div>

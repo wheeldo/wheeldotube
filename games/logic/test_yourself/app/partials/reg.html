@@ -1,0 +1,127 @@
+<div class="main_wrapper" ng-init="regInit();" id="root_scope">
+    <div class="banner" ng-include src="'games/logic/quiz_new/app/partials/includes/banner.html'"></div>
+
+    <div class="main_data no_banners">
+        <h3 ng-show="signup_headline" style="text-align:center;" ng-bind="signup_headline"></h3>
+        <h3 ng-hide="signup_headline" style="text-align:center">Connect to see how you rank:</h3>
+        <div ng-hide="signup_headline" style="text-align:center;">(We will never spam you)</div>
+        <div class="reg_form">
+            
+            <div class="form-group fb_connect">
+                <a ng-controller="appCtrl" href="javascript:void(0)" ng-click="login()">
+                        <img class="arr" data-role="fb-login-btn" src="/media/img/facebook-connect-logo.png" style="max-width: 176px;margin-bottom:5px" />
+                </a>
+            </div>
+            <div class="form-group google_connect">
+                <div ng-app="directive.g+signin" style="">
+                        <google-plus-signin clientid="764213770164-90t6jal11arn0v8n2eeinp39s82e8spe.apps.googleusercontent.com" language="en"></google-plus-signin>
+                </div>
+            </div>
+            <form role="form" ng-submit="registerNewUser()" form-autofill-fix>
+                <div class="form-group" ng-hide="si">
+                  <!--<label for="exampleInputEmail1">First name:</label>-->
+                  <input name="fname" type="text" class="form-control" placeholder="First name" ng-model="reg.fname">
+                </div>
+                <div class="form-group" ng-hide="si">
+                  <!--<label for="exampleInputEmail1">Last name:</label>-->
+                  <input name="lname" type="text" class="form-control" placeholder="Last name" ng-model="reg.lname">
+                </div>
+                <div class="form-group">
+                  <!--<label for="exampleInputEmail1">Email address</label>-->
+                  <input name="email"  id="reg_email" ng-change="checkEmail()" type="email" class="form-control" placeholder="Enter email" requierd ng-model="reg.email">
+                </div>
+                <div class="form-group" ng-show="si">
+                  <input type="password" class="form-control" placeholder="Password" ng-model="reg.password">
+                </div>
+                <div class="checkbox" ng-show="false">
+                  <label>
+                    <input type="checkbox" ng-model="reg.remember" ng-checked="true"> Remember me on this computer
+                  </label>
+                </div>
+                
+                <!--<div class="checkbox">
+                  <label>
+                    <input type="checkbox" ng-model="reg.subscribe" ng-checked="true"> Subscribe to this channel
+                  </label>
+                </div>-->
+                <input type="hidden" ng-model="reg.subscribe" ng-init="reg.subscribe=1" value="1" />
+                <div class="error" ng-bind-html="error"></div>
+                <div class="error" ng-show="emailExists&&!si">
+                    Email already exists! <a href='javascript:void(0)' ng-click="si=!si" ng-init="si=false">sign in to play</a>
+                </div>
+                <div class="error" ng-show="si">
+                    <a href='javascript:void(0)' ng-click="si=!si" ng-init="si=false">Sign up</a>
+                </div>
+                <button type="submit" class="cta" ng-hide="si">Connect</button>
+                <button type="submit" class="cta" ng-show="si" ng-click="signInEndGame()">Sign in</button>
+            </form>
+            <a class="skip" href="javascript:void(0)" ng-click="skipReg()">Skip this step</a>
+        </div>
+        
+    </div>
+    
+</div>
+
+<style>
+    
+    .skip {
+        color:#A3BDD7;
+    }
+    .skip:hover {
+        color:#A3BDD7;
+    }
+    
+    .cta {
+        background-color: #98b724 !important;
+        height:40px;
+        max-width:80%;
+        width:200px;
+        border:0px;
+        color:#ffffff;
+        font-size:22px;
+    }
+    .cta:hover {
+        background-color: #98b724 !important;
+    }
+    
+    .main_data {
+        margin-top:60px;
+    }
+    .reg_form {
+        margin-top:20px;
+        width:60%;
+    }
+    
+    .error {
+        font-size:12px;
+        color:red;
+    }
+    
+    input {
+        width:100%;
+        height:34px !important;
+    }
+    
+    .btn-default {
+        height:40px;
+        width:150px;
+        color:#ffffff; 
+        font-size:16px;
+        text-shadow:none !important;
+    }
+    
+    .btn-default:hover {
+        color:#ffffff; 
+        text-shadow:none !important;
+    }
+    
+    @media screen and (max-width:540px) {
+        h3 {
+            font-size:20px;
+        }
+        .reg_form {
+            margin-top:20px;
+            width:90%;
+        }
+    }
+</style>

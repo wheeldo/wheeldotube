@@ -1,0 +1,38 @@
+<div class="main_wrapper" ng-init="q_init()" id="root_scope">
+    <div class="banner" ng-include src="'games/logic/test_yourself/app/partials/includes/banner.html'"></div>
+    <div class="game">
+        <div class="q_row">
+            <div class="question">
+                <div class="image" ng-show="q.media">
+                    <img ng-src="{{q.media}}" ng-show="q.media" />
+                </div>
+                <span>(<span ng-bind='game_progress.answerd'></span>/<span ng-bind='game_progress.total'></span>) <span ng-bind="q.text"></span></span>
+                <br class="clr" />
+            </div>
+            
+
+
+        </div>
+        <div class="pb">
+            <div class="progress_bar_cont">
+                <div class="progress_bar_fill" ng-style="fill_style">
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="answer" ng-repeat="answer in q.answers" ng-click="select_ans(answer.strength,q.id,answer.id);" >
+            <span cont-text-bind="{{answer.text}}" ng-bind="answer.text"></span>
+        </div>
+        
+             
+        
+        
+<!--        <img ng-src="{{q.media}}" ng-show="q.media" />
+        <h3 ng-bind="q.text"></h3>
+        <div class="answer" ng-repeat="answer in q.answers" ng-bind="answer.text" ng-click="select_ans(answer.strength);"></div>-->
+    </div>
+    
+    
+    
+</div>

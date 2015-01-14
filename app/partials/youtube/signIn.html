@@ -1,0 +1,41 @@
+<div class="sign_in" id="root_scope" ng-init="signInInit()">
+	<div class="logo_cont">
+        <img src="/media/img/logo.png" alt="logo" id="logo" />
+    </div>
+    <h2>Sign in to HipoTube</h2>
+    <div class="sign_in_form gray_form cancel_error">
+        <div class="processing">
+            <img src="media/img/ajax-loader.gif" /> <br><br>
+            Processing, please wait...
+        </div>
+        <form ng-submit="signInSubmit()">
+            <div class="form_row">
+                <label>Email:</label>
+                <input type="email" name="email" ng-model="email" placeholder="Email address" required />
+            </div>
+            <div class="form_row">
+                <label>Password:</label>
+                <input type="password" name="password" ng-minlength="6" ng-model="password" placeholder="Your password" required />
+            </div>
+            <div class="note" ng-repeat="note in notes">                
+                *<span ng-bind="note"></span>
+            </div>
+            <div class="form_row actions">
+                <button type="button" class="sys-button orange extra" ng-click="__goto('RegFrom')">Add account</button>
+                <button class="sys-button blue submit" ng-click="signClicked()">Sign in</button>
+            </div>
+            
+            <div>
+                <a href="javascript:void(0)" ng-click="__goto('/')">Back to home page</a> | <a href="javascript:void(0)" ng-click="__goto('forgotPassword')">I forgot my password</a>
+            </div>
+        </form>
+        <div class="thanks">
+            
+            <h4>You're successfully login.</h4>
+            <br><br>
+            
+            
+            <button class="sys-button blue" ng-click="__goto('')">Go to home page</button>
+        </div>
+    </div>
+</div>

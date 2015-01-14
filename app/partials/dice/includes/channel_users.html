@@ -1,0 +1,19 @@
+<div class="padding-big">
+    <div class="search">
+        <div class="input_wrap">
+            <label>
+                <input type="text" ng-model="searchChannelUsers" autocomplete="off" dir="ltr" spellcheck="false" placeholder="Type to filter" />
+            </label>
+        </div>
+        
+        <button class="sys-button blue2" style="float:right;" ng-click="addUsersChannle()">Add users</button>
+        
+        <br class="clr" />
+    </div>
+   <div class="channel_user" ng-repeat="user in channel_users | filter:searchChannelUsers">
+       <img ng-src="{{user.image}}" />
+       <div class="text">
+            <span ng-bind="user.fname"></span> <span ng-bind="user.lname"></span>
+       </div>
+   </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="add_players">
+    <a class="upload_link" ng-click="addUsersChannle()">UPLAOD PLAYERS LIST</a>
+    
+    <div class="add_player_block">
+        <label>Add player</label>
+        <form ng-submit="addUserTop()">
+        <input type="text" placeholder="FIRST NAME" required="" ng-model="new_user_top.fname" name="fname" />
+        <input type="text" placeholder="LAST NAME" required="" ng-model="new_user_top.lname" name="lname" />
+        <input type="email" class="email" placeholder="E-MAIL" required="" ng-model="new_user_top.email" name="email" />
+        <button type="submit">Add</button>
+        </form>
+        <br class="clr">
+    </div>
+    <br class="clr">
+    <div class="search_users_channel">
+        <input type="text" ng-model="searchChannelUsers" autocomplete="off" dir="ltr" spellcheck="false" placeholder="Type to filter" />
+    </div>
+    <div class="channel_users">
+        <div class="channel_user" ng-repeat="user in channel_users | filter:searchChannelUsers">
+           <div class="image"><img ng-src="{{user.image}}" /></div>
+           <div class="text">
+                <span ng-bind="user.fname"></span> <span ng-bind="user.lname"></span>
+                <a class="delete" ng-click="unsubscribe_user(user.unique_link)"></a>
+           </div>
+           
+           <br class="clr">
+       </div>
+        <br class="clr">
+    </div>
+</div>
+     

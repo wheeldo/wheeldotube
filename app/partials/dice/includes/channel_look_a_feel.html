@@ -1,0 +1,67 @@
+<div class="banner">
+    <div class="channel_small_icon">
+        <div class="click_here_to_change small" ng-click="upload_image('channel_data__small_icon','jpg, png or gif only. 100 X 100 recommended 1Mb Maximum','c_fill,h_100,w_100')">Click to change >></div>
+    </div>
+    
+    
+    <div class="click_here_to_change" ng-click="upload_image('channel_data__cover','jpg, png or gif only. 1045 X 160 recommended 1Mb Maximum','c_fill,h_160,w_1045')">Click to change photo >></div>
+</div>
+<hr ng-show="channel_data.owner">
+<form ng-submit="addChannelAdmin(channel_data.id)" ng-init="loadChannleAdmins(channel_data.id)" ng-show="channel_data.owner">
+   <div class="form_row">
+        <label>Admins:</label>
+        <input style="width:200px;" type="email" name="email" ng-model="email" placeholder="Admin email"/>
+        <button type="submit" style="height:28px;" class="sys-button green submit">Add admin</button> <br>
+        
+        <div class="channel_admin" ng-repeat="admin in channle_admins"><a href="javascript:void(0)" ng-click="removeChannleAdmin($index)">X</a> <span ng-bind="admin.email"></span></div>
+        <br class="clr">
+    </div> 
+</form>
+
+
+<hr>
+<form ng-submit="saveChannel(channel_data.id)">
+    <div class="form_row">
+        <label>Name:</label>
+        <input type="text" name="name" ng-model="channel_data.name" />
+    </div>
+    <div class="form_row">
+        <label>Description:</label>
+        <textarea style="height:100px;" name="description" ng-model="channel_data.description" ></textarea>
+    </div>
+    <input name="small_icon" type="hidden" ng-model="channel_data.small_icon" />
+    <input name="cover" type="hidden" ng-model="channel_data.cover" />
+    
+    <div class="form_row actions">
+        <button class="sys-button blue submit">Save</button>
+        <br class="clr">
+    </div>
+</form>
+<style>
+    .channel_small_icon {
+         background-image:url({{channel_data.small_icon}});
+    }   
+
+    .banner {
+         background-image:url({{channel_data.cover}});
+     }
+     
+     .channel_admin {
+         float:left;
+         background-color:#98DCF7;
+         margin:5px 0px;
+         margin-right:5px;
+         padding:5px;
+     }
+     
+     .channel_admin a {
+         display:block;
+         float:left;
+         width:20px;
+         height:100%;
+         background-color:#1688B5;
+         text-align: center;
+         color:#ffffff;
+         margin-right:5px;
+     }
+</style>

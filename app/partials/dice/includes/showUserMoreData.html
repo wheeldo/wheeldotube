@@ -1,0 +1,23 @@
+<div class="more_data_wrap">
+    <h4>Game results for '<span ng-bind="data.user_name"></span>', started at <span ng-bind="data.start_date"></span></h4>
+    <h5>Score: <span ng-bind="data.score"></span></h5>
+    <hr>
+    <div class="q" ng-repeat="q in data.questions">
+        Question: <span ng-bind="q.q"></span> <br>
+        Answer: <span ng-bind="q.ans"></span>
+    </div>
+</div>
+
+<style>
+    .more_data_wrap {
+        padding:20px;
+        font-size:16px;
+    }
+    
+    .q {
+        border-bottom:1px solid #EAEAEA;
+        padding-bottom:5px;
+        margin-top:5px;
+        margin-bottom:5px;
+    }
+</style>

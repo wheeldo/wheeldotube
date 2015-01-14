@@ -1,0 +1,8 @@
+cron:
+- description: game playes update
+  url: /cron
+  schedule: every 3 mins
+  
+- description: billing cycle
+  url: /billing_cycle
+  schedule: every 10 mins

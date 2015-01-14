@@ -1,0 +1,23 @@
+<div class="register_wrap" id="root_scope" ng-init="activationInit()">
+    <div class="logo_cont">
+        <img src="/media/img/logo.png" alt="logo" id="logo" />
+    </div>
+    <h2></h2>
+    <div class="gray_form reg_form cancel_error">
+        <div class="processing">
+            <img src="media/img/ajax-loader.gif" /> <br><br>
+            Processing, please wait...
+        </div>
+        <div class="thanks">
+            
+            <h4>Welcome to Wheeldo</h4>
+
+            Thank you for registering with Wheeldo. <br> <br>
+            Now you can play, share and create new games. <br> <br> <br>
+            
+            <button class="sys-button orange" ng-click="__goto('signIn')">Sign in</button>
+            <button class="sys-button blue" ng-click="__goto('')">Go to home page</button>
+<!--            Redirecting In <span ng-bind="sec_left">10</span> seconds...  -->
+        </div>
+    </div>
+</div>

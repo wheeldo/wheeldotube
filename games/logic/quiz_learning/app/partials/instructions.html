@@ -1,0 +1,55 @@
+<div class="main_wrapper" ng-init="inst_init()" id="root_scope">
+    <div class="banner" ng-include src="'games/logic/quiz_new/app/partials/includes/banner.html'"></div>
+
+    <div class="main_data no_banners instractions">
+        <div class="content">
+            <div>
+                <img class="start_image" ng-src="{{quiz_game_data.instruction_img}}" ng-show="quiz_game_data.instruction_img" />
+            </div>
+            <div class="game_start_text">
+                <h1 ng-bind="quiz_game_data.instruction_text"></h1>
+            </div>
+            <button type="button" class="start"  ng-click="__go();startClicked();play_token();" tarnslate>Go!</button>
+
+        </div>
+
+    </div>
+    
+    
+</div>
+
+<style>
+    .instractions {
+        text-align:center;
+        padding:20px;
+    }
+    .start_image {
+        margin-top:50px;
+        max-width:500px;
+        width:100%;
+    }
+    
+    .game_start_text {
+        margin-top:20px;
+    }
+    
+    .game_start_text h1 {
+        color:inherit;
+        font-size:28px;
+    }
+    
+    .start {
+
+        width:100%;
+        max-width:300px;
+        margin-top:20px;
+        background-color:#98B724;
+        color:#ffffff;
+        border:0px;
+        height:70px;
+        line-height:70px;
+        font-size:30px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+    }
+</style>

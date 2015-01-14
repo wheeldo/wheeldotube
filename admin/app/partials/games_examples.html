@@ -1,0 +1,49 @@
+<div ng-init="init_games_example()" class="loader_afterload {{finish_load}}">
+    <button class="btn btn-app btn-grey btn-xs radius-4" ng-click="saveRow('Examples','examples')">
+        <i class="icon-save bigger-160"></i>
+        Save
+    </button>
+    <h4 ng-init="init_ph()">Game example page games: <input type="text" ng-model="examples.no" ng-change="set_ph()" style="width:30px;" max-length="2" />:</h4>
+    <div class="game_row" ng-repeat="n in n_a|limitTo:examples.no">
+        <div>
+            <select class="game_select" ng-model="examples.game_ids[$index]" ng-options="value.id as value.name for (key , value) in games" ng-init="setSelect($last)"></select>
+        </div>
+        <div class="bot_row">
+            <img class="thumbnail" ng-src="{{games[examples.game_ids[$index]].thumbnail}}" ng-show="games[examples.game_ids[$index]].thumbnail" />
+            <img class="thumbnail" ng-src="media/css/dice/img/thumb_{{get_color_box(games[examples.game_ids[$index]].id)}}.jpg" ng-hide="games[examples.game_ids[$index]].thumbnail" />
+            <h5 ng-bind="games[examples.game_ids[$index]].name"></h5>
+        </div>
+    </div>
+    
+    
+</div>
+
+<div class="loader_beforeload {{finish_load}}">
+    <img src="admin/assets/img/wait_ge.gif" />
+</div>
+
+<style>
+    
+    .game_row {
+        max-width:800px;
+        margin-bottom:10px;
+    }
+    
+    .thumbnail {
+        float:left;
+        height:50px;
+        margin-right:10px;
+    }
+    
+    .game_row h5 {
+        height:50px;
+        line-height:50px;
+    }
+    
+    .bot_row {
+        height:50px;
+        line-height:50px;
+        border-bottom:1px solid #FAFAFA;
+    }
+
+</style>

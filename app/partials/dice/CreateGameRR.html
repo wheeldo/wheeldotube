@@ -1,0 +1,458 @@
+<div id="root_scope">
+<div id='createGameRR_form' ng-init="createGameRR_form_init()">
+    <div class="form_stage q" stage='0'>
+        
+        <div class="form_q">
+            Welcome to the Wheeldo game creation wizard! <br> 
+            Simply choose an industry you'd like to create a game for</div>
+        <div class="boxes_wrap">
+            <div class="box" ng-repeat="domain in domain_topics_keys" ng-style="{'background-color':getRandomBGColor(0,$index)}" ng-click='createGameRR_form_submit(0,domain)' ng-bind='domain'></div>
+            <br class="clr" />
+        </div>
+    </div>
+    
+    <div class="form_stage q" stage='1'>
+        <div class="form_q">Choose a topic</div>
+        <div class="boxes_wrap">
+            <div class="box topic" ng-repeat='topic in domain_topics[createGameRR.domain]' ng-style="{'background-color':getRandomBGColor(1,$index)}" ng-click='createGameRR_form_submit(1,topic.id)' ng-bind='topic.name'></div>
+            <br class="clr" />
+        </div>
+    </div>
+    
+    <div class="form_stage" stage='2'>
+        <div class="form_q">Choose a design</div>
+        <div class="designs_wrapper">
+            <div class="design" ng-click="createGameRR_form_submit(2,1)">
+                <img src="/media/img/designs/design1.jpg" />
+            </div>
+            <div class="design" ng-click="createGameRR_form_submit(2,2)">
+                <img src="/media/img/designs/design2.jpg" />
+            </div>
+            <div class="design" ng-click="createGameRR_form_submit(2,3)">
+                <img src="/media/img/designs/design3.jpg" />
+            </div>
+            <div class="design" ng-click="createGameRR_form_submit(2,4)">
+                <img src="/media/img/designs/design4.jpg" />
+            </div>
+            <div class="design" ng-click="createGameRR_form_submit(2,5)">
+                <img src="/media/img/designs/design5.jpg" />
+            </div>
+            <div class="design" ng-click="createGameRR_form_submit(2,6)">
+                <img src="/media/img/designs/design6.jpg" />
+            </div>
+            <br class="clr" />
+        </div>
+    </div>
+    
+    
+    <div class="form_stage" stage='3' ng-class="{show_error:show_req_details3}">
+        <div class="form_details_row social_links">
+            <a class="fb" ng-controller="appCtrl" href="javascript:void(0)" ng-click="loginNoReload(createGameRR_fb_connect)">
+                FACEBOOK CONNECT
+            </a>
+            
+            
+<!--            <a ng-app="directive.g+signin" class="ggl" href="javascript:void(0)" >
+                GOOGLE CONNECT
+                <google-plus-signin clientid="764213770164-90t6jal11arn0v8n2eeinp39s82e8spe.apps.googleusercontent.com" language="en"></google-plus-signin>
+            </a>
+            
+            <div ng-app="directive.g+signin" style="display:block; float:right; margin-right:30px; position:relative;">
+                    <google-plus-signin clientid="764213770164-90t6jal11arn0v8n2eeinp39s82e8spe.apps.googleusercontent.com" language="en"></google-plus-signin>
+            </div>-->
+            <hr>
+            
+
+        </div>
+        <div class="form_details_row">
+            <h6>Or Email connect: </h6>
+        </div>
+        <div class="form_details_row">
+            <label>Email:</label>
+            <input type="email" name='email' class="email" blur-set="checkIFEmailExits(createGameRR.email)" placeholder="Insert your email address here" ng-model="createGameRR.email" required="" />
+        </div>
+        <div class="form_details_row">
+            <label>First name:</label>
+            <input type="text" placeholder="Insert your first name here" ng-model="createGameRR.fname" required="" ng-minlength="2" />
+        </div>
+        <div class="form_details_row">
+            <label>Last name:</label>
+            <input type="text" placeholder="Insert your last name here" ng-model="createGameRR.lname" required="" ng-minlength="2" />
+        </div>
+
+        <div class="form_details_row error" ng-show='notes'>
+            <label></label>
+            <span ng-repeat="note in notes">{{note}}</span>
+        </div>
+        
+        <div class="form_details_row">
+            <button ng-click="createGameRR_form_submit(3)">NEXT</button>
+        </div>
+    </div>
+    
+    <div class="form_stage" stage='4' ng-class="{show_error:show_req_details4}">
+        <div class="form_q"></div>
+        <div class="form_details_row">
+            <label>Password (min 6):</label>
+            <input type="password" placeholder="Insert your passpord here" ng-model="createGameRR.password" required="" ng-minlength="6" />
+        </div>
+        <div class="form_details_row">
+            <label>Confirm Password:</label>
+            <input type="password" placeholder="Insert your passpord here" ng-model="createGameRR.retype" required=""  ng-minlength="6" />
+        </div>
+        
+        <div class="form_details_row error" ng-show='note4'>
+            <label></label>
+            <span ng-bind='note4'></span>
+        </div>
+        
+        
+        
+        <div class="form_details_row">
+            <button ng-click="createGameRR_form_submit(4)">Create Game</button>
+        </div>
+    </div>
+    
+    
+    <div class="proccessing_wrap">
+        &nbsp;
+        <div class='proccessing_form'>
+            <img src="/media/img/rrloader.gif" />
+            <br>
+            <br>
+            Processing please wait...
+        </div>
+        &nbsp;
+    </div>
+
+    
+</div>
+</div>
+
+<!--<pre>{{createGameRR | json }}</pre>-->
+<style>
+    h6 {
+        
+    }
+    hr {
+        margin:0px;
+    }
+    .social_links {
+        text-align: center;
+    }
+    
+    .social_links a {
+        display:inline-block;
+        margin:0px 5px;
+        min-width:120px;
+        height:40px;
+        line-height:40px;
+        color:#ffffff;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        font-size:16px;
+        background-position: left center;
+        background-repeat: no-repeat;
+        padding-left:40px;
+        padding-right:20px;
+        margin-bottom:10px;
+    }
+    
+    .social_links a:hover {
+        text-decoration: none;
+    }
+    
+    .social_links a.fb {
+        background-color:#2D4373;
+        background-image: url('/media/img/fb_icon.png');
+    }
+    
+    .social_links a.ggl{
+        background-color:#DF4A32;
+        background-image: url('/media/img/ggl_icon.png');
+    }
+    
+    
+    .proccessing_wrap {
+        display:none;
+    }
+    
+    .proccessing_form {
+        font-size:30px;
+        line-height:50px;
+        color:#ffffff;
+        position:absolute;
+        z-index:100;
+        height:300px;
+        width:300px;
+        border:0px solid white;
+        top:50%;
+        margin-top:-150px;
+        left:50%;
+        margin-left:-150px;
+        text-align:center;
+        
+    }
+    body {
+        min-height:100%;
+        padding:0px;
+/*        background-image:url('/media/img/createGameRRBG2.jpg');*/
+/*        background-image:url('/media/img/createGameRRBG3.jpg');*/
+    background-color:black;
+        background-position: top left;
+        font-family: 'Arial';
+        -webkit-transition: background 1000ms ease-in-out;
+        -moz-transition: background 1000ms ease-in-out;
+        -ms-transition: background 1000ms ease-in-out;
+        -o-transition: background 1000ms ease-in-out;
+        transition: background 1000ms ease-in-out;
+        background-size:5000px 100%;
+    }
+    
+    
+    .form_stage {
+        display:none;
+
+        margin-top:6%;
+        color:#ffffff;
+        font-size:40px;
+        line-height:50px;
+/*        -webkit-transition: all 500ms ease-in;
+        -moz-transition: all 500ms ease-in;
+        -ms-transition: all 500ms ease-in;
+        -o-transition: all 500ms ease-in;
+        transition: all 500ms ease-in;*/
+    }
+    
+    .form_stage.q {
+        
+/*        margin-top:100px;*/
+        
+        font-weight:bold;
+    }
+    
+    .wrapper {
+        min-height: 100%;
+    }
+    #createGameRR_form {
+        min-height: 100%;
+    }
+    
+    #createGameRR_form .form_q{
+        width:100%;
+        max-width:1100px;
+        margin-bottom:30px;
+    }
+    
+    .boxes_wrap {
+        width:100%;
+        max-width:930px;
+        min-height:400px;
+        border:0px solid white;
+    }
+    
+    .boxes_wrap .box {
+        font-size:35px;
+        width:200px;
+        height:200px;
+        margin:10px;
+        padding:5px;
+        border:0px solid white;
+        text-align:center;
+        vertical-align: middle;
+        cursor:pointer;
+        opacity: 0.8;
+        filter: alpha(opacity=80);
+        float:left;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+    }
+    
+    .boxes_wrap .box:hover {
+        opacity: 1;
+        filter: alpha(opacity=100); /* For IE8 and earlier */
+    }
+    
+    .boxes_wrap .box.topic {
+        font-size:25px;
+    }
+    
+    
+    pre {
+        position:absolute;
+        bottom:0px;
+    }
+    
+    .designs_wrapper {
+        width:100%;
+        max-width:1120px;
+    }
+    
+    .designs_wrapper .design {
+        width:350px;
+        height:285px;
+        border:1px solid white;
+        float:left;
+        margin:10px;
+        opacity: 0.8;
+        filter: alpha(opacity=80);
+        cursor:pointer;
+    }
+    
+    .designs_wrapper .design:hover {
+        opacity: 1;
+        filter: alpha(opacity=100); /* For IE8 and earlier */
+    }
+    
+    .designs_wrapper .design img{
+        width:350px;
+        height:285px;
+    }
+    
+    .form_details_row {
+        width:100%;
+        max-width:800px;
+        font-size:30px;
+        height:50px;
+        line-height:50px;
+        margin-bottom:20px;
+    }
+    
+    .form_details_row.error {
+        font-size:15px;
+        height:25px;
+        line-height:25px;
+        
+    }
+    
+    .form_details_row label {
+        width:240px;
+        float:left;
+        font-size:28px;
+        height:50px;
+        line-height:50px;
+        padding:0px;
+        margin:0px;
+    }
+    
+    input.ng-invalid[type='text'],
+    input.ng-invalid[type='email'],
+    input.ng-invalid[type='password']{
+        border: 0px solid green;
+        border-bottom:1px solid white;
+    }
+    
+    .show_error input.ng-invalid[type='text'],
+    .show_error input.ng-invalid[type='email'],
+    .show_error input.ng-invalid[type='password']{
+        border: 1px solid red;
+    }
+    
+    
+    input.not_validf[type='email'] {
+        border: 1px solid red !important;
+    }
+    
+    input.validf[type='email'] {
+        border:0px !important;;
+        border-bottom:1px solid white !important;;
+    }
+    
+    .form_details_row input {
+        width:540px;
+        background-color:transparent;
+        color:#ffffff;
+        font-size:26px;
+        border:0px;
+        border-bottom:1px solid white;
+        -webkit-box-shadow: 0 0 0 0 #ffffff;
+        box-shadow: 0 0 0 0 #ffffff;
+    }
+    
+    .form_details_row button{
+        float:right;
+        width:200px;
+        height:40px;
+        border:1px solid #FF5700;
+        background-color: #FF5700;
+        color:#ffffff;
+        font-family: 'Arial';
+        -webkit-box-shadow: 2px 2px 5px 0 #A3A3A3;
+        box-shadow: 2px 2px 5px 0 #A3A3A3;
+    }
+    
+    .form_details_row button:hover {
+        background-color: #993400;
+        
+    }
+    
+    @media screen and (max-width:500px) {
+        .form_stage {
+            font-size:25px;
+            line-height:35px;
+        }
+        
+        .form_details_row label {
+            font-size:22px;
+        }
+        
+        .form_details_row input {
+            font-size:18px;
+        }
+        
+        .boxes_wrap .box {
+            width:135px;
+            height:135px;
+            font-size:25px;
+        }
+        
+        .boxes_wrap .box.topic {
+            font-size:18px;
+        }
+        
+    }
+    
+    @media screen and (max-width:800px) {
+        .designs_wrapper .design {
+            width:45%;
+            height:auto;
+            margin:2%;
+            padding:0px;
+        }
+        
+        .designs_wrapper .design img {
+            width:100%;
+            height:auto;
+        }
+        
+        .form_details_row {
+            height:auto;
+            min-height:60px;
+            line-height:30px;
+        }
+        
+        .form_details_row label {
+            width:98%;
+            padding:0px 1%;
+            float:none;
+            height:30px;
+            line-height:30px;
+        }
+        
+        .form_details_row input {
+            width:98%;
+            padding:4px 1%;
+        }
+    }
+    
+    @media screen and (max-width:1150px) {
+        #createGameRR_form {
+            padding:10px;
+        }
+    }
+    
+    
+
+    
+    
+</style>

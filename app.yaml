@@ -1,0 +1,261 @@
+application: turnkey-rookery-535
+version: 1
+runtime: php
+api_version: 1
+threadsafe: true
+
+handlers:
+    
+# website:
+    
+- url: /
+  script: website/index.php 
+  
+- url: /pricing
+  script: website/pricing.php 
+ 
+- url: /games-examples
+  script: website/games.php
+  
+- url: /register
+  script: website/register_page.php
+
+- url: /terms
+  script: website/terms.php
+  
+  
+  
+- url: /website/media
+  static_dir: website/media
+ 
+- url: /website/app
+  static_dir: website/app
+    
+- url: /test
+  script: test.php
+  
+- url: /Convert
+  script: bin/conversion_website_forwarder.php
+
+# system
+
+- url: /console
+  script: index.php
+  
+- url: /dashboard
+  script: index.php
+  
+- url: /login
+  script: index.php
+
+- url: /alt
+  script: index.php
+
+- url: /vendor
+  static_dir: vendor
+  application_readable: true
+
+- url: /play/.*
+  script: index.php
+  
+- url: /report/(.*)/(.*)
+  script: index.php
+
+- url: /article/.*
+  script: index.php
+
+- url: /results/.*
+  script: index.php
+
+- url: /channel/.*
+  script: index.php
+
+- url: /my_channels
+  script: index.php
+
+- url: /my_channel/.*
+  script: index.php
+
+- url: /createGame
+  script: index.php
+
+- url: /editGame/.*
+  script: index.php
+  
+- url: /CreateGameRR
+  script: index.php 
+ 
+- url: /share_game/.*
+  script: index.php 
+
+- url: /share_game/.*/.*
+  script: index.php 
+
+- url: /settings
+  script: index.php
+
+- url: /activation/.*
+  script: index.php
+  
+- url: /cmp/(.*)
+  script: bin/campaign.php
+
+- url: /play
+  script: bin/share_play.php
+
+- url: /fb_auth
+  script: bin/fb_auth.php
+
+- url: /mobile
+  script: mobile/index.php
+
+- url: /unsubscribe
+  script: bin/unsubscribe.php
+
+- url: /mobile/content
+  static_dir: mobile/content
+
+- url: /download
+  script: bin/download.php
+
+- url: /cron
+  script: bin/cron.php
+
+- url: /billing_cycle
+  script: bin/billing_cycle.php
+
+- url: /media/ex_files
+  static_dir: media/ex_files
+  application_readable: true
+
+- url: /media
+  static_dir: media
+
+- url: /img_uploader
+  script: bin/img_uploader.php
+  
+- url: /img_uploaderG
+  script: bin/img_uploader_p.php
+
+- url: /csv_uploader
+  script: bin/csvGeneralUploader.php
+
+- url: /users_uploader
+  script: bin/usersUploader.php
+
+- url: /app
+  static_dir: app
+
+- url: /uploads
+  static_dir: uploads
+
+- url: /games
+  script: games/index.php
+
+- url: /gameError
+  script: games/error.php
+
+- url: /vendor
+  static_dir: vendor
+
+- url: /gt
+  script: bin/getters.php
+
+- url: /op
+  script: bin/operators.php
+  
+- url: /ut
+  script: bin/usertrack.php
+
+- url: /rt
+  script: bin/report.php
+  
+- url: /bl
+  script: bin/billing.php
+  
+- url: /notify_file
+  script: notify_file.php
+
+- url: /send_email_processing
+  script: bin/send_email_processing.php
+
+- url: /add_user
+  script: bin/add_user.php
+
+- url: /q_a
+  script: q_a/index.php
+
+- url: /q_a/API
+  script: q_a/api.php
+
+
+
+
+
+- url: /api/.*
+  script: bin/api/api.php
+  auth_fail_action: unauthorized
+
+
+# quiz:
+- url: /games/logic/quiz/app
+  static_dir: games/logic/quiz/app
+
+- url: /games/logic/quiz/media
+  static_dir: games/logic/quiz/media
+
+- url: /games/logic/quiz/gt
+  script: /games/logic/quiz/bin/getters.php
+
+# quiz_new:
+- url: /games/logic/quiz_new/app
+  static_dir: games/logic/quiz_new/app
+
+- url: /games/logic/quiz_new/media
+  static_dir: games/logic/quiz_new/media
+
+- url: /games/logic/quiz_new/gt
+  script: /games/logic/quiz_new/bin/getters.php
+  
+# test_yourself:
+- url: /games/logic/test_yourself/app
+  static_dir: games/logic/test_yourself/app
+
+- url: /games/logic/test_yourself/media
+  static_dir: games/logic/test_yourself/media
+
+- url: /games/logic/test_yourself/gt
+  script: /games/logic/test_yourself/bin/getters.php
+
+# quiz_learning:
+- url: /games/logic/quiz_learning/app
+  static_dir: games/logic/quiz_learning/app
+
+- url: /games/logic/quiz_learning/media
+  static_dir: games/logic/quiz_learning/media
+
+- url: /games/logic/quiz_learning/gt
+  script: /games/logic/quiz_learning/bin/getters.php
+  
+
+#admin:
+- url: /admin
+  script: admin/index.php
+
+- url: /admin/assets
+  static_dir: admin/assets
+
+- url: /admin/media
+  static_dir: admin/media
+
+- url: /admin/app
+  static_dir: admin/app
+
+- url: /admin/login
+  script: admin/login.php
+
+- url: /admin/gt
+  script: admin/bin/getters.php
+
+- url: /admin/op
+  script: admin/bin/operators.php

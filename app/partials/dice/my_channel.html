@@ -1,0 +1,41 @@
+<div id="top_screen" ng-include src="'/app/partials/dice/includes/top_screen.html'"></div>
+<div id="root_scope">
+    
+<div id="content_wrap" class="channel" ng-init="myChannelInit();fixLayout();">
+
+        <div class="wrapper white">
+            
+            <h3 class="game_row_headline">Edit Channel</h3>
+            
+            <div class="channel_menu">
+                <ul>
+                    <li tab_ac="look_a_feel" class="active">
+                        <a href="javascript:void(0)" ng-click="setChannelTab('look_a_feel')">
+                            Look & Feel
+                        </a>
+                    </li>
+                    <li tab_ac="subscribers">
+                        <a href="javascript:void(0)" ng-click="setChannelTab('subscribers')">
+                            Subscribers (<span ng-bind="channel_users.length">0</span>)
+                        </a>
+                    </li>
+                    <li tab_ac="games">
+                        <a href="javascript:void(0)" ng-click="setChannelTab('games')">
+                            Channel Games
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+            
+
+        </div>
+        
+        <div class="wrapper channel_tab look_a_feel white active" ng-include src="'/app/partials/dice/includes/channel_look_a_feel.html'"></div>
+        <div class="wrapper channel_tab subscribers white" ng-include src="'/app/partials/dice/includes/channel_subscribers.html'"></div>
+        <div class="wrapper channel_tab games white" ng-include src="'/app/partials/dice/includes/channel_games.html'"></div>
+
+    
+</div>
+</div>

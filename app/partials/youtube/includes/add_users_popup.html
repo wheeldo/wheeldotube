@@ -1,0 +1,69 @@
+<div class="popup">
+    <div style="margin-bottom:5px;">Upload users file: </div>
+    <form id="users_upload_form" target="users_upload_target" method="post" enctype="multipart/form-data" action="{{users_uploader.action}}" res_mark="{{users_uploader.hash}}">
+        <input type="file" class="file" name="file" ng-file-select="onUsersFileSelect($files);" accept=".xls, .xlsx" />
+        <input type="hidden" name="res_mark" value="{{users_uploader.hash}}" />
+        <input type="hidden" name="url_notify" value="{{users_uploader.url_notify}}" />
+        <img class="loader" src="media/img/ajax-loader.gif" />
+    </form>
+    <a style="display:block;padding:5px 0px;" href="/download?filename=users_example.xlsx">(Download sample file)</a>
+    <iframe id="users_upload_target" name="users_upload_target" src="" style="width:0;height:0;border:0px solid #fff;"></iframe>
+    
+    <a class="addNewQuestionLink" href="javascript:void(0)" ng-click="addNewUser()">+ Add new user</a>
+    
+    <div id="users_table">
+        <table class="quiz">
+            <tr>
+                <th style="width:30%">First name</th>
+                <th style="width:30%">Last name</th>
+                <th style="width:30%">Email</th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="user in users">
+                <td><input class="user_input" type="text" ng-model="user.fname" /></td>
+                <td><input class="user_input" type="text" ng-model="user.lname" /></td>
+                <td><input class="user_input" type="email" ng-model="user.email" /></td>
+                <td>
+                    <button type="button" class="action-btn red" ng-click="deleteUserRow($index)">
+                        <li class="icons icon-delete"></li>
+                    </button>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    
+    <div class="form_row actions">
+        <button type="button" class="sys-button orange wait"><img src="media/img/loading.gif" /> Please wait</button>
+        <button type="button" class="sys-button blue2 add_users" ng-click="addUsers()" ng-show="users.length>0">Add <span ng-bind="users.length"></span> users</button>
+
+    </div>
+</div>
+
+
+<style>
+    .wait {
+        display:none;
+    }
+    .popup {
+        padding:20px;
+    }
+    
+    .user_input {
+        width:auto;
+    }
+    
+    
+    #users_table {
+        max-height:300px;
+        overflow-x:hidden;
+        overflow-y: auto;
+        padding-right:10px;
+        width:100%;
+    }
+
+    
+    table.quiz {
+        margin-right:5%;
+    }
+</style>

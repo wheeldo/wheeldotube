@@ -1,0 +1,85 @@
+
+        <div class="widget-box">
+                <div class="widget-header">
+                        <h4>Edit questionnaire</h4>
+
+                        <div class="widget-toolbar">
+
+                                <a href="javascript:void(0)" ng-click="close_popup()">
+                                        <i class="icon-remove"></i>
+                                </a>
+                        </div>
+                </div>
+
+                <div class="widget-body">
+                        <div class="widget-main">
+                            <form ng-submit="saveEditQuestionnaire()">
+                                <div>
+                                        <label for="form-field-9">Questionnaire name:</label>
+
+                                        <input class="form-control" type="text" ng-model="questionnaire.name" required="" ng-required="" ng-minlength="2" />
+                                </div>
+                                
+                                
+                                
+                                <div>
+                                        <label for="form-field-9">Public:</label>
+
+                                        <label>
+                                            <input class="ace ace-switch ace-switch-5" type="checkbox" ng-model="questionnaire.public_q" name="switch-field-1" ng-true-value="1" ng-false-value="0">
+                                            <span class="lbl"></span>
+                                        </label>
+                                        
+                                </div>
+                                
+                                <div ng-show="questionnaire.public_q=='1'">
+                                        <label for="form-field-9">Tags:</label>
+
+                                        <input class="form-control" type="text" ng-model="questionnaire.tags" placeholder="ENTER TAGS HERE (SEPARATE BY ;). e.g.: Sport;News;Nature" ng-required />
+                                </div>
+
+                                <div ng-show="questionnaire.public_q=='0'">
+                                        <label for="form-field-9">Secret key:</label>
+
+                                        <input readonly="true" class="form-control" type="text" ng-model="questionnaire.private_code" maxlength="2" />
+                                </div>
+                                
+                                <div>
+                                        <label>Questions:</label> 
+                                        <div class="questions_wrapper">
+                                            <div class="input-group" ng-repeat="questions in questionnaire.questions">
+                                                <input class="form-control" type="text" maxlength="160" disabled="" ng-model="questions.question">
+                                                <span class="input-group-addon" ng-click="del_question($index)">
+                                                    <i class="icon-trash"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                </div>
+                            
+                                <div class="clearfix form-actions">
+                                        <div class="col-md-offset-3 col-md-9">
+                                                <button type="submit" class="btn btn-info">
+                                                        <i class="icon-ok bigger-110"></i>
+                                                        Save questionnaire
+                                                </button>
+
+                                                &nbsp; &nbsp; &nbsp;
+                                                <button type="button" class="btn" ng-click="close_popup()">
+                                                        Cancel
+                                                </button>
+                                        </div>
+                                </div>
+                            </form>
+                        </div>
+                </div>
+        </div>
+
+
+<style>
+    .questions_wrapper {
+        max-height:200px;
+        overflow-y:auto;
+        overflow-x:hidden;
+    }
+</style>

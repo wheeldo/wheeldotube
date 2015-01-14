@@ -1,0 +1,70 @@
+
+        <div class="widget-box">
+                <div class="widget-header">
+                        <h4>Edit question</h4>
+
+                        <div class="widget-toolbar">
+
+                                <a href="javascript:void(0)" ng-click="close_popup()">
+                                        <i class="icon-remove"></i>
+                                </a>
+                        </div>
+                </div>
+
+                <div class="widget-body">
+                        <div class="widget-main">
+                            <form ng-submit="load_question()">
+                                <div>
+                                        <label>Question:</label>
+
+                                        <textarea class="form-control" ng-model="q.question"></textarea>
+                                </div>
+
+                                <div>
+                                        <label>Answers:</label> 
+                                        <div class="input-group" ng-repeat="answer in q.answers">
+                                            <input class="form-control" type="text" maxlength="160" ng-model="answer.content">
+                                            <span class="input-group-addon" ng-click="del_answer($index)">
+                                                <i class="icon-trash"></i>
+                                            </span>
+                                            <span class="input-group-addon" ng-click="set_answer($index)">
+                                                <i class="" ng-class="{'icon-circle':answer.right==1,'icon-circle-blank':answer.right==0}"></i>
+                                            </span>
+                                        </div>
+                                        
+                                        <button class="btn btn-xs btn-pink" type="button" ng-click="addAnswer()">
+                                                Add answer
+                                                <i class="icon-plus icon-on-right"></i>
+                                        </button>
+                                </div>
+
+                                <div>
+                                        <label for="form-field-9">Tags:</label>
+
+                                        <input class="form-control" type="text" ng-model="q.tags" />
+                                </div>
+                            
+                                <div>
+                                        <label for="form-field-9">Rank:</label>
+
+                                        <input class="form-control" type="text" ng-model="q.rank" maxlength="2" />
+                                </div>
+                            
+                                <div class="clearfix form-actions">
+                                        <div class="col-md-offset-3 col-md-9">
+                                                <button type="button" class="btn btn-info" ng-click="save_questions()">
+                                                        <i class="icon-ok bigger-110"></i>
+                                                        Submit
+                                                </button>
+
+                                                &nbsp; &nbsp; &nbsp;
+                                                <button type="submit" class="btn">
+                                                        <i class="icon-undo bigger-110"></i>
+                                                        Reset
+                                                </button>
+                                        </div>
+                                </div>
+                            </form>
+                        </div>
+                </div>
+        </div>

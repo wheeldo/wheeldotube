@@ -1,0 +1,45 @@
+<link rel="stylesheet" type="text/css" href="/media/css/dice/style_mobile.css">
+<div id="mobile_top_screen" ng-include src="'/app/partials/dice/mobile/includes/top_screen.html'"></div>
+<div class="mobile_content" id="content_wrap">
+        <div id="play_content" ng-init="initPlay();fixLayout();hideFrameData();" class="white">
+            <div class="player_top">
+                <h1>
+                    <span class="game_name" ng-bind="game.name"></span>
+                </h1>
+                <h2>
+                    published <span ng-bind="game.u_time"></span>
+                </h2>
+                <br class="clr" />
+            </div>
+            <div id="player" ng-include src="'/app/partials/dice/includes/player.html'" ng-controller='GameController'></div>
+            <div class="plays"><span ng-bind="game.plays"></span> played</div>
+
+            <div id="game_full_data">
+                <div class="player_section">
+                    Published <span ng-bind="game.u_time"></span>
+
+                    <button  class="subscribe" type="button" ng-click="subscribeChannle(game.cid)" ng-bind-html="subscribe_text"></button>
+
+
+
+                </div>
+                <hr>
+                <div class="player_section">
+                    <h3>Description</h3>
+                    <p ng-bind-html="game.full_desc"></p>
+                    <div class="social_links">
+                        <a ng-href="https://www.facebook.com/sharer.php?u=http://www.wheeldo.co/play?gid={{game.unique_id}}" target="_blank">
+                        	<img src="/media/css/dice/img/facebook.png" />
+                        </a>
+    <!--                    <a ng-href="http://www.linkedin.com/cws/share?url=http://www.wheeldo.co/#/play/{{game.unique_id}}&original_referer=http://www.wheeldo.co/#/play/{{game.unique_id}}&token=&isFramed=false&lang=en_US&_ts=1398934328126.8645" target="_blank"><img src="media/css/dice/img/linkedin.png" /></a>-->
+
+                        <a twitter data-text="{{game.name}}" data-url="http://www.wheeldo.co/play/{{game.unique_id}}"></a>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<div id="mobile_footer" ng-include src="'/app/partials/dice/mobile/includes/footer.html'"></div>

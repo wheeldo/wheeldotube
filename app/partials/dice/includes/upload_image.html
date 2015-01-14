@@ -1,0 +1,16 @@
+<form action="{{upload_url.url}}" method="post" id="img_upload_frame_popup_form" enctype="multipart/form-data" target="img_upload_frame_popup"  res_mark="{{res_mark}}">
+    <input type="file" name="img_upload" id="img_upload_input_popup" ng-file-select="onGeneralIMGSelect($files,'img_upload_frame_popup_form')" />
+    <input type="hidden" name="res_mark" value="{{res_mark}}" />
+    <input type="hidden" name="img_effect" value="{{img_effect}}" />
+    <button type="button" class="img_d_d" ng-click="selectFile()">
+        <div class="channel_cover_loader_before">
+            Select image to upload <br> <span style="font-size:11px;">(<span ng-bind="note"></span>)</span> <br>
+            <img class="cloud_upload" src="/media/css/dice/img/cloud.png" />
+        </div>
+        <div class="loader channel_cover_loader"><img src="/media/img/loading.gif" /></div>
+    </button>
+</form>
+<iframe id="img_upload_frame_popup" name="img_upload_frame_popup" onload="img_upload_done()"></iframe>
+<div style="text-align:center;padding:20px;display:none;" id="waiting_circle_loader">
+    <img src="/media/css/dice/img/player_loader3.gif" />
+</div>

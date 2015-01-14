@@ -1,0 +1,61 @@
+
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='Aviad' ,  `lname`='Bl' ,  `email`='aviadb.lu@gmail.com' ,  `password`='ad628b2c2c94d21ee1dee95a42d310417284224a8e8779ca' ,  `image`='/media/img/u_default.jpg' ,  `active`='1' ,  `reg_time`='1411895932' ,  `unique_link`='de2bbd145b' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `channels` SET  `unique_id`='de2bbd145b' ,  `user_id`='7489' ,  `user_private_channel`='0' ,  `name`='Aviad Bl channel' ,  `small_icon`='media/css/dice/img/u_default.jpg' ,  `cover`='/media/img/deafult_banner.jpg' ,  `time`='1411895932' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='AViad' ,  `lname`='2' ,  `email`='aviadb.lu@gmail.com' ,  `password`='3ac51df9feff9c469e1ac471a83375081618b2df9c3f38ec' ,  `image`='/media/img/u_default.jpg' ,  `active`='1' ,  `reg_time`='1411896092' ,  `unique_link`='c3d4f14c2a' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `channels` SET  `unique_id`='c3d4f14c2a' ,  `user_id`='7490' ,  `user_private_channel`='0' ,  `name`='AViad 2 channel' ,  `small_icon`='media/css/dice/img/u_default.jpg' ,  `cover`='/media/img/deafult_banner.jpg' ,  `time`='1411896092' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='aviad' ,  `lname`='bky' ,  `email`='aviad@wheeldo.com' ,  `password`='fc54041e37e6cd2a205068c797b8d436de0e807f0c0bf011' ,  `image`='/media/img/u_default.jpg' ,  `active`='1' ,  `reg_time`='1411981524' ,  `unique_link`='0e14acdcdd' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `channels` SET  `unique_id`='0e14acdcdd' ,  `user_id`='7494' ,  `user_private_channel`='0' ,  `name`='aviad bky channel' ,  `small_icon`='media/css/dice/img/u_default.jpg' ,  `cover`='/media/img/deafult_banner.jpg' ,  `time`='1411981524' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='12' ,  `lname`='12' ,  `email`='avia2d@wheeldo.com' ,  `password`='ee55544037e6cd2a205068c797b8d436de0e807f0c0bf011' ,  `image`='/media/img/u_default.jpg' ,  `active`='1' ,  `reg_time`='1411981747' ,  `unique_link`='b93323f8b0' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `channels` SET  `unique_id`='b93323f8b0' ,  `user_id`='7495' ,  `user_private_channel`='0' ,  `name`='12 12 channel' ,  `small_icon`='media/css/dice/img/u_default.jpg' ,  `cover`='/media/img/deafult_banner.jpg' ,  `time`='1411981747' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='12' ,  `lname`='12' ,  `email`='avia2d@wheeldo.com' ,  `password`='03b5685ff1528ba0f99a5349b5b711e4287333dbe8d84297' ,  `image`='/media/img/u_default.jpg' ,  `active`='1' ,  `reg_time`='1411981886' ,  `unique_link`='51e5704c9f' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `channels` SET  `unique_id`='51e5704c9f' ,  `user_id`='7496' ,  `user_private_channel`='0' ,  `name`='12 12 channel' ,  `small_icon`='media/css/dice/img/u_default.jpg' ,  `cover`='/media/img/deafult_banner.jpg' ,  `time`='1411981886' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='12' ,  `lname`='12' ,  `email`='avia2d@wheeldo.com' ,  `password`='e9716687f7476634fa92e258df0d4fcc39bdf53cabeda52a' ,  `image`='/media/img/u_default.jpg' ,  `active`='1' ,  `reg_time`='1411982016' ,  `unique_link`='d0940fb969' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `channels` SET  `unique_id`='d0940fb969' ,  `user_id`='7497' ,  `user_private_channel`='0' ,  `name`='12 12 channel' ,  `small_icon`='media/css/dice/img/u_default.jpg' ,  `cover`='/media/img/deafult_banner.jpg' ,  `time`='1411982016' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='avi' ,  `lname`='ad' ,  `email`='aviad@wheeldo.com' ,  `password`='1a527e80d7a431123843eabea74386275e4b89aeb39f2bd2' ,  `image`='/media/img/u_default.jpg' ,  `active`='1' ,  `reg_time`='1411982396' ,  `unique_link`='2553942dd5' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `channels` SET  `unique_id`='2553942dd5' ,  `user_id`='7498' ,  `user_private_channel`='0' ,  `name`='avi ad channel' ,  `small_icon`='media/css/dice/img/u_default.jpg' ,  `cover`='/media/img/deafult_banner.jpg' ,  `time`='1411982396' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='avi' ,  `lname`='ad' ,  `email`='aviad@wheeldo.com' ,  `password`='01cc85bb5698c859ab0eb06aa356b8e2fae6104d6da66186' ,  `image`='/media/img/u_default.jpg' ,  `active`='1' ,  `reg_time`='1411982516' ,  `activation_link`='d9c7d2a2b842c278ba633977c90ab5fe7ba6fa20' ,  `unique_link`='d9c7d2a2b8' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `channels` SET  `unique_id`='d9c7d2a2b8' ,  `user_id`='7499' ,  `user_private_channel`='0' ,  `name`='avi ad channel' ,  `small_icon`='media/css/dice/img/u_default.jpg' ,  `cover`='/media/img/deafult_banner.jpg' ,  `time`='1411982516' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='avi' ,  `lname`='ad' ,  `email`='aviad@wheeldo.com' ,  `password`='fb5cab040b5ba9741debf7ebca10c617826bf7b65b363afc' ,  `image`='/media/img/u_default.jpg' ,  `active`='1' ,  `reg_time`='1411982688' ,  `activation_link`='a97aa5a4a99d1b395ff85c8ea51e0c20e891f40c' ,  `unique_link`='a97aa5a4a9' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `channels` SET  `unique_id`='a97aa5a4a9' ,  `user_id`='7501' ,  `user_private_channel`='0' ,  `name`='avi ad channel' ,  `small_icon`='media/css/dice/img/u_default.jpg' ,  `cover`='/media/img/deafult_banner.jpg' ,  `time`='1411982688' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='avi' ,  `lname`='ad' ,  `email`='aviad@wheeldo.com' ,  `password`='3a8687fb4feec486d328bbb4e73e3a56a0fc79994ab823c6' ,  `image`='/media/img/u_default.jpg' ,  `active`='1' ,  `reg_time`='1411982892' ,  `activation_link`='06b5754d8d78ad5d6389218cf4a198410db7be0f' ,  `unique_link`='06b5754d8d' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `channels` SET  `unique_id`='06b5754d8d' ,  `user_id`='7502' ,  `user_private_channel`='0' ,  `name`='avi ad channel' ,  `small_icon`='media/css/dice/img/u_default.jpg' ,  `cover`='/media/img/deafult_banner.jpg' ,  `time`='1411982892' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='av' ,  `lname`='ad' ,  `email`='aviad@wheeldo.com' ,  `password`='bb12c92f393a18626f58e41046d1eb6065847189af7dd9bd' ,  `image`='/media/img/u_default.jpg' ,  `active`='1' ,  `reg_time`='1412073039' ,  `activation_link`='b1f05debf2c72a4393b0f6b4eb526b219365f8bd' ,  `unique_link`='b1f05debf2' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `channels` SET  `unique_id`='b1f05debf2' ,  `user_id`='7508' ,  `user_private_channel`='0' ,  `name`='av ad channel' ,  `small_icon`='media/css/dice/img/u_default.jpg' ,  `cover`='/media/img/deafult_banner.jpg' ,  `time`='1412073039' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='aviad' ,  `lname`='123' ,  `email`='aviad1234@gmail.com' ,  `password`='8ec65d0e0848a244d845d42e402f3659f0f14f9ab740d5d7' ,  `image`='/media/img/u_default.jpg' ,  `active`='1' ,  `reg_time`='1412236011' ,  `activation_link`='a346cb4cb891db867618f7d21a318a72bd28989b' ,  `unique_link`='a346cb4cb8' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `channels` SET  `unique_id`='a346cb4cb8' ,  `user_id`='9358' ,  `user_private_channel`='0' ,  `name`='aviad 123 channel' ,  `small_icon`='media/css/dice/img/u_default.jpg' ,  `cover`='/media/img/deafult_banner.jpg' ,  `time`='1412236011' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='12' ,  `lname`='12' ,  `email`='avi.a.d.blu@gmail.com' ,  `password`='13e9bcc3cc3259b38746d77b3a2e43889a1197aadd92efb6' ,  `image`='/media/img/u_default.jpg' ,  `active`='1' ,  `reg_time`='1412236129' ,  `activation_link`='8ee6d30511ebd1edbcebb3484471c75634894ecd' ,  `unique_link`='8ee6d30511' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `channels` SET  `unique_id`='8ee6d30511' ,  `user_id`='9359' ,  `user_private_channel`='0' ,  `name`='12 12 channel' ,  `small_icon`='media/css/dice/img/u_default.jpg' ,  `cover`='/media/img/deafult_banner.jpg' ,  `time`='1412236129' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='123' ,  `lname`='123' ,  `email`='aviad2@wheeldo.com' ,  `password`='d1fa9eab08404f9a20a7f40649aeff4347f6557617fa0b56' ,  `image`='/media/img/u_default.jpg' ,  `active`='1' ,  `reg_time`='1412497675' ,  `activation_link`='4c17c05b74971fa9b7bc09a24d0bf2a4b798290a' ,  `unique_link`='4c17c05b74' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `channels` SET  `unique_id`='4c17c05b74' ,  `user_id`='9754' ,  `user_private_channel`='0' ,  `name`='123 123 channel' ,  `small_icon`='media/css/dice/img/u_default.jpg' ,  `cover`='/media/img/deafult_banner.jpg' ,  `time`='1412497675' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `users` SET  `fname`='AVIAD' ,  `lname`='Blu' ,  `email`='avi.a.d.bl.u@gmail.com' ,  `password`='a35cd0343dae11513362806d493ba674f579a09c80080456' ,  `image`='/media/img/u_default.jpg' ,  `active`='1' ,  `reg_time`='1412582717' ,  `activation_link`='549b81eef2a9f86a87b5f39c28552c40c20d8f0b' ,  `unique_link`='549b81eef2' ,  `ghost`='0' ,  `id`=NULL  
+in insert - inserting 
+INSERT INTO `channels` SET  `unique_id`='549b81eef2' ,  `user_id`='9756' ,  `user_private_channel`='0' ,  `name`='AVIAD Blu channel' ,  `small_icon`='media/css/dice/img/u_default.jpg' ,  `cover`='/media/img/deafult_banner.jpg' ,  `time`='1412582717' ,  `id`=NULL  

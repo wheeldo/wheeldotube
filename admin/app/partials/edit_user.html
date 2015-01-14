@@ -1,0 +1,141 @@
+<form class="form-horizontal" role="form" ng-submit="save_user()" ng-init="load_user_data()">
+<!--    <pre>{{user | json}}</pre>-->
+        <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 
+               <img class="user_image_big" ng-src="{{user.image}}" />
+                </label>
+
+        </div>
+        <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> First Name </label>
+
+                <div class="col-sm-9">
+                        <input type="text" placeholder="First Name" class="col-xs-10 col-sm-5" ng-model="user.fname" />
+                </div>
+        </div>
+
+        <div class="space-4"></div>
+        
+        <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Last Name </label>
+
+                <div class="col-sm-9">
+                        <input type="text" placeholder="Last Name" class="col-xs-10 col-sm-5" ng-model="user.lname" />
+                </div>
+        </div>
+        
+        <div class="space-4"></div>
+        
+        <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Email </label>
+
+                <div class="col-sm-9">
+                        <input type="email" placeholder="Email" class="col-xs-10 col-sm-5" ng-model="user.email" />
+                </div>
+        </div>
+        
+        <div class="space-4"></div>
+        
+        <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> Reset Password</label>
+
+                <div class="col-sm-9">
+                        <input type="text" id="form-field-2" placeholder="Password" class="col-xs-10 col-sm-5" ng-model="user.new_password" />
+                        <span class="help-inline col-xs-12 col-sm-7">
+                                <span class="middle">Leave password blank if don't want to change</span>
+                        </span>
+                </div>
+        </div>
+
+        <div class="space-4"></div>
+        
+        <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Is Admin </label>
+                
+                <div class="col-sm-9">
+                    <label>
+                        <input name="switch-field-1" class="ace ace-switch ace-switch-6" type="checkbox" ng-model="user.admin" ng-true-value="1" ng-false-value="0" />
+                        <span class="lbl"></span>
+                    </label>
+                </div>
+        </div>
+        
+        <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Admin Notifications </label>
+                
+                <div class="col-sm-9">
+                    <label>
+                        <input name="switch-field-1" class="ace ace-switch ace-switch-6" type="checkbox" ng-model="user.notified_new_registration" ng-true-value="1" ng-false-value="0" />
+                        <span class="lbl"></span>
+                    </label>
+                </div>
+        </div>
+        
+        
+        
+        <div class="space-4"></div>
+        
+        <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> User Active </label>
+                
+                <div class="col-sm-9">
+                    <label>
+                        <input name="switch-field-1" class="ace ace-switch ace-switch-6" type="checkbox" ng-model="user.active" ng-true-value="1" ng-false-value="0" />
+                        <span class="lbl"></span>
+                    </label>
+                </div>
+        </div>
+        
+        <div class="space-4"></div>
+        
+        <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Ghost </label>
+                
+                <div class="col-sm-9">
+                    <label>
+                        <input name="switch-field-1" class="ace ace-switch ace-switch-6" type="checkbox" ng-model="user.ghost" ng-true-value="1" ng-false-value="0" />
+                        <span class="lbl"></span>
+                    </label>
+                </div>
+        </div>
+        
+        <div class="space-4"></div>
+
+        <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="form-input-readonly">Registration Time</label>
+
+                <div class="col-sm-9">
+                        <input readonly="" type="text" class="col-xs-10 col-sm-5" id="form-input-readonly" ng-model="user.h_time" />
+                </div>
+        </div>
+
+        <div class="space-4"></div>
+        
+        <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="form-input-readonly">Unique Link</label>
+
+                <div class="col-sm-9">
+                        <input readonly="" type="text" class="col-xs-10 col-sm-5" id="form-input-readonly" ng-model="user.unique_link" />
+                </div>
+        </div>
+
+        <div class="space-4"></div>
+
+        
+
+        <div class="clearfix form-actions">
+                <div class="col-md-offset-3 col-md-9">
+                        <button class="btn btn-info" type="submit">
+                                <i class="icon-ok bigger-110"></i>
+                                Submit
+                        </button>
+
+                        &nbsp; &nbsp; &nbsp;
+                        <button class="btn" type="button" ng-click="return_to_users()">
+                                <i class="icon-back bigger-110"></i>
+                                Back
+                        </button>
+                </div>
+        </div>
+
+</form>

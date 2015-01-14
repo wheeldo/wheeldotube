@@ -1,0 +1,38 @@
+
+<div class="pscore mobile_float">
+    <div class="game_progress"> <span ng-bind="game_progress.answerd"></span>/<span ng-bind="game_progress.total"></span> </div>
+    <div id="personal_score" ng-init="loadScore()"><span tarnslate>Your personal score</span>: <span ng-bind="score"></span></div>
+    <br class="clr" />
+</div>
+
+<div class="pscore_small">
+    <div id="personal_score" ng-init="loadScore()"><span tarnslate>Your personal score</span>: <span ng-bind="score"></span></div>
+</div>
+
+
+<div class="mobile_float">
+    <div class="timer" ng-bind="timer"></div>
+</div>
+
+<div class="mobile_float">
+    <div class="strikes">
+        <span tarnslate>Strikes</span><br>
+        <div class="strike" ng-class="{active:game_quiz_user.strikes>0}"></div>
+        <div class="strike" ng-class="{active:game_quiz_user.strikes>1}"></div>
+        <div class="strike" ng-class="{active:game_quiz_user.strikes>2}"></div>
+    </div>
+</div>
+
+<div class="mobile_float">
+    <div class="lifes" id="lifes">
+        <div class="life" ng-class="{active:game_quiz_user.use_5050=='1'}" ng-click="setLife('use_5050')">
+            50:50
+        </div>
+        <div class="life" ng-class="{active:game_quiz_user.use_plus_60=='1'}" ng-click="setLife('use_plus_60')">
+            +30
+        </div>
+        <div class="life" ng-class="{active:game_quiz_user.use_skip=='1'}"ng-click="setLife('use_skip')">
+            skip
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="close" ng-click="cancel()">X</div>
+<iframe ng-style="frame_style" ng-src="{{frame_src}}"></iframe>
+<style>
+    .close {
+        position:absolute;
+        color:#ffffff;
+        opacity: 1;
+        filter: alpha(opacity=100);
+        right:10px;
+        top:10px;
+    }
+    
+    .close:hover {
+        color:#ffffff;
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+    
+    .modal {
+        padding:30px;
+        background-color:#333333;
+        border:3px solid #FFFFFF;
+    }
+
+    .sharePopUp  {
+        top:0px !important;
+        max-width:700px;
+        width:100%;
+        background-image:url('/media/img/guidance_bg.png');
+    }
+    
+    iframe {
+        width:100%;
+        border:0px;
+        overflow: hidden;
+    }
+</style>

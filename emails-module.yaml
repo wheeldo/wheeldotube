@@ -1,0 +1,14 @@
+application: turnkey-rookery-535
+module: emails-module
+version: uno
+runtime: php
+api_version: 1
+threadsafe: true
+
+instance_class: B8
+manual_scaling:
+  instances: 1
+  
+handlers:
+- url: /
+  script: emails-module/index.html

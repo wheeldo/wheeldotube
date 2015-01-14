@@ -1,0 +1,43 @@
+<div id="root_scope">
+<div class="wrapper">
+    <a class="close_x" href="javascript:void(0)" ng-click="close_popup()"><img src="/media/css/dice/img/close.png" /></a>
+    <h5>Write a great invitation to your subscribers...</h5>
+    <div class="processing">
+        <img src="/media/img/ajax-loader.gif" /> <br><br>
+        Processing, please wait...
+    </div>
+    <form class="form_to_hide" ng-submit="signInSubmit()" form-autofill-fix>
+        <div class="form_row">
+            <label>Subject</label>
+            <input type="text" name="subject" ng-model="email.subject" placeholder="Email subject" ng-required />
+        </div>
+        <div class="form_row">
+            <textarea ng-bind-html="email.content" id="email_content" placeholder="Email content" ng-init="console.log('1');initCK('email_content')"></textarea>
+        </div>
+        <div class="note" ng-repeat="note in notes">
+            *<span ng-bind="note"></span>
+        </div>
+        <div class="form_row actions">
+            <button ng-show="channel_users_n" class="sys-button blue submit" ng-disabled="!email.subject" ng-class="{dis:!email.subject}" ng-click="updateEditor(); sendToFollowers()">SEND TO <span ng-bind="channel_users_n"></span> SUBSCRIBERS</button>
+
+            <span ng-show="channel_users_n==0">You don't have subscribers yet...</span>
+
+            <br class="clr">
+        </div>
+    </form>
+    <div class="thanks">
+        Your invitations has been sent. <br>
+        <button class="sys-button blue submit"  ng-click="close_popup()">Close</button>
+    </div>
+</div>
+</div>
+
+<style>
+    .form_row textarea {
+        height:200px;
+    }
+
+    [disabled] {
+        background-color:gray !important;
+    }
+</style>

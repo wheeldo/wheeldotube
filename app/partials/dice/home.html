@@ -1,0 +1,47 @@
+<div id="top_screen" ng-include src="'/app/partials/dice/includes/top_screen.html?t=1'"></div>
+
+<!--<div id="side_menu" ng-include src="'/app/partials/dice/includes/side_menu.html'"></div>-->
+<div id="content_wrap" ng-init="fixLayout();">
+<!--    <div class="hp_banner banner_1" ng-include src="'/app/partials/dice/includes/banner_1.html?t=2'"></div>-->
+<!--    <div ng-show="user_login" class="slogen" ng-include src="'/app/partials/dice/includes/slogen.html'"></div>
+    <div ng-show="user_login" class="motivation_bar" ng-include src="'/app/partials/dice/includes/motivation_bar.html'"></div>-->
+    
+    <div id="content">
+        <div class="wrapper">                                                                                     
+            <div class="console_top">
+                <a class="create_new_game" href="/createGame">
+                    Create a Game
+                </a>
+                <a href="javascript:void(0)" ng-click="show_tutorial('v8IiTv8RLFw')" class="create_game_tutorial_link">
+                    How To Create a New Game - Video Tutorial <br>
+                    <img src="/media/img/video_icon.png" />
+                    
+                </a>
+                <input id="games_search" placeholder="Search by game name" type="text" ng-model="games_search" />
+            </div>
+            <div ng-show="user_login" ng-include src="'/app/partials/dice/includes/my_games_rows.html?t=1'"></div>
+            
+            
+<!--            <h3 class="game_row_headline">Featured games</h3>
+            <div class="games_row" ng-include src="'/app/partials/dice/includes/featured_games.html?t=1'"></div>
+            
+            <h3 ng-show="user_login" class="game_row_headline">My games</h3>
+            <div ng-show="user_login" class="games_row" ng-include src="'/app/partials/dice/includes/my_games.html'"></div>-->
+        </div>
+        
+        
+<!--        <div class="wrapper" ng-if="!user_login"> 
+            <h3 class="game_row_headline">Featured games</h3>
+            <div class="games_row" ng-include src="'/app/partials/dice/includes/featured_games.html?t=1'"></div>
+        </div>
+        <div class="wrapper" ng-if="user_login"> 
+            <h3 class="game_row_headline">Recommended games</h3>
+            <div class="games_row" ng-include src="'/app/partials/dice/includes/suggested_games.html?t=1'"></div>
+            
+            <h3 class="game_row_headline">Popular games</h3>
+            <div class="games_row" ng-include src="'/app/partials/dice/includes/popular_games.html'" ></div>
+        </div>-->
+        
+    </div>    
+</div>
+<div id="footer" ng-include src="'/app/partials/dice/includes/footer.html'"></div>

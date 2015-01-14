@@ -1,0 +1,125 @@
+<div ng-init="init_home_page_design()" class="loader_afterload {{finish_load}}">
+    
+    
+    <h4>
+        
+        <button class="btn btn-app btn-grey btn-xs radius-4" ng-click="saveRow('Featured','featured')">
+            <i class="icon-save bigger-160"></i>
+            Save
+        </button>
+        
+        Featured games <input type="text" ng-model="featured.no" ng-change="set_ph()" style="width:30px;" max-length="2" />:
+    </h4>
+    <div class="box_ph" ng-init="init_ph()">
+        <div class="widget-container-span" ng-repeat="n in n_a|limitTo:featured.no">
+            <div>
+                <select class="game_select" ng-model="featured.game_ids[$index]" ng-options="value.id as value.name for (key , value) in games" ng-init="setSelect($last)"></select>
+            </div>
+            
+
+            <img class="thumbnail" ng-src="{{games[featured.game_ids[$index]].thumbnail}}" ng-show="games[featured.game_ids[$index]].thumbnail" />
+            <img class="thumbnail" ng-src="media/css/dice/img/thumb_{{get_color_box(games[featured.game_ids[$index]].id)}}.jpg" ng-hide="games[featured.game_ids[$index]].thumbnail" />
+            
+            <h5 ng-bind="games[featured.game_ids[$index]].name"></h5>
+            
+        </div>
+    </div>
+        <br class="clr"/>
+    </div>
+    
+    <h4>
+        
+        <button class="btn btn-app btn-grey btn-xs radius-4" ng-click="saveRow('Recommended','suggested')">
+            <i class="icon-save bigger-160"></i>
+            Save
+        </button>
+        
+        Recommended games <input type="text" ng-model="suggested.no" ng-change="set_ph()" style="width:30px;" max-length="2" />:
+    </h4>
+    <div class="box_ph" ng-init="init_ph()">
+        <div class="widget-container-span" ng-repeat="n in n_a|limitTo:suggested.no">
+            <div>
+                <select class="game_select" ng-model="suggested.game_ids[$index]" ng-options="value.id as value.name for (key , value) in games" ng-init="setSelect($last)"></select>
+            </div>
+            
+
+            <img class="thumbnail" ng-src="{{games[suggested.game_ids[$index]].thumbnail}}" ng-show="games[suggested.game_ids[$index]].thumbnail" />
+            <img class="thumbnail" ng-src="media/css/dice/img/thumb_{{get_color_box(games[suggested.game_ids[$index]].id)}}.jpg" ng-hide="games[suggested.game_ids[$index]].thumbnail" />
+            
+            <h5 ng-bind="games[suggested.game_ids[$index]].name"></h5>
+            
+        </div>
+    </div>
+        <br class="clr"/>
+    </div>
+
+
+    <h4>
+        
+        <button class="btn btn-app btn-grey btn-xs radius-4" ng-click="saveRow('Popular','popular')">
+            <i class="icon-save bigger-160"></i>
+            Save
+        </button>
+        
+        Popular games <input type="text" ng-model="popular.no" ng-change="set_ph()" style="width:30px;" max-length="2" />:
+    </h4>
+    <div class="box_ph" ng-init="init_ph()">
+        <div class="widget-container-span" ng-repeat="n in n_a|limitTo:popular.no">
+            <div>
+                <select class="game_select" ng-model="popular.game_ids[$index]" ng-options="value.id as value.name for (key , value) in games" ng-init="setSelect($last)"></select>
+            </div>
+            
+
+            <img class="thumbnail" ng-src="{{games[popular.game_ids[$index]].thumbnail}}" ng-show="games[popular.game_ids[$index]].thumbnail" />
+            <img class="thumbnail" ng-src="media/css/dice/img/thumb_{{get_color_box(games[popular.game_ids[$index]].id)}}.jpg" ng-hide="games[popular.game_ids[$index]].thumbnail" />
+            
+            <h5 ng-bind="games[popular.game_ids[$index]].name"></h5>
+            
+        </div>
+    </div>
+        <br class="clr"/>
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+<div class="loader_beforeload {{finish_load}}">
+    <img src="admin/assets/img/wait_ge.gif" />
+</div>
+
+<style>
+    
+    h5 {
+        font-size:11px;
+        margin:2px 3px;
+        overflow: hidden;
+        height:14px;
+    }
+    .box_ph {
+
+    }
+    .clr {
+        clear:both;
+    }
+    .widget-container-span {
+        height:{{b_w}}px;
+        width:{{b_w}}px;
+        float:left;
+        border:1px dashed green;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin:2px;
+    }
+
+</style>
